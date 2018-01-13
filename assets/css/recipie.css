@@ -93,10 +93,11 @@ body {
     position: absolute;
     z-index: 99;
     top: 10%;
+    transition: right 1s ease;
 }
 
 .top-backdrop {
-    transition: right 1s ease;
+
 }
 
 .items > li {
