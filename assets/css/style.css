@@ -1,0 +1,957 @@
+/* 
+----------------------------------------------
+1. General styles
+----------------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Dancing+Script:400,700');
+body {
+    overflow-x: hidden;
+    font: 400 16px/1.8 'Crimson Text', serif;
+    color: #666;
+    width: 100%;
+}
+
+
+
+body {
+    background-color: #9ED8FF;
+}
+
+/*
+-------------------------------------------
+1.1. Typography
+-------------------------------------------
+*/
+
+@font-face {
+    font-family: headlines;
+    src: url('../../headerfont.ttf');
+}
+
+@font-face {
+    font-family: portfolio;
+    src: url('../../portfoliofont.ttf');
+}
+
+
+
+@font-face {
+    font-family: aboutfont;
+    src: url('../../aboutfont.ttf');
+}
+
+@font-face {
+    font-family: abouttextfont;
+    src: url('../../aboutpargr.ttf');
+}
+
+
+
+/*
+-------------------------------------------
+ Nav Navigation Style
+-------------------------------------------
+*/
+
+.navbar {
+    padding-top: 25px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.navbar a {
+    color: #88CDD6;
+    font-family: aboutfont;
+    margin-left: 25px;
+}
+
+
+
+#contact-links {
+    position: absolute;
+    left: 33%;
+    top: 95%;
+    width: 400px;
+    height: 250px;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity 1s ease;
+}
+
+.contact-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    /*    background: #fff;*/
+}
+
+.contact-icons > li {
+    width: 50px;
+    flex: 1;
+    margin-left: 15%;
+}
+
+
+
+
+
+
+
+/*
+-------------------------------------------
+3. Home Page 
+-------------------------------------------
+*/
+
+.homeDiv {
+    height: 100vh;
+    background-image: url(../../backgrphoto/mainland.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: headlines;
+    color: #fff;
+    font-size: 1.9em;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.portfolio {
+    font-family: sans-serif;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 600px;
+    text-align: center;
+    color: yellow;
+}
+
+.portfolio > span {
+    font-size: 4em;
+    padding-bottom: 0;
+    font-family: portfolio;
+}
+
+.stones-homediv {
+    position: absolute;
+    bottom: -15%;
+    left: 1%;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+
+.heading-title {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+}
+
+.table {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.mainheader {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.slider-area .sliderimg {
+    height: 100px;
+}
+
+
+
+/*
+-------------------------------------------
+4. About Area Style
+-------------------------------------------
+*/
+
+.about-area {
+    padding: 100px 0;
+    max-width: 100%;
+}
+
+.about-area h4 {
+    margin-bottom: 30px;
+}
+
+.about-text {
+    width: 100%;
+    margin-left: 50px;
+    margin-right: auto;
+    background-color: rgba(170, 200, 208, .5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.about-text > h4 {
+    font-family: aboutfont, sans-serif;
+    color: #2D65D6;
+    font-size: 3.2em;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 900;
+    border-bottom: 1.5px solid #040606;
+    text-transform: uppercase;
+}
+
+.about-text > p {
+    letter-spacing: .1em;
+    text-align: center;
+    padding-top: 2%;
+    font-family: abouttextfont, sans-serif;
+    width: 100%;
+    font-weight: 700;
+    color: #1D190A;
+}
+
+
+.about-img {
+    position: relative;
+    margin-left: auto;
+    padding-right: 30px;
+    flex-grow: 1;
+
+}
+
+
+.first-image {
+    position: absolute;
+    max-height: 100%;
+    max-width: 90%;
+    border-radius: 5px;
+    left: 125px;
+}
+
+.second-image {
+    position: absolute;
+    right: 190px;
+    top: 130px;
+    height: 90%;
+    max-height: 90%;
+    z-index: 99;
+}
+
+.first-image,
+.second-image {
+    border-radius: 10px;
+    -webkit-transition: -webkit-transform .5s ease-in;
+    transition: -webkit-transform .5s ease-in;
+    transition: transform .5s ease-in;
+    transition: transform .5s ease-in, -webkit-transform .5s ease-in;
+}
+
+
+
+
+
+/*
+-------------------------------------------
+ABOUT AREA
+-------------------------------------------
+*/
+
+.about-area {
+    padding-top: -150px;
+    background-image: url(../../backgrphoto/biobackdrop.jpg);
+    background-size: cover;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.bio-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+
+
+.about-text > p {
+    padding: 0 3%;
+    text-align: left;
+    line-height: inherit;
+}
+
+
+
+.about-btn {
+    margin-top: 15px;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.about-btn a {
+    text-decoration: none;
+    color: #222;
+    border: 1px solid #222;
+    padding: 10px 25px;
+}
+
+.about-area .about-btn {
+    margin-top: 40px;
+}
+
+.reservation-area .book-btn {
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
+
+.reservation-area .book-btn a {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 25px;
+}
+
+.footer-top .submit-btn {
+    margin-top: 25px;
+    display: inline-block;
+    margin-bottom: 6px;
+    letter-spacing: 2px;
+}
+
+.footer-top .submit-btn a {
+    color: #222;
+    border: 1px solid #222;
+    padding: 10px 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-------------------------------------------
+1.5. Total Background Images
+-------------------------------------------
+*/
+
+.resturent-bg {
+    background-image: url(/photos/bahrainwidephoto.jpg);
+}
+
+/*
+-------------------------------------------
+Chef signature background 
+-------------------------------------------
+*/
+
+.reservation-area {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+/*
+-------------------------------------------
+5. SIGNATRE CHEF DISH 
+-------------------------------------------
+*/
+
+#signatureChefDish {
+    background-color: #C8E2E9;
+}
+
+.gallery-grid {
+    margin: 2% 1%;
+    height: 100vh;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    grid-template-areas: "div-top div-top div-top div-top div-top div-top " "div-one div-one div-four div-five div-seven div-seven" "div-one div-one div-six div-six div-seven div-seven" "div-two div-three div-six div-six div-seven div-seven"
+}
+
+
+/*****         GRID DECLARATION      *******/
+
+.div-top {
+    grid-area: div-top;
+    text-align: center;
+}
+
+.div-one {
+    grid-area: div-one;
+    /*    background-color: red;*/
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-two {
+    grid-area: div-two;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-three {
+    grid-area: div-three;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-four {
+    grid-area: div-four;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-five {
+    grid-area: div-five;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-six {
+    grid-area: div-six;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-seven {
+    grid-area: div-seven;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*****    GRID IMAGES AND ANIMATIONS *******/
+
+.div-photo {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    -webkit-transition: -webkit-transform 1s ease-out;
+    transition: -webkit-transform 1s ease-out;
+    transition: transform 1s ease-out;
+    transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.div-photo-small {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 1s ease-out;
+    transition: -webkit-transform 1s ease-out;
+    transition: transform 1s ease-out;
+    transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.div-gen:hover .div-photo-small,
+.div-gen:hover .div-photo {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.photo-overlay {
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.div-gen:hover .photo-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.photo-overlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    /* will center the text */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .7);
+}
+
+.photo-overlay > h4,
+.photo-overlay > p {
+    color: #fff;
+}
+
+
+/*
+-------------------------------------------
+9. Food Menu Area Style
+-------------------------------------------
+*/
+
+.foodmenu-bg {
+    padding: 100px 0;
+    background: #E7E7E7;
+}
+
+.foodmenu-area .title h4 {
+    margin-bottom: 80px;
+    margin-top: -7px;
+    text-align: center;
+}
+
+.foodmenu-area .menu-details h6 {
+    margin: 10px 0 10px 0;
+    display: inline-block;
+}
+
+.foodmenu-area .menu-details span {
+    text-align: right;
+    display: block;
+    margin-top: -30px;
+}
+
+.foodmenu-area .menu-details p {
+    border-bottom: 1px dashed rgba(34, 34, 34, 0.27);
+    padding: 11px 0 25px 0;
+    font-size: 14px;
+}
+
+.foodmenu-area .menu-details .border-fr {
+    border: none;
+}
+
+
+/*
+
+
+/*
+-------------------------------------------
+     RECEPIE DIV 
+-------------------------------------------
+*/
+
+.recepie-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+}
+
+.item
+/*
+-------------------------------------------
+13. Footer Top /Contact Area Style
+-------------------------------------------
+*/
+
+.footer-top {
+    margin-top: -5px;
+}
+
+.footer-top .footertop-bg {
+    padding: 100px 0;
+}
+
+.footer-top .title h4 {
+    margin-bottom: 85px;
+    text-align: center;
+}
+
+.footer-top .form-group input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    outline: 0;
+    outline-color: transparent;
+}
+
+.footer-top textarea#coment {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    outline: 0;
+    outline-color: transparent;
+}
+
+
+/*
+-------------------------------------------
+14. Footer Area Style
+-------------------------------------------
+*/
+
+.foodSecDiv {
+    height: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.item {
+    flex-grow: 1;
+    height: 500px;
+    background-color: grey;
+    margin-left: 10px;
+    flex-basis: 400px;
+    margin-top: 20px;
+}
+
+.foodSecDiv h3 {
+    text-align: center;
+    position: absolute;
+}
+
+/*
+-------------------------------------------
+14. Footer Area Style
+-------------------------------------------
+*/
+
+.footer-area {
+    background: #222222;
+    text-align: center;
+    height: 200px;
+}
+
+.footer-area .footer-bg {
+    padding: 20px 0;
+}
+
+.footer-area .footer-icons i {
+    padding: 8px;
+    color: #fff;
+}
+
+.footer-area p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-area .social-logo {
+    width: 70px;
+    margin: 0 45px;
+}
+
+.icons-parent {
+    flex-wrap: wrap;
+    margin: 55px 0 0;
+    display: inline-flex;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*
+-------------------------------------------
+14.1. Top arrow scroll area
+-------------------------------------------
+*/
+
+.footer-area .top-arrow {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    top: auto;
+}
+
+.footer-area .top-arrow i a {
+    text-decoration: none;
+}
+
+.footer-area .top-arrow i {
+    font-size: 35px;
+    height: 38px;
+    color: #eff3f1;
+    width: 35px;
+    text-align: center;
+    cursor: pointer;
+    background: #2B2827;
+    border: 2px solid #0c0c0c;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 1690px) {}
+
+@media all and (max-width: 1280px) {
+    ...
+}
+
+/*       IPAD PRO   LANDSCAPE       */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .homeDiv {
+        height: 70vh;
+    }
+
+    .portfolio {
+        top: 20%;
+    }
+
+    .stones-homediv {
+        bottom: 25%;
+        height: 200px;
+        left: 10%;
+    }
+
+    .first-image {
+        left: 0;
+        height: 600px;
+    }
+
+    .second-image {
+        height: 550px;
+        left: -15%;
+    }
+}
+
+/* Portrait */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    .portfolio {
+        top: 10%;
+    }
+
+    .stones-homediv {
+        bottom: 55%;
+        height: 250px;
+    }
+
+
+
+    .homeDiv {
+        height: 40vh;
+    }
+
+    .first-image {
+        left: 0;
+        height: 600px;
+    }
+
+    .second-image {
+        height: 550px;
+        left: -15%;
+    }
+
+
+
+}
+
+
+/*       /IPAD PRO          */
+
+@media all and (max-width: 980px) {
+    * GALLERY DIV */ #signatureChefDish {
+        background-color: #C8E2E9;
+    }
+
+    .gallery-grid {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .div-gen {
+        margin: 4px;
+        height: 300px;
+        width: 300px;
+        flex-grow: 1;
+    }
+
+    .div-seven {
+        height: auto;
+    }
+
+    .div-top {
+        display: none;
+    }
+
+    .div-top > h4 {
+        font-size: 1.3em;
+    }
+
+
+}
+
+@media all and (max-width: 736px) {
+    .stones-homediv {
+        width: 50%;
+    }
+
+    .portfolio {
+        position: absolute;
+        left: 0;
+        top: 5%;
+        font-size: .5em;
+        width: 100%;
+    }
+
+    span > .sandwichmenulogo {
+        width: 25px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 480px) {
+
+
+    body {
+        background-color: #272624;
+    }
+
+    .portfolio {
+        position: absolute;
+        margin: auto;
+        top: 20%;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .stones-homediv {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .homeDiv {
+        background-image: url(/backgrphoto/mainlandsm.jpg);
+    }
+
+
+
+    .about-text {
+        margin: 0;
+
+    }
+
+    .about-text > h4 {
+        margin: 0;
+        text-align: left;
+        font-size: 2em;
+    }
+
+    .about-text > p {
+        font-size: .7em;
+        margin-left: 5px;
+    }
+
+
+    .about-btn {
+        height: 70px;
+    }
+
+    /*    GALLERY DIV */
+    #signatureChefDish {
+        background-color: #C8E2E9;
+    }
+
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .div-gen {
+        margin-top: 4px;
+        height: 300px;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .div-seven {
+        display: none;
+    }
+
+    .div-top > h4 {
+        font-size: 1.3em;
+    }
+
+    .about-text > h4 {
+        font-family: aboutfont;
+        color: #2D65D6;
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+
+    .about-area {
+        background-image: none;
+        background-color: #9ED8FF;
+    }
+
+    .about-text > p {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 50px 0 20px;
+        margin-right: auto;
+        background-color: rgba(170, 200, 208, .5);
+        padding-top: 20px;
+        border-radius: 5px;
+        color: #1D190A;
+    }
+
+    .social-logo {
+        width: 10px;
+    }
+
+
+
+}
