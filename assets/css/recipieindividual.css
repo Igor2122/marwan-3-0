@@ -1,12 +1,11 @@
 body {
-    background: url('../../recipieimg/woodtexture.jpg') ;
+    background: url('../../recipieimg/woodtexture.jpg');
     background-size: cover;
-    height: 100px;
+    /*    height: 100px;*/
 }
 
 
 /******** FONTS    *********/
-
 
 @font-face {
     font-family: coolvetica;
@@ -31,7 +30,6 @@ body {
 
 /******** /FONTS    *********/
 
-
 /******** LAYOUT    *********/
 
 .back-arrow {
@@ -43,10 +41,11 @@ body {
     transition: -webkit-transform .5s ease;
     transition: transform .5s ease;
     transition: transform .5s ease, -webkit-transform .5s ease;
-}    
+}
 
 .back-arrow:hover {
-    -webkit-transform: scale(1.1);transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 /* share div */
@@ -60,14 +59,15 @@ body {
     height: 50%;
     width: 5%;
     background: blue;
-    -webkit-transition: left 1s ease;   transition: left 1s ease;
+    -webkit-transition: left 1s ease;
+    transition: left 1s ease;
 }
 
 .share-icon {
     height: 20%;
     width: 100%;
     background: red;
-/*    -webkit-transition: width .5s ease;transition: width .5s ease;*/
+    /*    -webkit-transition: width .5s ease;transition: width .5s ease;*/
 }
 
 /*
@@ -77,14 +77,13 @@ body {
 */
 
 #recipie-div {
-    margin-top: 2%;
+    margin: 2% 0;
     text-align: auto;
     width: 75%;
     background: #E3E3E3;
     position: absolute;
     left: 50%;
     margin-left: -37.5%;
-    height: 1250px;
     border-radius: 5px;
 }
 
@@ -95,10 +94,8 @@ body {
 
 /* /share div */
 
-
-
-
 /* main content */
+
 #mainimage {
     width: 300px;
     position: absolute;
@@ -153,108 +150,116 @@ ul {
 
 
 .redepie-directions {
-/*    position: absolute;*/
-}    
+    /*    position: absolute;*/
+}
 
 
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     #mainimage {
         width: 40%;
         right: 5%;
         top: 10%;
     }
-    
+
     h1 {
         font-size: 2vh;
     }
-    
+
     h2 {
         font-size: 2vh;
     }
-    
+
     .redepie-directions {
         position: static;
         margin: 12% auto 0;
         width: 85%;
     }
-    
+
     .ingridients {
         margin: 12% 0 0 2%;
         position: static;
     }
-    
+
 }
 
 /* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-        #mainimage {
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    #mainimage {
         width: 40%;
         right: 5%;
         top: 10%;
     }
-    
+
     h1 {
         font-size: 2vh;
     }
-    
+
     h2 {
         font-size: 2vh;
     }
-    
+
     .redepie-directions {
         position: static;
         margin: 12% auto 0;
         width: 85%;
     }
-    
+
     .ingridients {
         margin: 12% 0 0 2%;
         position: static;
+    }
+
+    .back-arrow {
+        top: 15%;
+        width: 30px;
     }
 }
 
 
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 680px) {
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
     #mainimage {
         width: 40%;
         position: static;
     }
-    
+
     h1 {
         font-size: 2vh;
     }
-    
+
     h2 {
         font-size: 2vh;
     }
-    
+
     .ingridients {
         right: 0;
         position: static;
         width: 100%;
     }
-    
+
     .ingridients li {
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
-    
+
     .redepie-directions {
         width: 100%;
         padding: 0;
         position: static;
         margin: 0;
     }
-    
+
     .redepie-directions li {
         font-size: 2vh;
     }
+
+    .back-arrow {
+        top: 3%;
+        width: 30px;
+    }
 }
-
-
-
-
-
