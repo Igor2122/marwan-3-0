@@ -183,7 +183,7 @@ h4 {
     background-color: rgba(226, 244, 255, .4);
     position: absolute;
     transform: translateX(100%);
-    transition: transform .5s cubic-bezier(.49,.06,.66,1.29);
+    transition: transform .95s cubic-bezier(.49,.06,.66,1.29);
     height: 100%;
     width: 100%;
     background-size: cover;
