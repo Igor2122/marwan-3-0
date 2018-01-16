@@ -23,7 +23,7 @@ function divmovements() {
     directionsDiv.style.transition = "top 1s";
     image.style.opacity = '1';
     image.style.transition = "opacity 1s, transform 1s";
-    image.style.transform = 'scale(1.05)';
+    image.style.transform = 'scale(1.5) translateX(10%)';
     sharediv.style.left = '0%';
 }
 
