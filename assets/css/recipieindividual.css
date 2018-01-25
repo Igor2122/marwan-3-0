@@ -141,8 +141,9 @@ ul {
 }
 
 .ingridients {
+    width: 40%;
     position: absolute;
-    top: 15%;
+    top: 9%;
     right: 5%;
 }
 
