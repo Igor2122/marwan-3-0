@@ -125,7 +125,6 @@ ul > li {
 }
 
 .redepie-directions {
-    margin-top: 70%;
     margin-left: 10%;
     margin-bottom: 10%;
     width: 55%;
@@ -142,21 +141,29 @@ ul {
 
 .ingridients {
     width: 40%;
-    position: absolute;
+    margin-left: 60%;
+    opacity: .5;
+}
+
+
+/*         Medium screens     */
+
+
+@media(min-width: 100px) {
+.ingridients {
+    width: 40%;
+/*    position: absolute;*/
     top: 9%;
-    right: 5%;
+    right: -5%;
 }
 
 
 
-
-.redepie-directions {
-    /*    position: absolute;*/
 }
-
 
 
 /* iPads (portrait and landscape) ----------- */
+
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     #mainimage {

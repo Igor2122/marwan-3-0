@@ -18,7 +18,7 @@ if (screen.width < 640) {
 }
 
 function divmovements() {
-    ingridientsDiv.style.right = '15%';
+    ingridientsDiv.style.opacity = '1';
     ingridientsDiv.style.transition = "all 1s";
     directionsDiv.style.transition = "top 1s";
     image.style.opacity = '1';
@@ -33,11 +33,12 @@ function divmovements() {
 const sharediv = document.getElementById('social-media-share');
 const shareIcon = document.getElementsByClassName('share-icon');
 
+
+
 sharediv.addEventListener('mouseover', function (e) {
     if (e.target.className === 'share-icon') {
         e.target.style.width = '150%';
         e.target.style.transition = 'width 1s ease';
-        e.target.textContent = 'share';
     }
 });
 
