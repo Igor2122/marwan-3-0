@@ -31,20 +31,24 @@ function divmovements() {
 
 
 const sharediv = document.getElementById('social-media-share');
-const shareIcon = document.getElementsByClassName('share-icon');
+const shareIcon = document.querySelector('.share-icon');
+
+const loc = window.location.href;
+console.log(location);
 
 
+//sharediv.addEventListener('mouseover', function (e) {
+//    if (e.target.className == 'facebook') {
+//        e.target.style.width = '150%';
+//        e.target.style.transition = 'width 1s ease'
+//        e.target.innerHTML = '';
+//    };
+//
+//
+//});
 
-sharediv.addEventListener('mouseover', function (e) {
-    if (e.target.className === 'share-icon') {
-        e.target.style.width = '150%';
-        e.target.style.transition = 'width 1s ease';
-    }
-});
 
-
-sharediv.addEventListener('mouseleave', function () {
-    for (var i = 0; i < shareIcon.length; i++) {
-        shareIcon[i].style.width = '100%';
-    }
-});
+//sharediv.addEventListener('mouseleave', function (e) {
+//    e.target.innerHTML = '';
+//    e.style.width = '100%';
+//});
