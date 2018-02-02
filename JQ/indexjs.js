@@ -1,7 +1,9 @@
-const stones = document.getElementsByClassName('stones-homediv')[0];
+const stones = document.querySelector('.video');
 
-window.addEventListener('load', () => {
-    stones.style.opacity = '1';
+
+
+window.addEventListener('scroll', () => {
+    stones.style.top = (window.pageYOffset / 3) + 'px';
 })
 
 window.addEventListener('scroll', parralex, false);

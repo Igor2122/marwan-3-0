@@ -16,6 +16,12 @@ body {
 
 body {
     background-color: #9ED8FF;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /*
@@ -55,14 +61,15 @@ body {
 */
 
 .navbar {
-    padding-top: 25px;
+    margin-top: 1%;
     position: absolute;
     z-index: 1;
     width: 100%;
+/*    background: #fff;*/
 }
 
 .navbar a {
-    color: #88CDD6;
+    color: #fff;
     font-family: aboutfont;
     margin-left: 25px;
 }
@@ -87,7 +94,6 @@ body {
     flex-direction: row;
     list-style-type: none;
     margin: 0;
-    /*    background: #fff;*/
 }
 
 .contact-icons > li {
@@ -110,9 +116,6 @@ body {
 
 .homeDiv {
     height: 100vh;
-    background-image: url(../../backgrphoto/mainland.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 h1 {
@@ -124,7 +127,33 @@ h1 {
 }
 
 
+.video {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
+.video > video {
+    max-height: 110%;
+    max-width: 100%;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #1F1E1C;
+    opacity: .8;
+}
 
 .portfolio {
     font-family: sans-serif;
@@ -140,14 +169,6 @@ h1 {
     font-size: 4em;
     padding-bottom: 0;
     font-family: portfolio;
-}
-
-.stones-homediv {
-    position: absolute;
-    bottom: -15%;
-    left: 1%;
-    opacity: 0;
-    transition: opacity .5s ease-in;
 }
 
 
@@ -742,11 +763,6 @@ Chef signature background
         top: 20%;
     }
 
-    .stones-homediv {
-        bottom: 25%;
-        height: 200px;
-        left: 10%;
-    }
 
     .first-image {
         left: 0;
@@ -765,11 +781,6 @@ Chef signature background
 
     .portfolio {
         top: 10%;
-    }
-
-    .stones-homediv {
-        bottom: 55%;
-        height: 250px;
     }
 
 
@@ -795,10 +806,33 @@ Chef signature background
 
 /*       /IPAD PRO          */
 
+
+/*        IPAD      */
+
+
 @media all and (max-width: 980px) {
     * GALLERY DIV */ #signatureChefDish {
         background-color: #C8E2E9;
     }
+
+    body {
+/*        display: none;*/
+    }
+
+
+    .video   {
+        background-image: url(/backgrphoto/mainlandsm.jpg);
+        background-size: cover;
+    }
+
+        .video > video {
+        display: none;
+    }
+
+    .header-overlay {
+        display: none;
+    }
+
 
     .gallery-grid {
         display: flex;
@@ -848,7 +882,20 @@ Chef signature background
     }
 }
 
+
+/*      mobile     */
 @media all and (max-width: 480px) {
+
+
+
+
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar a {
+        color: #1E1C19;
+    }
 
 
     body {
@@ -863,16 +910,21 @@ Chef signature background
         width: 100%;
     }
 
-    .stones-homediv {
-        display: none;
-    }
-
     h1 {
         font-size: 1.2em;
     }
 
-    .homeDiv {
+    .video   {
         background-image: url(/backgrphoto/mainlandsm.jpg);
+        background-size: cover;
+    }
+
+    .video > video {
+        display: none;
+    }
+
+    .header-overlay {
+        display: none;
     }
 
 
@@ -899,6 +951,8 @@ Chef signature background
     }
 
     /*    GALLERY DIV */
+
+
     #signatureChefDish {
         background-color: #C8E2E9;
     }
