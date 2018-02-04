@@ -225,27 +225,28 @@ h1 {
 }
 
 .about-text > h4 {
-    font-family: aboutfont, sans-serif;
+    font-family: Lato, sans-serif;
     color: #2D65D6;
     font-size: 3.2em;
     text-align: center;
     padding-top: 15px;
-    font-weight: 900;
+    font-weight: 1900;
     border-bottom: 1.5px solid #040606;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
 }
 
 .about-text > p {
-    letter-spacing: .1em;
+    font-style: italic;
     text-align: center;
     padding-top: 2%;
-    font-family: abouttextfont, sans-serif;
+    font-family: sans-serif, sans-serif;
     width: 100%;
-    font-weight: 700;
     color: #1D190A;
 }
 
-
+.about-text > p::first-letter {
+    font-size: 150%;
+}
 .about-img {
     position: relative;
     margin-left: auto;
@@ -293,6 +294,7 @@ ABOUT AREA
 
 .about-area {
     padding-top: -150px;
+/*    background-image: url(../../backgrphoto/patternbackground.png);*/
     background-image: url(../../backgrphoto/biobackdrop.jpg);
     background-size: cover;
     max-width: 100%;
@@ -755,9 +757,7 @@ Chef signature background
 /*       IPAD PRO   LANDSCAPE       */
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-    .homeDiv {
-        height: 70vh;
-    }
+
 
     .portfolio {
         top: 20%;
