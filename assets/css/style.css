@@ -4,7 +4,11 @@
 ----------------------------------------------
 */
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Dancing+Script:400,700');
+
+
+
+
+
 body {
     overflow-x: hidden;
     font: 400 16px/1.8 'Crimson Text', serif;
@@ -46,12 +50,6 @@ body {
     font-family: aboutfont;
     src: url('../../aboutfont.ttf');
 }
-
-@font-face {
-    font-family: abouttextfont;
-    src: url('../../aboutpargr.ttf');
-}
-
 
 
 /*
@@ -116,6 +114,7 @@ body {
 
 .homeDiv {
     height: 100vh;
+    width: 100vh;
 }
 
 h1 {
@@ -729,6 +728,7 @@ Chef signature background
     right: 10px;
     bottom: 10px;
     top: auto;
+    width: 5%;
 }
 
 .footer-area .top-arrow i a {
@@ -748,8 +748,21 @@ Chef signature background
 
 /* Media Queries */
 
-@media all and (max-width: 1690px) {}
+@media all and (min-width: 1690px) {
+    
+.about-text {
+    width: 7em;
+}
 
+    
+.video > video {
+    min-width: 100vh;
+    min-height: 116vh;
+}
+
+
+}
+    
 @media all and (max-width: 1280px) {
     ...
 }
