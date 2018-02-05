@@ -286,7 +286,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.925);
     z-index: 10;
     cursor: pointer;
     overflow-y: scroll;
@@ -301,13 +301,43 @@ h3 {
     margin: auto;
     padding: 5% 0;
 }
+
+.content {
+    background: grey;
+    width: 80%;
+    margin: auto;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background: grey;
+
+}
  
 .right {
-    float: right;
+   background: red;
+    width: 50%;
+    height: auto;
 }
 
 .left {
-    float: left;
+   background: green;
+    width: 50%;
+    height: auto;
+}
+
+.bold {
+    font-style: italic;
+    font-size: 1.3em;
+    border-bottom: 1px white solid;
+}
+
+h5 {
+    color: #fff;
+    font-size: 1.9em;
+    padding: 5% 0 2%;
 }
 
 .menu-list > p {
