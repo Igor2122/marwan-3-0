@@ -293,9 +293,13 @@ h3 {
     height: auto;
 }
 
-.overlay-photo {
+.menu-content {
     width: 80%;
-    height: auto;
+    color: #fff;
+    background: grey;
+    opacity: 1;
+    margin: auto;
+    padding: 5% 0;
 }
  
 .right {
