@@ -210,87 +210,7 @@ h1 {
 
 
 
-/*
--------------------------------------------
-4. About Area Style
--------------------------------------------
-*/
 
-.about-area {
-    padding: 100px 0;
-    max-width: 100%;
-}
-
-.about-area h4 {
-    margin-bottom: 30px;
-}
-
-.about-text {
-    width: 100%;
-    margin-left: 50px;
-    margin-right: auto;
-    background-color: rgba(170, 200, 208, .5);
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.about-text > h4 {
-    font-family: Lato, sans-serif;
-    color: #2D65D6;
-    font-size: 3.2em;
-    text-align: center;
-    padding-top: 15px;
-    font-weight: 1900;
-    border-bottom: 1.5px solid #040606;
-/*    text-transform: uppercase;*/
-}
-
-.about-text > p {
-    font-style: italic;
-    text-align: center;
-    padding-top: 2%;
-    font-family: sans-serif, sans-serif;
-    width: 100%;
-    color: #1D190A;
-}
-
-.about-text > p::first-letter {
-    font-size: 150%;
-}
-.about-img {
-    position: relative;
-    margin-left: auto;
-    padding-right: 30px;
-    flex-grow: 1;
-
-}
-
-
-.first-image {
-    position: absolute;
-    max-height: 100%;
-    max-width: 90%;
-    border-radius: 5px;
-    left: 125px;
-}
-
-.second-image {
-    position: absolute;
-    right: 190px;
-    top: 130px;
-    height: 90%;
-    max-height: 90%;
-    z-index: 99;
-}
-
-.first-image,
-.second-image {
-    border-radius: 10px;
-    -webkit-transition: -webkit-transform .5s ease-in;
-    transition: -webkit-transform .5s ease-in;
-    transition: transform .5s ease-in;
-    transition: transform .5s ease-in, -webkit-transform .5s ease-in;
-}
 
 
 
@@ -305,109 +225,19 @@ ABOUT AREA
 .about-area {
     padding-top: -150px;
 /*    background-image: url(../../backgrphoto/patternbackground.png);*/
-    background-image: url(../../backgrphoto/biobackdrop.jpg);
+    background: url(../../backgrphoto/blackbacground.jpg);
+/*    background: #fff;*/
     background-size: cover;
+    background-repeat: no-repeat;
     max-width: 100%;
     width: 100%;
-    height: auto;
-}
-
-.bio-div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-}
-
-
-
-.about-text > p {
-    padding: 0 3%;
-    text-align: left;
-    line-height: inherit;
-}
-
-
-
-.about-btn {
-    margin-top: 15px;
-    display: inline-block;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-}
-
-.about-btn a {
-    text-decoration: none;
-    color: #222;
-    border: 1px solid #222;
-    padding: 10px 25px;
-}
-
-.about-area .about-btn {
-    margin-top: 40px;
-}
-
-.reservation-area .book-btn {
-    margin-bottom: 10px;
-    text-align: center;
-    margin-top: 15px;
-    letter-spacing: 2px;
-}
-
-.reservation-area .book-btn a {
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 10px 25px;
-}
-
-.footer-top .submit-btn {
-    margin-top: 25px;
-    display: inline-block;
-    margin-bottom: 6px;
-    letter-spacing: 2px;
-}
-
-.footer-top .submit-btn a {
-    color: #222;
-    border: 1px solid #222;
-    padding: 10px 25px;
+    height: 100vh;
 }
 
 
 
 
 
-
-
-
-
-
-
-
-/*
--------------------------------------------
-1.5. Total Background Images
--------------------------------------------
-*/
-
-.resturent-bg {
-    background-image: url(/photos/bahrainwidephoto.jpg);
-}
-
-/*
--------------------------------------------
-Chef signature background 
--------------------------------------------
-*/
-
-.reservation-area {
-    background-image: url(../img/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 
 
