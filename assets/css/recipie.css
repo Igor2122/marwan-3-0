@@ -33,10 +33,12 @@ body {
     height: 100vh;
     display: grid;
     grid-row-gap: 40px;
-    grid-template-columns: .4fr 1fr;
+    grid-template-columns: .2fr 1fr;
     grid-auto-rows: minmax(100px, auto) minmax(100px, auto);
     grid-template-areas: "menulist menu" "menulist menu"
 }
+
+
 
 .div-list-recepie {
     height: 100%;
@@ -154,11 +156,16 @@ h4 {
     font-size: 2em;
     font-family: listitemsfont;
     margin-top: 6%;
+    transition: all .2s ease-in;
 }
+
+
 
 .item:hover {
     cursor: pointer;
+    transform: scale(1.2);
 }
+
 
 
 /*     RIGHT COLUMN */

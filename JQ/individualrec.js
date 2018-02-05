@@ -6,11 +6,24 @@ const ingridientsDiv = document.getElementsByClassName('ingridients')[0];
 const directionsDiv = document.getElementsByClassName('redepie-directions')[0];
 
 
+// self closing button
+
+
+const button = document.querySelector('.back-arrow')
+
+button.addEventListener('click', () => {
+   window.open('', '_self', ''); window.close();
+});
+
+
+
+
+
 
 function scrollTop() {
     maindiv.style.top = (window.pageYOffset / 4) + 'px';
     image.style.top = (window.pageYOffset / 5) + 'px';
-    sharediv.style.top = (window.pageYOffset / 3) + 'px';
+//    sharediv.style.top = (window.pageYOffset / 3) + 'px';
 }
 
 if (screen.width < 640) {
@@ -24,7 +37,7 @@ function divmovements() {
     image.style.opacity = '1';
     image.style.transition = "opacity 1s, transform 1s";
     image.style.transform = 'scale(1.5) translateX(10%)';
-    sharediv.style.left = '0%';
+//    sharediv.style.left = '0%';
 }
 
 // SHARE DIV 

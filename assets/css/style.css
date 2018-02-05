@@ -72,7 +72,18 @@ body {
     margin-left: 25px;
 }
 
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s ease-in;
+}
 
+.navbar a:hover::after {
+    width: 100%;
+}
 
 #contact-links {
     position: absolute;
@@ -140,7 +151,7 @@ h1 {
 }
 
 .video > video {
-    max-height: 110%;
+    max-height: 120%;
     max-width: 100%;
 }
 
@@ -419,8 +430,12 @@ Chef signature background
     display: grid;
     grid-gap: 10px;
     grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: auto minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
-    grid-template-areas: "div-top div-top div-top div-top div-top div-top " "div-one div-one div-four div-five div-seven div-seven" "div-one div-one div-six div-six div-seven div-seven" "div-two div-three div-six div-six div-seven div-seven"
+    grid-auto-rows: auto  minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    grid-template-areas:
+"div-top div-top div-top div-top div-top div-top "
+"div-one div-one div-four div-five div-seven div-seven"
+"div-one div-one div-six div-six div-seven div-seven"
+"div-two div-three div-six div-six div-seven div-seven"
 }
 
 
