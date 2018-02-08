@@ -4,36 +4,25 @@
 ----------------------------------------------
 */
 
-
-
-
-
-
 body {
     overflow-x: hidden;
     font: 400 16px/1.8 'Crimson Text', serif;
     color: #666;
     width: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    margin: 0;
+    <<<<<<< HEAD <<<<<<< HEAD=======margin: 0;
     background-color: #d1d1d1;
->>>>>>> 3e1f6ffd3f736b8e7111f65a04c9a0de295d39b6
+    > > > > > > > 3e1f6ffd3f736b8e7111f65a04c9a0de295d39b6
 }
 
 
 
-=======
-    margin: 0;
-    background-color: #d1d1d1;
+=======margin: 0;
+background-color: #d1d1d1;
 }
 
 
 
->>>>>>> fef07fc6213a4be61fa5c11304f6288eeb1a07c0
-* {
+> > > > > > > fef07fc6213a4be61fa5c11304f6288eeb1a07c0 * {
     box-sizing: border-box;
 }
 
@@ -72,7 +61,7 @@ body {
     position: absolute;
     z-index: 1;
     width: 100%;
-/*    background: #fff;*/
+    /*    background: #fff;*/
 }
 
 .navbar a {
@@ -144,11 +133,11 @@ h1 {
     padding: 0;
 }
 
- h2 {
-        padding: 15% 0 0 10%;
-        color: #fff;
-         font-size: 1.8em;
-    }
+h2 {
+    padding: 15% 0 0 10%;
+    color: #fff;
+    font-size: 1.8em;
+}
 
 
 .video {
@@ -168,6 +157,16 @@ h1 {
     max-height: 120%;
     max-width: 100%;
 }
+
+    .header-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #1F1E1C;
+        opacity: .8;
+    }
 
 
 .portfolio {
@@ -227,25 +226,23 @@ ABOUT AREA
 -------------------------------------------
 */
 
-
-
-
 #about {
     padding-top: -150px;
-/*    background-image: url(../../backgrphoto/patternbackground.png);*/
+    /*    background-image: url(../../backgrphoto/patternbackground.png);*/
     /*background: url(../../backgrphoto/blackbacground.jpg);*/
     /*background: url(../../backgrphoto/background.jpg);*/
-    background: -moz-linear-gradient(45deg, rgba(66,61,55,1) 0%, rgba(35,32,29,1) 99%, rgba(35,32,29,1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(66,61,55,1)), color-stop(99%, rgba(35,32,29,1)), color-stop(100%, rgba(35,32,29,1))); /* safari4+,chrome */
-background: -webkit-linear-gradient(45deg, rgba(66,61,55,1) 0%, rgba(35,32,29,1) 99%, rgba(35,32,29,1) 100%); /* safari5.1+,chrome10+ */
-background: -o-linear-gradient(45deg, rgba(66,61,55,1) 0%, rgba(35,32,29,1) 99%, rgba(35,32,29,1) 100%); /* opera 11.10+ */
-background: -ms-linear-gradient(45deg, rgba(66,61,55,1) 0%, rgba(35,32,29,1) 99%, rgba(35,32,29,1) 100%); /* ie10+ */
-background: linear-gradient(45deg, rgba(66,61,55,1) 0%, rgba(35,32,29,1) 99%, rgba(35,32,29,1) 100%); /* w3c */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', endColorstr='#423D37',GradientType=1 ); /* ie6-9 */
+    background: -moz-linear-gradient(182deg, rgba(13,2,2,1) 0%, rgba(46,41,38,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(46,41,38,1)), color-stop(100%, rgba(13,2,2,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(182deg, rgba(13,2,2,1) 0%, rgba(46,41,38,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(182deg, rgba(13,2,2,1) 0%, rgba(46,41,38,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(182deg, rgba(13,2,2,1) 0%, rgba(46,41,38,1) 100%); /* ie10+ */
+background: linear-gradient(268deg, rgba(13,2,2,1) 0%, rgba(46,41,38,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2E2926', endColorstr='#0d0202',GradientType=1 ); /* ie6-9 */
+
     background-size: cover;
     background-repeat: no-repeat;
-    
-    
+
+
     height: 100vh;
 }
 
@@ -272,6 +269,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
 }
 
 
+
+
 .slider-div {
     grid-column: 1 / 2;
     /*background: blue;*/
@@ -295,7 +294,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
     z-index: 1;
     background: #fff;
     height: 400px;
-    width: 10px; 
+    width: 10px;
 }
 
 .line-vertical {
@@ -316,7 +315,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
     z-index: 1;
     background: #fff;
     height: 400px;
-    width: 10px; 
+    width: 10px;
 }
 
 .line-vertical-bottom {
@@ -356,6 +355,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
     font-size: 1.2em;
 }
 
+.my-linked-il {
+    position: absolute;
+    z-index: 1;
+    left: 30%;
+}
+
+.liked-in-logo {
+    width: 50px;
+}
+
 .chef-photo {
     position: absolute;
     top: 0;
@@ -364,10 +373,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
     height: 450px;
     margin: auto;
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
+.random-txt-pic {
+    position: absolute;
+    width: 600px;
+    right: 7%;
+    top: 30%;
+     opacity: .1 ;
+}
 
 .container {
     display: flex;
@@ -398,8 +414,8 @@ h3 {
 
 .slider {
     position: relative;
-    height: 350px;
-    width: 35%;
+    height: 300px;
+    width: 300px;
     background: #f2f2f2;
     overflow: hidden;
 }
@@ -418,7 +434,7 @@ h3 {
 .slider > p {
     color: #fff;
     top: 47%;
-    right: -11%;
+    right: -20%;
     position: absolute;
     z-index: 2;
     transform: rotate(90deg);
@@ -454,7 +470,7 @@ h3 {
 }
 
 
-/*      ABOUT SLIDER               */ 
+/*      ABOUT SLIDER               */
 
 .slider-img {
     position: absolute;
@@ -483,12 +499,8 @@ h3 {
     display: grid;
     grid-gap: 10px;
     grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 10%  minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
-    grid-template-areas:
-"div-top div-top div-top div-top div-top div-top "
-"div-one div-one div-four div-five div-seven div-seven"
-"div-one div-one div-six div-six div-seven div-seven"
-"div-two div-three div-six div-six div-seven div-seven"
+    grid-auto-rows: 10% minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    grid-template-areas: "div-top div-top div-top div-top div-top div-top " "div-one div-one div-four div-five div-seven div-seven" "div-one div-one div-six div-six div-seven div-seven" "div-two div-three div-six div-six div-seven div-seven"
 }
 
 
@@ -670,8 +682,6 @@ h3 {
 -------------------------------------------
 */
 
-
-
 /*
 -------------------------------------------
 14. Footer Area Style
@@ -720,166 +730,62 @@ h3 {
 /* Media Queries */
 
 @media all and (min-width: 1690px) {
-    
-.about-text {
-    width: 7em;
-}
 
-    
-.video > video {
-    min-width: 100vh;
-    min-height: 116vh;
-}
+    .about-text {
+        width: 7em;
+    }
 
 
+    .video > video {
+        min-width: 100vh;
+        min-height: 116vh;
+    }
+
+
 }
-    
+
 @media all and (max-width: 1280px) {
     ...
 }
-
-/*       IPAD PRO   LANDSCAPE       */
-
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-
-
-    .homeDiv {
-        height: 70vh;
-    }
-    
-    .portfolio {
-        top: 20%;
-    }
-
-
-    .first-image {
-        left: 0;
-        height: 600px;
-    }
-
-    .second-image {
-        height: 550px;
-        left: -15%;
-    }
-}
-
-/* Portrait */
-
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
-
-    .portfolio {
-        top: 10%;
-    }
-
-
-
-    .homeDiv {
-        height: 40vh;
-    }
-
-    .first-image {
-        left: 0;
-        height: 600px;
-    }
-
-    .second-image {
-        height: 550px;
-        left: -15%;
-    }
-    
-    
-    /*          ABOUT SECTION             */
-    #about {
-        height: 80vh;
-    }
-    
-.about-area {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 25%;
-    grid-column-gap: 5%;
-    /*position: relative;*/
-}
-    
-    .short-bio-text {
-        grid-column: 1 / 2;
-    }
-    
-    
-    .photo {
-        grid-column: 2 / 3;
-        
-    }
-    
-    .chef-photo {
-        height: 40%;
-    }
-    
-    
-    .container {
-        grid-column-start: span 3;
-    }
-    
-    
-    .bottom {
-        display: none;
-    }
-    
-    .text {
-        width: 100%;
-    }
-
-}
-
-
-/*       /IPAD PRO          */
-
-
-
-
 
 
 
 /*        IPAD      */
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)  { 
-    
-.homeDiv {
-    height: 40vh;
+    .homeDiv {
+        height: 40vh;
     }
-    
-    
-.video {
-    top: 0;
-    left: 0;
-    z-index: -1;
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    /*background: #fff;*/
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
 
-.video > video {
-    max-height: 120%;
-    max-width: 100%;
-}
-    
+
+    .video {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        /*background: #fff;*/
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .video > video {
+        max-height: 120%;
+        max-width: 100%;
+    }
+
     .header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #1F1E1C;
-    opacity: .8;
-}
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #1F1E1C;
+        opacity: .8;
+    }
 
 
     .header-overlay {
@@ -911,68 +817,199 @@ and (max-device-width : 1024px)  {
     .div-top > h4 {
         font-size: 1.3em;
     }
-    
-    
+
+
     /*      ABOUT SECTION        */
-    
     #about {
         height: 100vh;
     }
-    
-    body {
-    }
-    
+
+
     .about-area {
         display: grid;
         grid-template-columns: 1.5fr .5fr;
         grid-template-rows: 60% 40%;
         position: relative;
-        
+
     }
-    
-    
+
+
     .bottom {
         display: none;
     }
-    
+
     .chef-photo {
         top: 15%;
         height: 400px;
         right: 1%;
     }
-    
+
     .slider-div {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-    
+
     .quote-txt > h3 {
         font-size: 1em;
     }
-    
+
     .quote-txt > h1 {
         font-size: 1em;
     }
-    
+
     .slider {
         height: 225px;
     }
-    
+
     h2 {
         margin-top: 100px;
     }
-    
+
     .container {
         margin-top: 200px;
     }
-    
+
     .text {
         margin-left: 100px;
     }
-    
-        
+
+
 }
 
+
+/*       IPAD PRO   LANDSCAPE       */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    
+    .container {
+        margin-top: 100px;
+    }
+
+    .homeDiv {
+        height: 100vh;
+    }
+
+
+
+    .portfolio {
+        top: 20%;
+    }
+
+
+    .first-image {
+        left: 0;
+        height: 600px;
+    }
+
+    .second-image {
+        height: 550px;
+        left: -15%;
+    }
+
+    .video {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.video > video {
+    max-height: 120%;
+    max-width: 135%;
+}
+
+    .header-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #1F1E1C;
+        opacity: .8;
+    }
+
+     .quote   {
+        margin-top: 8%;
+    }
+}
+
+/* Portrait */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    .portfolio {
+        top: 10%;
+    }
+
+
+
+    .homeDiv {
+        height: 40vh;
+    }
+
+    .first-image {
+        left: 0;
+        height: 600px;
+    }
+
+    .second-image {
+        height: 550px;
+        left: -15%;
+    }
+
+
+    /*          ABOUT SECTION             */
+    #about {
+        height: 80vh;
+    }
+
+    .about-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 25%;
+        grid-column-gap: 5%;
+        /*position: relative;*/
+    }
+
+    .short-bio-text {
+        grid-column: 1 / 2;
+    }
+
+
+    .photo {
+        grid-column: 2 / 3;
+
+    }
+
+    .chef-photo {
+        height: 40%;
+    }
+
+
+    .container {
+        grid-column-start: span 3;
+    }
+
+
+    .bottom {
+        display: none;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+}
+
+
+/*       /IPAD PRO          */
 
 
 }
@@ -1002,6 +1039,7 @@ and (max-device-width : 1024px)  {
 
 
 /*      mobile     */
+
 @media all and (max-width: 480px) {
 
 
@@ -1034,7 +1072,7 @@ and (max-device-width : 1024px)  {
 
 
 
-    .video   {
+    .video {
         background-image: url(/backgrphoto/mainlandsm.jpg);
         background-size: cover;
     }
@@ -1043,36 +1081,40 @@ and (max-device-width : 1024px)  {
         display: none;
     }
 
-    .header-overlay {
+
+/*    ABOUT SECTION */
+
+
+    .about-area {
+        grid-auto-columns: 1fr;
+    }
+
+    .bottom,
+    .chef-photo,
+    .line-vertical,
+    .line-horizontal,
+    .slider-div,
+    .random-txt-pic,
+    .div-photo {
         display: none;
     }
 
-
-
-    .about-text {
-        margin: 0;
-
+    .text {
+        width: 80%;
     }
 
-    .about-text > h4 {
-        margin: 0;
-        text-align: left;
-        font-size: 2em;
-    }
-
-    .about-text > p {
-        font-size: .7em;
-        margin-left: 5px;
+    .text > h2 {
+        padding-top: 15%;
+        font-size: 1.6em;
     }
 
 
-    .about-btn {
-        height: 70px;
-    }
+
+
+
+
 
     /*    GALLERY DIV */
-
-
     #signatureChefDish {
         background-color: #C8E2E9;
     }
@@ -1108,23 +1150,13 @@ and (max-device-width : 1024px)  {
 
     .about-area {
         background-image: none;
-        background-color: #9ED8FF;
     }
 
-    .about-text > p {
-        max-width: 100%;
-        width: 100%;
-        padding: 0 50px 0 20px;
-        margin-right: auto;
-        background-color: rgba(170, 200, 208, .5);
-        padding-top: 20px;
-        border-radius: 5px;
-        color: #1D190A;
-    }
 
     .social-logo {
         width: 10px;
     }
+
 
 
 
