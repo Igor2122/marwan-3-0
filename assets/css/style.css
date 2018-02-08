@@ -169,15 +169,6 @@ h1 {
     max-width: 100%;
 }
 
-.header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #1F1E1C;
-    opacity: .8;
-}
 
 .portfolio {
     font-family: sans-serif;
@@ -253,8 +244,8 @@ background: linear-gradient(45deg, rgba(66,61,55,1) 0%, rgba(35,32,29,1) 99%, rg
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', endColorstr='#423D37',GradientType=1 ); /* ie6-9 */
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 100%;
-    width: 100%;
+    
+    
     height: 100vh;
 }
 
@@ -263,11 +254,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
 
 .about-area {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 430px);
+    grid-template-columns: 1.5fr .5fr;
+    grid-template-rows: 60% 40%;
     position: relative;
 }
 
+
+.short-bio-text {
+    position: relative;
+    /*background: yellow;*/
+    grid-column: 1 / 2;
+}
+
+.photo {
+    grid-column: 2 / 3;
+    /*background: red;*/
+}
+
+
+.slider-div {
+    grid-column: 1 / 2;
+    /*background: blue;*/
+    position: relative;
+}
+
+
+.bottom {
+    grid-column: 2 / 3;
+    position: relative;
+    /*background: orange;*/
+}
 
 
 /*      Bio text area      */
@@ -292,37 +308,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
     height: 10px;
 }
 
-.short-bio-text {
-    position: relative;
-    /*background: yellow;*/
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.photo {
-    /*background: red;*/
-    grid-column-start: 3;
-    grid-column-end: 3;
-}
-
-
-.slider-div {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    /*background: blue;*/
-    position: relative;
-}
-
-
-.bottom {
-    position: relative;
-    grid-column-start: 3;
-    grid-column-end: 3;
-    /*background: orange;*/
-}
 
 .line-horizontal-bottom {
-    bottom: 4%;
+    bottom: -10%;
     right: 5%;
     position: absolute;
     z-index: 1;
@@ -332,7 +320,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
 }
 
 .line-vertical-bottom {
-    bottom: 4%;
+    bottom: -10%;
     right: 5%;
     position: absolute;
     z-index: 1;
@@ -345,26 +333,35 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
 
 
 .text {
-    margin: 10% 0 0 10%;
+    margin-top: 10%;
+    margin-left: 5%;
     width: 45%;
-    padding: 1%;
 }
 
 .text > h2 {
-    font-family: Oswald;
-    color: #FFFF00;
-    font-size: 3em;
+    padding: 0;
+    margin-left: 5%;
+    padding-bottom: 40px;
+    font-family: portfolio;
+    color: #E9EF38;
+    font-size: 2em;
+    transform: scaleY(1.9);
+    font-weight: 200;
 }
 
 .text > p {
-    padding-top: 5%;
+    padding-top: 3%;
     font-family: Lato;
     color: #fff;
     font-size: 1.2em;
 }
 
 .chef-photo {
-    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    z-index: 1;
+    height: 450px;
     margin: auto;
     display: flex;
   align-items: center;
@@ -374,19 +371,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23201D', end
 
 .container {
     display: flex;
-    margin-top: 1%;
 }
 
 .quote {
     margin-top: 10%;
     background: #26231F;
-    height: 200px;
+    height: 150px;
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.quote-txt > h3 {
+    padding-bottom: 20px;
+}
 
 
 h3 {
@@ -398,17 +397,74 @@ h3 {
 
 
 .slider {
-    height: 400px;
-    width: 40%;
+    position: relative;
+    height: 350px;
+    width: 35%;
     background: #f2f2f2;
+    overflow: hidden;
+}
+
+.arrow-dv {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 12%;
+    background-color: red;
+    opacity: .8;
+}
+
+.slider > p {
+    color: #fff;
+    top: 47%;
+    right: -11%;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(90deg);
 }
 
 
+.next-arrow,
+.next-arrow-up {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 85%;
+    transform: rotate(90deg);
+    transition: all .2s ease-in;
+    opacity: .8;
+}
+
+.next-arrow-up {
+    top: 5%;
+    transform: rotate(270deg);
+}
 
 
+.next-arrow:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
 
 
+.next-arrow-up:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
 
+
+/*      ABOUT SLIDER               */ 
+
+.slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .5s ease-in;
+}
 
 
 /*
@@ -747,12 +803,12 @@ h3 {
 }
     
     .short-bio-text {
-        grid-column: 1 / 2
+        grid-column: 1 / 2;
     }
     
     
     .photo {
-        grid-column: 2 / 3
+        grid-column: 2 / 3;
         
     }
     
@@ -788,24 +844,43 @@ h3 {
 /*        IPAD      */
 
 
-@media all and (max-width: 980px) {
-    * GALLERY DIV */ #signatureChefDish {
-        background-color: #C8E2E9;
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+    
+.homeDiv {
+    height: 40vh;
     }
+    
+    
+.video {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    /*background: #fff;*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-    body {
-/*        display: none;*/
-    }
+.video > video {
+    max-height: 120%;
+    max-width: 100%;
+}
+    
+    .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #1F1E1C;
+    opacity: .8;
+}
 
-
-    .video   {
-        background-image: url(/backgrphoto/mainlandsm.jpg);
-        background-size: cover;
-    }
-
-        .video > video {
-        display: none;
-    }
 
     .header-overlay {
         display: none;
@@ -836,6 +911,68 @@ h3 {
     .div-top > h4 {
         font-size: 1.3em;
     }
+    
+    
+    /*      ABOUT SECTION        */
+    
+    #about {
+        height: 100vh;
+    }
+    
+    body {
+    }
+    
+    .about-area {
+        display: grid;
+        grid-template-columns: 1.5fr .5fr;
+        grid-template-rows: 60% 40%;
+        position: relative;
+        
+    }
+    
+    
+    .bottom {
+        display: none;
+    }
+    
+    .chef-photo {
+        top: 15%;
+        height: 400px;
+        right: 1%;
+    }
+    
+    .slider-div {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .quote-txt > h3 {
+        font-size: 1em;
+    }
+    
+    .quote-txt > h1 {
+        font-size: 1em;
+    }
+    
+    .slider {
+        height: 225px;
+    }
+    
+    h2 {
+        margin-top: 100px;
+    }
+    
+    .container {
+        margin-top: 200px;
+    }
+    
+    .text {
+        margin-left: 100px;
+    }
+    
+        
+}
+
 
 
 }
@@ -859,6 +996,9 @@ h3 {
         padding: 0;
     }
 }
+
+
+
 
 
 /*      mobile     */

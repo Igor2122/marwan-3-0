@@ -33,10 +33,7 @@ function yScrolll() {
     let yPos = window.pageYOffset;
     console.log(yPos);
     if (yPos > 590) {
-        picTwo.style.transform = 'translateX(-15%)';
-        setTimeout(function () {
-            picOne.style.transform = 'translateX(-25%)';
-        }, 100);
+        
     }
 };
 
@@ -51,3 +48,28 @@ function yScroll() {
 };
 
 
+
+// ABOUT SLIDER 
+
+const upArrow = document.querySelector('.next-arrow-up');
+const downArrow = document.querySelector('.next-arrow');
+const sliderImages = document.getElementsByClassName('slider-img');
+
+let count = 0;
+
+function nextSlide () {
+    sliderImages[count].style.opacity = '1';
+    setTimeout('sliderReset()', 3000);
+}
+
+function sliderReset () {
+    sliderImages[count].style.opacity = '0';
+    count++;
+    if(count > (sliderImages.length -1) ) {
+        count = 0;
+    }
+    setTimeout('nextSlide()', 500);
+}
+
+
+sliderReset();
