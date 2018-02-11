@@ -254,7 +254,7 @@ ul {
     }
 
     .ingridients {
-        right: 0;
+        margin: auto;
         position: static;
         width: 100%;
     }

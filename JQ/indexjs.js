@@ -1,58 +1,80 @@
-const stones = document.querySelector('.video');
 
 
 
-window.addEventListener('scroll', () => {
-    stones.style.top = (window.pageYOffset / 3) + 'px';
-})
+// HOMEDIV PARRALEX EFFECT
 
 window.addEventListener('scroll', parralex, false);
 
-function parralex() {
-    //     stones.style.top = (window.pageYOffset /3) + 'px';
+const homeDiv = document.querySelector('.video');
+
+function parralex () {
+    homeDiv.style.top = (window.pageYOffset / 3) + 'px';
 }
 
-window.addEventListener('scroll', function() {
-    yScrolll();
-    yScroll();
-});
+// /HOMEDIV PARRALEX EFFECT
 
 
-const picOne = document.getElementsByClassName('first-image')[0]
-const picTwo = document.getElementsByClassName('second-image')[0]
-const bioDiv = document.getElementsByClassName('bio-div')[0];
+
+// SMOOTH SCROOL PAGE EFFECT 
+
+let scrollY = 0;
+let distance = 40;
+const speed = 24;
+
+ 
+function autoscrollTo (el) {
+    let targetY = document.getElementById(el).offsetTop;
+    let bodyHeight = document.body.offsetHeight;
+    let currentY = yPos + window.innerHeight;
+    let animatior = setTimeout('autoscrollTo(\' '+el+' \')',speed);
+    if(currentY > bodyHeight) {
+        clearTimeout(animatior);
+    } else {
+        if(yPos < targetY - distance) {
+            scrollY = yPos + distance;
+            window.scroll(0, scrollY);
+        } else {
+            clearTimeout(animatior);
+        }
+    }
+}
+
+
+
+// /SMOOTH SCROOL PAGE EFFECT 
+
+
+
+
+
+// CONTACT LINKS ANIMATION  
+
+    
+window.addEventListener('scroll', yScroll);
 
 const contact = document.getElementsByClassName('contacts')[0];
-let div = document.getElementById('contact-links')
+let div = document.getElementById('contact-links');
 
 contact.addEventListener('click', () => {
     div.style.opacity = '1';
 });
 
-function yScrolll() {
-    let yPos = window.pageYOffset;
-    console.log(yPos);
-    if (yPos > 590) {
-        
-    }
-};
-
- 
-
-// contacts
+let yPos = window.pageYOffset;
 function yScroll() {
-    let yPos = window.pageYOffset;
-        if (yPos > 8) {
+    console.log(yPos);
+    if (yPos > 8) {
             div.style.opacity = '0';
-        }
-};
+        } 
+
+}
+
+// /CONTACT LINKS ANIMATION 
+
 
 
 
 // ABOUT SLIDER 
 
-const upArrow = document.querySelector('.next-arrow-up');
-const downArrow = document.querySelector('.next-arrow');
 const sliderImages = document.getElementsByClassName('slider-img');
 
 let count = 0;

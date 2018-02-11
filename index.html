@@ -17,8 +17,7 @@
     <script type="text/javascript" src="JQ/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="JQ/lightbox.min.js"></script>
 <!--    google fonts -->
-<link href="https://fonts.googleapis.com/css?family=Lato:400i" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato:400i" rel="stylesheet">
 
 </head>
 
@@ -34,9 +33,9 @@
   </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item  nav-link " href="">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#about">About</a>
-                    <a class="nav-item nav-link " href="#signatureChefDish">Signature Chef Dish</a>
+                    <a class="nav-item  nav-link " href="#" onclick="return false" onmousedown="autoscrollTo('home');">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#" onclick="return false"  onmousedown="autoscrollTo('about');" >About</a>
+                    <a class="nav-item nav-link " href="#" onclick="return false"  onmousedown="autoscrollTo('signatureChefDish');">Signature Chef Dish</a>
                     <a class="nav-item nav-link" href="recepie.html">Recipes</a>
                     <a class="nav-item nav-link" href="menu2.html">Menu</a>
                     <a class="nav-item nav-link contacts" href="#">Get in touch</a>
@@ -51,7 +50,7 @@
                 </div>
             </div>
         </nav>
-        <div class="video">
+        <div id="home" class="video">
             <video src="backgrphoto/landingvideo.mp4" autoplay="true" loop="true"></video>
 
             <div class="header-overlay"></div>
@@ -73,10 +72,10 @@
                 <div class="line-vertical"></div>
                 <div class="line-horizontal"></div>
                 <div class="text">
-                    <h2>Meet The Chef</h2>
+                    <h1>Meet The Chef</h1>
                     <p>Experienced Executive Chef with a demonstrated history of working in the hospitality industry. <br> Motivated and enthusiastic Chef who has a real passion for food, and who is sure to exceed your customer’s expectations.</p>
                     <a href="https://www.linkedin.com/in/marwan-slim-aa26b226/" target="_blank" class="my-linked-il">My
-                        <img src="svg/svg/linkedin.svg" alt="linked in logo" class="liked-in-logo">
+                        <img src="svg/svg/linkedin.svg" alt="liked-in-logo" class="liked-in-logo">
                     </a>
                 </div>
             </div>
@@ -93,8 +92,6 @@
                         </div>
                     </div>
                     <div class="slider">
-                        <!--<img class="next-arrow" src="images/next.png"></img>-->
-                        <!--<img class="next-arrow-up" src="images/next.png"></img>-->
                         <p>Fine Dining Experience</p>
                         <div class="arrow-dv"></div>
                         <div class="slider-images">
@@ -115,15 +112,8 @@
 
 
 
-
-
-
-
-
-
-
-
     <!--chef signature dish-->
+    
     <div id="signatureChefDish">
         <div class="gallery-grid">
             <div class="div-top">
@@ -185,15 +175,6 @@
 <link rel="stylesheet" href="https://snapwidget.com/stylesheets/snapwidget-lightbox.css" />
 <script src="https://snapwidget.com/js/snapwidget-lightbox.js"></script>
 <iframe src="https://snapwidget.com/embed/485325" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
-                <!--
-                 <div class="photo-overlay">
-                    <h4> Follow my Instagram</h4> 
-                    <br> 
-                    <br> 
-                    <br> 
-                    <a href="https://www.instagram.com/igor_pavlenko1" target="_blank">intagram<img src="" alt=""></a>  
-                </div>
--->
             </div>
 
 
@@ -202,9 +183,7 @@
 
     </div>
 
-
-
-    <!-- /Recepie Area -->
+    <!-- /chef signature dish -->
 
 
     <!--Footer Top Area Start-->
@@ -216,7 +195,7 @@
           
                 <!--/.container-->
                 <div class="top-arrow">
-                    <a href="#home"><i class="fa fa-angle-up"></i></a>
+                    <a href="#=" onclick="return false" onmousedown="resetScroller('home');">Back to top<i class="fa fa-angle-up">     </i></a>
                 </div>
                 <!-- /.top-arrow-->
             <!--/.footer-bg-->
