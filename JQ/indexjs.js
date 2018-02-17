@@ -1,4 +1,29 @@
 
+$( document ).ready(function() {
+    
+    
+    $('h1').fadeIn('slow');
+    
+    
+    
+    
+    // /HOMEDIV PARRALEX EFFECT
+    
+    $('.nav-scroll').click(function (e) {
+        e.preventDefault();
+        
+        let linkHref = $(this).attr('href');
+        
+        $('html, body').animate({
+            scrollTop: $(linkHref).offset().top
+            }, 1000);
+            
+    });
+
+    // SMOOTH SCROOL PAGE EFFECT 
+    
+});
+
 
 
 // HOMEDIV PARRALEX EFFECT
@@ -11,38 +36,12 @@ function parralex () {
     homeDiv.style.top = (window.pageYOffset / 3) + 'px';
 }
 
-// /HOMEDIV PARRALEX EFFECT
 
 
 
-// SMOOTH SCROOL PAGE EFFECT 
-
-let scrollY = 0;
-let distance = 40;
-const speed = 24;
-
- 
-function autoscrollTo (el) {
-    let targetY = document.getElementById(el).offsetTop;
-    let bodyHeight = document.body.offsetHeight;
-    let currentY = yPos + window.innerHeight;
-    let animatior = setTimeout('autoscrollTo(\' '+el+' \')',speed);
-    if(currentY > bodyHeight) {
-        clearTimeout(animatior);
-    } else {
-        if(yPos < targetY - distance) {
-            scrollY = yPos + distance;
-            window.scroll(0, scrollY);
-        } else {
-            clearTimeout(animatior);
-        }
-    }
-}
 
 
-
-// /SMOOTH SCROOL PAGE EFFECT 
-
+// /END  *** SMOOTH SCROOL PAGE EFFECT 
 
 
 
@@ -68,7 +67,7 @@ function yScroll() {
 
 }
 
-// /CONTACT LINKS ANIMATION 
+// /END  *** CONTACT LINKS ANIMATION 
 
 
 
@@ -95,3 +94,4 @@ function sliderReset () {
 
 
 sliderReset();
+

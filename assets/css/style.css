@@ -123,6 +123,7 @@ h1 {
     font-size: 1.9em;
     margin: 0;
     padding: 0;
+    display: none;
 }
 
 h2 {
@@ -386,7 +387,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2E2926', end
     width: 600px;
     right: 7%;
     top: 30%;
-     opacity: .05 ;
+     opacity: .1 ;
 }
 
 .container {
