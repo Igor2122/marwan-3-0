@@ -373,7 +373,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2E2926', end
 .chef-photo {
     position: absolute;
     top: 0;
-    right: 5%;
+    right: 2%;
     z-index: 1;
     height: 450px;
     margin: auto;
@@ -668,31 +668,7 @@ h3 {
 -------------------------------------------
 */
 
-.foodSecDiv {
-    height: 1200px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    text-align: center;
-}
 
-.item {
-    flex-grow: 1;
-    height: 500px;
-    background-color: grey;
-    margin-left: 10px;
-    flex-basis: 400px;
-    margin-top: 20px;
-}
-
-.foodSecDiv h3 {
-    text-align: center;
-    position: absolute;
-}
 
 /*
 -------------------------------------------
@@ -703,9 +679,20 @@ h3 {
 .footer-area {
     background: #222222;
     text-align: center;
-    height: 100px;
+    height: 50px;
 }
 
+.top-arrow {
+    position: fixed;
+    right: 5%;
+    top: 90%;
+    z-index: 2;
+}
+
+
+.nav-scroll > img {
+    width: 50px;
+}
 
 /* Media Queries */
 
