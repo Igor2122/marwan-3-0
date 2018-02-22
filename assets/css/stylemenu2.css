@@ -16,23 +16,6 @@ body {
 */
 
 @font-face {
-    font-family: headlines;
-    src: url('../../headerfont.ttf');
-}
-
-@font-face {
-    font-family: portfolio;
-    src: url('../../portfoliofont.ttf');
-}
-
-
-
-@font-face {
-    font-family: navfont;
-    src: url('../../navfont.ttf');
-}
-
-@font-face {
     font-family: aboutfont;
     src: url('../../aboutfont.ttf');
 }
@@ -61,13 +44,14 @@ body {
     display: grid;
     grid-column-gap: 100px;
     grid-template-columns: .5fr 1fr;
-    grid-template-rows: 75px minmax(950px, auto) minmax(950px, auto) 75px;
+    grid-template-rows: 75px minmax(950px, auto) minmax(950px, auto) 55px;
     grid-template-areas: "top top " "main . " "main . " "bottom bottom ";
 }
 
 .navbar a {
-    color: #88CDD6;
-    font-family: aboutfont;
+    color: #fff;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2em;
     margin-left: 25px;
 }
 
@@ -97,13 +81,12 @@ body {
 MAIN CONTENT LAYOUT 
 **************/
 
-
-
 .main {
     padding-top: 15%;
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 65%;
 }
 
 .main h2 {
@@ -123,17 +106,12 @@ h2 {
     text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.75);
 }
 
-.top-picture > img {
+.top-picture>img {
     position: absolute;
     top: 110px;
     left: 0;
 }
 
-.secondary-drop .ice-cubes-pic {
-    height: 200px;
-    position: absolute;
-    z-index: 1000;
-}
 
 
 
@@ -161,7 +139,7 @@ h2 {
     right: -5%;
     top: 80px;
     height: 150px;
-    width: 100%;
+    width: 60%;
     background-color: #9EA24E;
     opacity: .8;
     transform: translateX(20%);
@@ -176,7 +154,7 @@ h2 {
     position: absolute;
     bottom: 125px;
     height: 180px;
-    width: 115%;
+    width: 100%;
     background-color: #d6d6d6;
     transform: translateX(5%);
     z-index: 1;
@@ -192,12 +170,12 @@ h2 {
 }
 
 
-.secondary-drop > h4,
-.secondary-drop > p {
+.secondary-drop>h4,
+.secondary-drop>p {
     color: #fff;
     padding: 15px 0 0 0;
     text-transform: uppercase;
-/*    border-bottom: 2px solid green;*/
+    /*    border-bottom: 2px solid green;*/
     padding-bottom: 5px;
     border-width: 80%;
 }
@@ -212,9 +190,9 @@ h3 {
     z-index: 999;
 }
 
-    
-    
-    
+
+
+
 
 @font-face {
     font-family: listitemsfont;
@@ -225,8 +203,8 @@ h3 {
     background: #fff;
     position: absolute;
     z-index: 5;
-    right: -35%;
-    top: 20%;
+    right: -25%;
+    top: 25%;
     display: block;
     float: right;
     margin-right: 15px;
@@ -254,12 +232,12 @@ h3 {
 .images-logs:nth-child(even) {
     position: absolute;
     z-index: -1;
-/*    top: -15px;*/
+    /*    top: -15px;*/
     right: -40%;
     width: auto;
 }
 
-.top-picture > img {
+.top-picture>img {
     padding-top: 15px;
     width: 100%;
 }
@@ -313,9 +291,9 @@ h3 {
 
 
 }
- 
+
 .right {
-/*   background: red;*/
+    /*   background: red;*/
     width: 33%;
     height: auto;
     margin-left: 5%;
@@ -341,7 +319,7 @@ h5 {
     padding: 5% 0 2%;
 }
 
-.menu-list > p {
+.menu-list>p {
     color: white;
 }
 
@@ -361,7 +339,7 @@ h5 {
 
 @media all and (max-width: 480px) {
     .main {
-        width: 100%;
+        width: 60%;
     }
 
     .images-logs {
@@ -403,21 +381,21 @@ h5 {
         left: -10%;
     }
 
-    .top-picture > img {
+    .top-picture>img {
         position: absolute;
         top: 95px;
         left: 0;
     }
-    
+
     .buttonEnlarge {
-    position: absolute;
-    background: #fff;
-    z-index: 5;
-    right: -15%;
-    top: 40%;
-    display: block;
-    float: right;
-    margin-right: 15px;
-}
+        position: absolute;
+        background: #fff;
+        z-index: 5;
+        right: -15%;
+        top: 40%;
+        display: block;
+        float: right;
+        margin-right: 15px;
+    }
 
 }

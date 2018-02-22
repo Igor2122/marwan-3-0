@@ -54,7 +54,7 @@ body {
     position: absolute;
     z-index: 1;
     top: 0;
-    margin-top: 25%;
+    margin-top: 20%;
     left: -15%;
     padding-left: 1%;
     height: 50%;
@@ -63,26 +63,15 @@ body {
     transition: left 1s ease;
 }
 
-.share-icon,
-.facebook{
-    height: 20%;
-    width: 100%;
-    /*    -webkit-transition: width .5s ease;transition: width .5s ease;*/
+.icon {
+    width: 400px;
+    transition: all .1s ease;
 }
 
-/*
-.facebook {
-    background: url('../../svg/svg/004-facebook.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+h4 {
+    color: #fff;
+    font-size: 1.2em;
 }
-*/
-
-/*
-#social-media-share:hover .share-icon {
-    width: 180%;
-}
-*/
 
 #recipie-div {
     margin: 2% 0;
@@ -95,7 +84,7 @@ body {
     border-radius: 5px;
 }
 
-.share-icon > img {
+.share-icon>img {
     width: 55px;
     margin: auto;
 }
@@ -126,7 +115,7 @@ h2 {
     margin: auto;
 }
 
-ul > li {
+ul>li {
     font-family: Anton;
     font-size: 3.5vh;
     margin: 10px 0;
@@ -156,14 +145,13 @@ ul {
 
 /*         Medium screens     */
 
-
 @media(min-width: 100px) {
-.ingridients {
-    width: 40%;
-/*    position: absolute;*/
-    top: 9%;
-    right: -5%;
-}
+    .ingridients {
+        width: 40%;
+        /*    position: absolute;*/
+        top: 9%;
+        right: -5%;
+    }
 
 
 
@@ -171,7 +159,6 @@ ul {
 
 
 /* iPads (portrait and landscape) ----------- */
-
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     #mainimage {
