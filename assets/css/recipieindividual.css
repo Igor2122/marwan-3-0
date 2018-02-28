@@ -33,9 +33,10 @@ body {
 /******** LAYOUT    *********/
 
 .back-arrow {
+    width: 45px;
     position: absolute;
     left: 13%;
-    top: 15%;
+    top: 13%;
     z-index: 99;
     -webkit-transition: -webkit-transform .5s ease;
     transition: -webkit-transform .5s ease;
@@ -97,12 +98,12 @@ h4 {
     width: 300px;
     position: absolute;
     margin: 20% 0 0 10%;
-    border-radius: 10px;
+    border-radius: 5px;
     opacity: .5;
 }
 
 h1 {
-    font-size: 8vh;
+    font-size: 5vh;
     letter-spacing: 8px;
     margin-top: 1%;
     text-align: center;
@@ -111,8 +112,9 @@ h1 {
 
 h2 {
     font-family: cursive;
-    font-size: 6vh;
+    font-size: 4vh;
     margin: auto;
+    font-weight: bolder;
 }
 
 ul>li {

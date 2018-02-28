@@ -1059,7 +1059,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2E2926', end
 
 
     .about-area {
-        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
+        height: 80vh;
     }
 
     .bottom,
@@ -1067,16 +1068,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2E2926', end
     .line-vertical,
     .line-horizontal,
     .slider-div,
-    .random-txt-pic {
+    .random-txt-pic,
+    .photo{
         display: none;
     }
 
     .text {
+        margin-top: 200px;
         width: 80%;
+        margin: auto;
     }
 
     .text > h2 {
-        margin-top: 45%;
         font-size: 1.6em;
     }
 
