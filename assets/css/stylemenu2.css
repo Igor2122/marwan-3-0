@@ -285,6 +285,12 @@ h3 {
     height: auto;
 }
 
+.closeButton {
+    position:absolute;
+    top:10%;
+    right:10%;
+}
+
 .menu-content {
     width: 80%;
     color: #fff;
@@ -340,15 +346,15 @@ h5 {
 @media all and (max-width: 1690px) {}
 
 @media all and (max-width: 1280px) {
-    ...
+    
 }
 
 @media all and (max-width: 980px) {
-    ...
+    
 }
 
 @media all and (max-width: 736px) {
-    ...
+    
 }
 
 @media all and (max-width: 480px) {
@@ -360,7 +366,15 @@ h5 {
         height: 50%;
         top: 45%;
     }
-    ;
+    .content {
+    width: 95%;
+    
+    }
+    
+    .top {
+        font-size: .5rem;
+    }
+
 
     .main-drop {
         top: 30px;
@@ -410,6 +424,13 @@ h5 {
         display: block;
         float: right;
         margin-right: 15px;
+    }
+    
+    .closeButton {
+        position: fixed;
+        width: 15px;
+        top: 2%;
+        right: 4%;
     }
 
 }

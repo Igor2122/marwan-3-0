@@ -28,7 +28,11 @@ body {
     grid-template-columns: .2fr 1fr;
     grid-auto-rows: minmax(20px, 70px)  minmax(100px, auto) minmax(100px, auto);
     grid-template-areas:
-        "navdiv navdiv" "menulist menu" "menulist menu"
+        "navdiv menu" "menulist menu" "menulist menu"
+    -ms-grid-template-columns: .2fr 1fr;
+    -ms-grid-auto-rows: minmax(20px, 70px)  minmax(100px, auto) minmax(100px, auto);
+    -ms-grid-template-areas:
+        "navdiv menu" "menulist menu" "menulist menu"
 }
 
 .navigation {
@@ -86,15 +90,16 @@ body {
     position: absolute;
     height: 200px;
     top: -10px;
-    left: -100px;
+    /*left: -100px;*/
 }
 
 .div-list-recepie>.herbs {
-    width: 150px;
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 150px
+    /*width: 150px;*/
+    /*z-index: 1;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 150px*/
+    display: none;
 }
 
 .div-list-recepie>.top-backdrop {
@@ -441,17 +446,16 @@ h5 {
         padding: 0;
     }
 
-/*
-    #main-content {
-        height: 100vh;
-        display: grid;
-        grid-row-gap: 40px;
-        grid-template-columns: .2fr 1fr;
-        grid-auto-rows:minmax(100px, auto)  minmax(100px, auto) minmax(100px, auto);
-        grid-template-areas:
-        "navdiv navdiv"  "menulist menu" "menulist menu"
-    }
-*/
+
+    /*#main-content {*/
+    /*    height: 100vh;*/
+    /*    display: grid;*/
+    /*    grid-template-columns: .2fr 1fr;*/
+    /*    grid-auto-rows:minmax(50px, auto)  minmax(100px, auto) minmax(100px, auto);*/
+    /*    grid-template-areas:*/
+    /*    "navdiv menu"  "menulist menu" "menulist menu"*/
+    /*}*/
+
 
     .div-list-recepie {
         display: flex;
@@ -519,8 +523,18 @@ h5 {
     grid-template-columns: .2fr 1fr;
     grid-auto-rows: minmax(20px, 70px)  minmax(100px, auto) minmax(100px, auto);
     grid-template-areas:
-        "navdiv navdiv" "menulist menu" "menulist menu"
+        "menulist menu" "menulist menu" "menulist menu"
 }
+
+    .navigation {
+        display: none;
+    }    
+
+    .home-icon-small {
+        position: absolute;
+        top: 2%;
+        left: 25px;
+    }
 
     h1,
     h2 {
