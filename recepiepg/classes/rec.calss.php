@@ -5,29 +5,38 @@ include_once 'rec.I.class.php';
 class RecDB implements RecDBIntrface
 {
     
-    public  $pdo;
+    
+    // private $host = ;
+    // private $usr = ;
+    // private $pass = ;
+    // private $dbname = ;
     
     function __construct()
     {
         
+        
     }
     
-    function query()
+    function connect()
     {
-        $host = 'localhost';
-        $usr = 'root';
-        $pass = '';
-        $dbname = 'recepies';
+        $this->host = 'localhost';
+        $this->user = 'root';
+        $this->pass = '';
+        $this->dbname = 'recepies';
         
-        $dsn = 'mysql:host='. $host . ';dbname='. $dbname;
+        try {
+            $dsn = "mysql:host=". $this->host . ";dbname=". $this->dbname;
         
-        $pdo = new PDO($dsn, $usr, $pass);
+            $pdo = new PDO($dsn, $this->user, $this->pass);
         
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $pdo;    
+        } catch (PDOException $e ) {
+            echo "Connection failed" .$e->getMessage();
+        }
         
-        $stmt = $pdo->query('SELECT * FROM recep');
         
-        return $stmt;
+        
     }
     
     

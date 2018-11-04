@@ -2,13 +2,16 @@
 
 include_once 'inc/_header.php';
 
-include_once 'inc/_nav.php';
+// include_once 'inc/_nav.php';
  
  
 include_once 'classes/rec.calss.php';
         
         $con = new RecDB();
-        $res = $con->query();
+        $res = $con->connect();
+        
+        echo gettype($res);
+        
         
 
         // while($row = $res->fetch()){
@@ -43,7 +46,7 @@ include_once 'classes/rec.calss.php';
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="img/<?= $rec->image ?>" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title"><?= $rec->name ?></h5>
+                  <h5 class="card-title"><?= $rec['name']?></h5>
                   <p class="card-text"><?= $rec->description ?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
