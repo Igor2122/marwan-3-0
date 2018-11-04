@@ -1,7 +1,7 @@
 <?php include_once 'inc/_header.php'?>
 
-    <header>
-      <?php include_once 'inc/_nav.php'?>
+    
+<?php include_once 'inc/_nav.php'?>
       
       
     <main role="main">
@@ -19,7 +19,25 @@
 
       <div class="album py-5 bg-light">
         <div class="container">
-
+        <?php 
+        
+        include_once 'classes/rec.calss.php';
+        
+        $con = new RecDB();
+        $res = $con->query();
+        
+        
+        
+        
+        while($row = $res->fetch()){
+          echo $row->name;
+        }
+        
+        
+        
+        
+        
+        ?>
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">

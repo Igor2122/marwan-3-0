@@ -4,17 +4,15 @@ include_once 'rec.I.class.php';
 
 class RecDB implements RecDBIntrface
 {
-    const DB_NAME = '../news.db';
     
-    private $_db = 'null';
-    
+    public  $pdo;
     
     function __construct()
     {
         
     }
     
-    function connect()
+    function query()
     {
         $host = 'localhost';
         $usr = 'root';
@@ -27,7 +25,9 @@ class RecDB implements RecDBIntrface
         
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         
-        $stmt = $pdo->query('SELECT * FROM posts');
+        $stmt = $pdo->query('SELECT * FROM recep');
+        
+        return $stmt;
     }
     
     
