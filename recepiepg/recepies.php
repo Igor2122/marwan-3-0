@@ -36,12 +36,15 @@ include_once 'classes/rec.calss.php';
       <div class="album py-5 bg-light">
         <div class="container">
           <div class="row">
-            <?php foreach($res as $rec) :?>
+            
+        <?php foreach($res as $rec) :?>
+        
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="img/<?= $rec->image ?>" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text"><?= $rec->name ?></p>
+                  <h5 class="card-title"><?= $rec->name ?></h5>
+                  <p class="card-text"><?= $rec->description ?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -52,7 +55,9 @@ include_once 'classes/rec.calss.php';
                 </div>
               </div>
             </div>
-            <?php endforeach?>
+            
+        <?php endforeach?>
+            
           </div>
         </div>
       </div>
