@@ -9,7 +9,8 @@ interface RecDBIntrface
         $ingredients, 
         $directions, 
         $level, 
-        $description);
+        $description,
+        $image);
     function getRec();
     function delRec();
 }

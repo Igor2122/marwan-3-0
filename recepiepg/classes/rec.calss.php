@@ -31,12 +31,10 @@ class RecDB implements RecDBIntrface
     }
     
     
-    function saveRec($name, 
-        $category, 
-        $ingredients, 
-        $directions, 
-        $level, 
-        $description){}
+    function saveRec($name, $category, $ingredients, $directions, $level, $description, $image)
+    {
+        
+    }
     function getRec(){}
     function delRec(){}
     
