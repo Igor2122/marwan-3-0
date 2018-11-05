@@ -1,5 +1,6 @@
 <?php include_once '../inc/_header.php'?>
-<?php include_once '../inc/_nav.php'?>
+<?php //include_once '../inc/_nav.php'?>
+<?php include_once '../classes/addrec.class.php'?>
 
 
     <div class="container-fluid mt-md-5">
@@ -96,20 +97,31 @@
           </div>
           
           
-          
         <div class="container w-75">
-          <form>
+          <form method="post">
               <div class="form-group">
                   <label for="usr">Name:</label>
-                  <input type="text" class="form-control" id="usr">
+                  <input name="name" type="text" class="form-control" id="usr">
+              </div>
+              <div class="form-group">
+                  <label for="comment">Category:</label>
+                  <textarea name="category" class="form-control" rows="5" id="comment" name="text"></textarea>
               </div>
               <div class="form-group">
                   <label for="comment">Ingridients:</label>
-                  <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                  <textarea name="ingredients" class="form-control" rows="5" id="comment" name="text"></textarea>
               </div>
               <div class="form-group">
                   <label for="comment">Directions:</label>
-                  <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                  <textarea name="directions" class="form-control" rows="5" id="comment" name="text"></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="comment">Level</label>
+                  <textarea name="level" class="form-control" rows="5" id="comment" name="text"></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="comment">Description</label>
+                  <textarea name="description" class="form-control" rows="5" id="comment" name="text"></textarea>
               </div>
               <div class="form-group">
                   <label for="exampleFormControlFile1">Example file input</label>
