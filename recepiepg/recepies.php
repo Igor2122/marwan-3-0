@@ -9,9 +9,11 @@ include_once 'classes/recep.class.php';
         
         $con = new Recep();
         $res = $con->getAllRec();
+        // $con->insert('test' , 'item1, item2, item3', 'tram.jpeg');
+        
         $count = $con->getUsersWithCountCheck();
         
-        echo $count['name'];
+        // echo $count['name'];
 ?>
 
     
@@ -41,7 +43,17 @@ include_once 'classes/recep.class.php';
                 <img class="card-img-top" src="img/<?= $rec['image'] ?>" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title"><?= $rec['name']?></h5>
-                  <p class="card-text"><?= $rec['description'] ?></p>
+                  <p class="card-text">
+                    <?php $des = $rec['description']; 
+                          $li = explode(",", $des);
+                    ?>
+                    <?php foreach($li as $l) :?>
+                      <ul class="list-group">
+                        <li class="list-group-item"><?= $l?></li>
+                      </ul>
+                    <?php endforeach?>                  
+                            
+                    </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
