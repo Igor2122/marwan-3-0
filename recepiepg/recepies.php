@@ -9,9 +9,9 @@ include_once 'classes/recep.class.php';
         
         $con = new Recep();
         $res = $con->getAllRec();
+        $count = $con->getUsersWithCountCheck();
         
-        echo gettype($res);
-
+        echo $count['name'];
 ?>
 
     
