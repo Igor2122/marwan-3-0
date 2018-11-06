@@ -45,13 +45,17 @@ class Recep extends RecDB
         
         
         // Helper functions 
-        function showListOfIngridAndRecDirectn($val){
+        function showListOfIngridAndRecDirectn($val, $count){
             $li = explode(",", $val);
-            
+            $loop = 0;
             foreach($li as $l){
+                $loop ++;
                 echo "<ul class='list-group'>";
                     echo "<li class='list-group-item'>$l</li>";
                 echo "</ul>";
+                if($count-1 == $loop){
+                    break;
+                }
             }
         }
     }

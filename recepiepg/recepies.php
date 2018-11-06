@@ -45,7 +45,7 @@ include_once 'classes/recep.class.php';
                   <h5 class="card-title"><?= $rec['name']?></h5>
                     <p class="card-text">
                       <?php 
-                        $con->showListOfIngridAndRecDirectn($rec['description']);
+                        $con->showListOfIngridAndRecDirectn($rec['description'], 5);
                       ?>
                     </p>
                   <div class="d-flex justify-content-between align-items-center">
