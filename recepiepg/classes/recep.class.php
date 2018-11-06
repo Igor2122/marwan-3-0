@@ -39,46 +39,21 @@ class Recep extends RecDB
                 // exit;
         }
         
+    }
+    
+    
         
-        //           $des = $rec['description']; 
-        //                   $li = explode(",", $des);
-        //             
-        //            php foreach($li as $l) :
-        //               <ul class="list-group">
-        //                 <li class="list-group-item"><?= $l</li>
-        //               </ul>
-        //              endforeach
         
         // Helper functions 
-        function showListOfIngridients ($arr){
-            $li = explode(",", $arr);
+        function showListOfIngridAndRecDirectn($val){
+            $li = explode(",", $val);
             
             foreach($li as $l){
                 echo "<ul class='list-group'>";
-                    echo "<li class='list-group-item'><?= $l</li>";
+                    echo "<li class='list-group-item'>$l</li>";
                 echo "</ul>";
             }
         }
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    // public function getUsersWithCountCheck(){
-    //     $id = 2;
-    //     $stmt = $this->connect()->prepare("SELECT * FROM recep WHERE img_id=?");
-    //     $stmt->execute([$id]);
-        
-    //     if($stmt->rowCount()){
-    //         return $stmt->fetch();
-    //     } else {
-            
-    //     }
-    // }
-}
