@@ -8,10 +8,6 @@ class Recep extends RecDB
         $this->connect();
     }
     
-    // function getAllRec(){
-    //     $stmt = $this->connect()->query("SELECT * FROM recep");
-    //     return $stmt;
-    // }
     // Fetching all recep with PDO
     function getAllRec(){
         $stmt = $this->connect()->prepare("SELECT * FROM recep");
@@ -19,23 +15,31 @@ class Recep extends RecDB
         return $stmt->fetchAll();
     }
     
-    public function getUsersWithCountCheck(){
-        $id = 2;
-        
-        
-        $stmt = $this->connect()->prepare("SELECT * FROM recep WHERE img_id=?");
-        $stmt->execute([$id]);
-        
-        if($stmt->rowCount()){
-            return $stmt->fetch();
-        } else {
-            
-        }
-    }
     
     function insert($name, $description, $image){
         $stmt = $this->connect()->query(
             "INSERT INTO recep(name, description , image) 
             VALUES('$name', '$description', '$image')");
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // public function getUsersWithCountCheck(){
+    //     $id = 2;
+    //     $stmt = $this->connect()->prepare("SELECT * FROM recep WHERE img_id=?");
+    //     $stmt->execute([$id]);
+        
+    //     if($stmt->rowCount()){
+    //         return $stmt->fetch();
+    //     } else {
+            
+    //     }
+    // }
 }

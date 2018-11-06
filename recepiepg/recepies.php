@@ -11,7 +11,7 @@ include_once 'classes/recep.class.php';
         $res = $con->getAllRec();
         // $con->insert('test' , 'item1, item2, item3', 'tram.jpeg');
         
-        $count = $con->getUsersWithCountCheck();
+        // $count = $con->getUsersWithCountCheck();
         
         // echo $count['name'];
 ?>

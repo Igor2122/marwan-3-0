@@ -1,6 +1,8 @@
 <?php include_once '../inc/_header.php'?>
 <?php //include_once '../inc/_nav.php'?>
-<?php include_once '../classes/addrec.class.php'?>
+<?php 
+  include_once '../classes/addReceps.class.php';
+?>
 
 
     <div class="container-fluid mt-md-5">
@@ -104,8 +106,12 @@
                   <input name="name" type="text" class="form-control" id="usr">
               </div>
               <div class="form-group">
-                  <label for="comment">Category:</label>
-                  <textarea name="category" class="form-control" rows="5" id="comment" name="text"></textarea>
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select name="category" class="form-control" id="exampleFormControlSelect1">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
               </div>
               <div class="form-group">
                   <label for="comment">Ingridients:</label>
