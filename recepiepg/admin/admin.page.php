@@ -1,6 +1,7 @@
-<?php include_once '../inc/_header.php'?>
-<?php //include_once '../inc/_nav.php'?>
-<?php 
+<?php include_once '../inc/_header.php';
+ 
+  //include_once '../inc/_nav.php'
+ 
   include_once '../classes/addReceps.class.php';
 ?>
 

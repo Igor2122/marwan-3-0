@@ -38,6 +38,27 @@ class Recep extends RecDB
                 echo $msg = " There was a problem ";
                 // exit;
         }
+        
+        
+        //           $des = $rec['description']; 
+        //                   $li = explode(",", $des);
+        //             
+        //            php foreach($li as $l) :
+        //               <ul class="list-group">
+        //                 <li class="list-group-item"><?= $l</li>
+        //               </ul>
+        //              endforeach
+        
+        // Helper functions 
+        function showListOfIngridients ($arr){
+            $li = explode(",", $arr);
+            
+            foreach($li as $l){
+                echo "<ul class='list-group'>";
+                    echo "<li class='list-group-item'><?= $l</li>";
+                echo "</ul>";
+            }
+        }
     }
     
     

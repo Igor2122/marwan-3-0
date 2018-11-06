@@ -10,10 +10,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $level = $_POST['level'];
     $description = $_POST['description'];
     
-    
-    
-    
-    
     $addingRecep = new Recep();
     $addingRecep->insert($name, $category, $ingredients, $directions, $level, $description);
 }
