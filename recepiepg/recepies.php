@@ -10,6 +10,9 @@ include_once 'classes/recep.class.php';
         $res = $con->getAllRec();
 ?>
 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>-->
+
+
     
       
       
@@ -31,7 +34,7 @@ include_once 'classes/recep.class.php';
           <div class="row">
             
         <?php foreach($res as $rec) :?>
-        
+        <h5><?= $rec['img_id']?></h5>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="img/<?= $rec['image'] ?>" alt="Card image cap">
@@ -75,8 +78,14 @@ include_once 'classes/recep.class.php';
                       </div>
                       <div class="col-md-6">
                         <?php 
-                          $con->showListOfIngridAndRecDirectn($rec['description'], 5);
+                          $con->showListOfIngridAndRecDirectn($rec['description'], 15);
                         ?>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h3>Directions</h3>
+                        <!--$con->showListOfIngridAndRecDirectn($rec['description'], 5);-->
                       </div>
                     </div>
                   </div>
