@@ -100,7 +100,7 @@
           
           
         <div class="container w-75">
-          <form method="post">
+          <form method="post" enctype="multipart/form-data">
               <div class="form-group">
                   <label for="usr">Name:</label>
                   <input name="name" type="text" class="form-control" id="usr">
@@ -131,7 +131,7 @@
               </div>
               <div class="form-group">
                   <label for="exampleFormControlFile1">Example file input</label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>

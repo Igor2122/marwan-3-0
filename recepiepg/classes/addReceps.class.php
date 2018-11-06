@@ -9,11 +9,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $directions = $_POST['directions'];
     $level = $_POST['level'];
     $description = $_POST['description'];
-    $image = $_POST['image'];
     
-    echo $category;
+    
+    
     
     
     $addingRecep = new Recep();
-    $addingRecep->insert($name, $default_domain, $image);
+    $addingRecep->insert($name, $category, $ingredients, $directions, $level, $description);
 }
