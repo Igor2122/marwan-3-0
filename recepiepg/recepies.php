@@ -2,18 +2,12 @@
 
 include_once 'inc/_header.php';
 
-// include_once 'inc/_nav.php';
- 
+include_once 'inc/_nav.php';
  
 include_once 'classes/recep.class.php';
         
         $con = new Recep();
         $res = $con->getAllRec();
-        // $con->insert('test' , 'item1, item2, item3', 'tram.jpeg');
-        
-        // $count = $con->getUsersWithCountCheck();
-        
-        // echo $count['name'];
 ?>
 
     
@@ -66,7 +60,7 @@ include_once 'classes/recep.class.php';
             
             <!-- Modals -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"><?= $rec['name']?></h5>
@@ -80,7 +74,9 @@ include_once 'classes/recep.class.php';
                         <img class="card-img-top" src="img/<?= $rec['image'] ?>" alt="Card image cap">
                       </div>
                       <div class="col-md-6">
-                        
+                        <?php 
+                          $con->showListOfIngridAndRecDirectn($rec['description'], 5);
+                        ?>
                       </div>
                     </div>
                   </div>
