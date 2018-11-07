@@ -14,6 +14,7 @@ include_once 'classes/recep.class.php';
          foreach ($res as $rec ) {
             echo "<div class='col-md-4'>";
               echo "<div class='card mb-4 box-shadow'>";
+              echo "<img class='card-img-top' src=" . 'img/' .  $rec['image']  . " alt='Card image cap'>";
                 echo "<div class='card-body'>";
                   echo "<h5 class='card-title'>" . $rec['name'] . " </h5>";
                     echo "<p class='card-text'>";
