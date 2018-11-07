@@ -1,3 +1,6 @@
+<?php 
+   include_once 'classes/recep.class.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +8,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Document</title>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </head>
+   <script src="js/main.js"></script>
 </head>
 <body>
-<?php
-function add($a,$b){
-  $c=$a+$b;
-  return $c;
-}
-?>
-<script>
-function phpadd() {
-  var padd = <?php echo add(1,2);?>; // call function to insert value
-  alert(padd);
-}
-</script>
-
-<button onclick='phpadd()'>add</button>
+   <script>
+      $(document).ready(function(){
+         var show = '$_POST';
+         $(".show").click(function(){
+             $(".container").load("load-data.php", {show});
+         });
+      });
+   </script>
+   <div class="container"></div>
+   <button class="show">Show data </button>
 </body>
 </html>

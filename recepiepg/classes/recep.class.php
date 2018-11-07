@@ -10,7 +10,7 @@ class Recep extends RecDB
     
     // Fetching all recep with PDO
     function getAllRec(){
-        $stmt = $this->connect()->prepare("SELECT * FROM recep");
+        $stmt = $this->connect()->prepare("SELECT * FROM recep WHERE categ_id=1");
         $stmt->execute();
         return $stmt->fetchAll();
     }
@@ -20,9 +20,7 @@ class Recep extends RecDB
         
         $location = "../img/" . basename($_FILES['image']['name']);
         
-        
         $img = $_FILES['image']['name'];
-        
         
         $stmt = $this->connect()->query(
                 
