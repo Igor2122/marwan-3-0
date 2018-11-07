@@ -1,0 +1,11 @@
+CREATE TABLE recep(
+img_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL ,
+    category VARCHAR(20),
+    ingredients VARCHAR(120) NOT NULL ,
+    directions VARCHAR(120) NOT NULL ,
+    level INT DEFAULT 1,
+    description VARCHAR(20) DEFAULT 'no description'
+);
+
+
