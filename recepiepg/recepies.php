@@ -34,7 +34,6 @@ include_once 'classes/recep.class.php';
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <button class="show" id="1">Show data </button>
               <?php 
                 include_once 'queryData/load-categor.php';
                ?>

@@ -12,7 +12,7 @@ class Recep extends RecDB
     // Fetching all recep with PDO
     function getAllRec($id)
     {
-        $stmt = $this->connect()->prepare("SELECT * FROM recep WHERE categ_id = :id");
+        $stmt = $this->connect()->prepare("SELECT img_id, name, categ_id, ingredients, directions, level, description, image FROM recep WHERE categ_id = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         return $stmt->fetchAll();
@@ -20,7 +20,7 @@ class Recep extends RecDB
 
     function getAllCategries()
     {
-        $stmt = $this->connect()->prepare("SELECT * FROM category");
+        $stmt = $this->connect()->prepare("SELECT categ_id, name FROM category");
         $stmt->execute();
         return $stmt->fetchAll();
     }
