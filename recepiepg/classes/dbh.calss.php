@@ -5,12 +5,6 @@ include_once 'rec.I.class.php';
 class RecDB implements RecDBIntrface
 {
     
-    
-    // private $host = ;
-    // private $usr = ;
-    // private $pass = ;
-    // private $dbname = ;
-    
     function __construct()
     {
         
@@ -21,7 +15,7 @@ class RecDB implements RecDBIntrface
     {
         $this->host = 'localhost';
         $this->user = 'root';
-        $this->pass = 'root';
+        $this->pass = '';
         $this->dbname = 'recepies';
         
         try {

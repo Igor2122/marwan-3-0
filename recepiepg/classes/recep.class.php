@@ -9,8 +9,9 @@ class Recep extends RecDB
     }
     
     // Fetching all recep with PDO
-    function getAllRec(){
-        $stmt = $this->connect()->prepare("SELECT * FROM recep ");
+    function getAllRec($id){
+        $stmt = $this->connect()->prepare("SELECT * FROM recep WHERE img_id = :id");
+        $stmt->bindParam(':id', $id);
         $stmt->execute();
         return $stmt->fetchAll();
     }

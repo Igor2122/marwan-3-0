@@ -6,8 +6,8 @@ include_once 'inc/_nav.php';
  
 include_once 'classes/recep.class.php';
         
-        $con = new Recep();
-        $res = $con->getAllRec();
+        // $con = new Recep();
+        // $res = $con->getAllRec();
 ?>
 
 <!--<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>-->
@@ -28,7 +28,17 @@ include_once 'classes/recep.class.php';
           </p>
         </div>
       </section>
-
+<script>
+      $(document).ready(function(){
+         var show = '$_POST';
+         $(".show").click(function(){
+            var id = $(this).prop("id")
+             $(".container").load("load-data.php", {show, id});
+         });
+      });
+   </script>
+   <div class="container"></div>
+   <button class="show" id="1">Show data </button>
       <div class="album py-5 bg-light">
         <div class="container">
           <div class="row">

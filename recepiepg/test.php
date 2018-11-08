@@ -18,11 +18,12 @@
       $(document).ready(function(){
          var show = '$_POST';
          $(".show").click(function(){
-             $(".container").load("load-data.php", {show});
+            var id = $(this).prop("id")
+             $(".container").load("load-data.php", {show, id});
          });
       });
    </script>
    <div class="container"></div>
-   <button class="show">Show data </button>
+   <button class="show" id="1">Show data </button>
 </body>
 </html>

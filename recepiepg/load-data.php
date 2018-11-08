@@ -3,11 +3,12 @@
 // 733838
 
 $show = $_POST;
+echo $postId = $_POST['id'];
 
 include_once 'classes/recep.class.php';
         
         $con = new Recep();
-        $res = $con->getAllRec();
+        $res = $con->getAllRec(23);
 
         if ($res) {
          # code...
