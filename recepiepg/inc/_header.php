@@ -23,7 +23,7 @@
     <!-- Custom styles for this template -->
     <link href="../css/main.css" rel="stylesheet">
     <link href="css/bt4.css" rel="stylesheet">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body>
