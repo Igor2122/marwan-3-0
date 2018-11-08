@@ -30,23 +30,34 @@ include_once 'classes/recep.class.php';
       </section>
 
    <!--<div class="container"></div>-->
-   <button class="show" id="1">Show data </button>
-      <div class="album py-5 bg-light">
-        <div class="container">
+
+   </div>
+   <div class="album py-5 bg-light">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-4">
+           <button class="show" id="1">Show data </button>
+            </div>
+            <div class="col-md-8">
+
+            
+          
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 qurResult">
               <script>
                 $(document).ready(function(){
                    var show = '$_POST';
                    $(".show").click(function(){
                       var id = $(this).prop("id")
-                       $(".col-md-4").load("load-data.php", {show, id});
+                       $(".qurResult").load("load-data.php", {show, id});
                    });
                 });
              </script>
             </div>
       
             
+          </div>
+          </div>
           </div>
         </div>
       </div>
