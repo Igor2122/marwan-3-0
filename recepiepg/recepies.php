@@ -3,7 +3,7 @@
 include_once 'inc/_header.php';
 
 include_once 'inc/_nav.php';
- 
+
 include_once 'classes/recep.class.php';
         
         // $con = new Recep();
@@ -29,40 +29,27 @@ include_once 'classes/recep.class.php';
         </div>
       </section>
 
-   <!--<div class="container"></div>-->
 
-   </div>
-   <div class="album py-5 bg-light">
-     <div class="container">
-       <div class="row">
-         <div class="col-md-4">
-           <button class="show" id="1">Show data </button>
-            </div>
-            <div class="col-md-8">
-
-            
-          
+      <div class="album py-5 bg-light">
+        <div class="container">
           <div class="row">
-            <div class="col-md-4 qurResult">
-              <script>
-                $(document).ready(function(){
-                   var show = '$_POST';
-                   $(".show").click(function(){
-                      var id = $(this).prop("id")
-                       $(".qurResult").load("load-data.php", {show, id});
-                   });
-                });
-             </script>
+            <div class="col-md-4">
+              <button class="show" id="1">Show data </button>
+              <?php 
+                include_once 'queryData/load-categor.php';
+               ?>
+              </div>
+              <div class="col-md-8">
+                <div class="row qurResult">
+                  <!-- lodading the reslult recepie data -->
+                  <script src="js/main.js"></script>
+                </div>
+              </div>
             </div>
-      
-            
-          </div>
-          </div>
           </div>
         </div>
-      </div>
 
-    </main>
+  </main>
 
     <?php include_once 'inc/_footer.php' ?>
 

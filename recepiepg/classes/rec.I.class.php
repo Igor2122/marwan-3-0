@@ -1,16 +1,17 @@
 <?php 
 
 
-interface RecDBIntrface 
+interface RecDBIntrface
 {
     function saveRec(
-        $name, 
-        $category, 
-        $ingredients, 
-        $directions, 
-        $level, 
+        $name,
+        $category,
+        $ingredients,
+        $directions,
+        $level,
         $description,
-        $image);
+        $image
+    );
     function getRec();
     function delRec();
 }

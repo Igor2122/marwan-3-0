@@ -1,8 +1,17 @@
-$(document).ready(function()
-{
+$(document).ready(function () {
+
     
-    
-    
+        var req = '$_POST';
+        $(".show").click(function () {
+            var id = $(this).prop("id");
+            $(".qurResult").load("queryData/load-recepies.php", {
+                req,
+                id
+            });
+        });
+
+
+
 });
 
 
@@ -44,6 +53,3 @@ $(document).ready(function()
 // { 
 //     $(this).removeData();
 // }) ;
-
-    
-
