@@ -79,9 +79,10 @@ class Recep extends RecDB
         $loop = 0;
         foreach ($li as $l) {
             $loop++;
-            echo "<ul class='list-group'>";
-            echo "<li class='list-group-item'>$l</li>";
+            echo "<ul class='list-group list-group-flush'>";
+                echo "<li class='list-group-item'>$l</li>";
             echo "</ul>";
+            
             if ($count - 1 == $loop) {
                 break;
             }

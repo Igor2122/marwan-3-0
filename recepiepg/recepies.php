@@ -17,10 +17,10 @@ include_once 'classes/recep.class.php';
       
       
     <main role="main">
-
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Album example</h1>
+          <h1 class="jumbotron-heading">Showcasing My Best Recepies</h1>
+          <h3>Sign up for News and Updates</h3>
           <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
           <p>
             <a href="#" class="btn btn-primary my-2">Main call to action</a>
