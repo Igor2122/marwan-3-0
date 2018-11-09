@@ -82,11 +82,30 @@ class Recep extends RecDB
             echo "<ul class='list-group list-group-flush'>";
                 echo "<li class='list-group-item'>$l</li>";
             echo "</ul>";
-            
+
             if ($count - 1 == $loop) {
                 break;
             }
         }
+    }
+
+    function showDishCookingLevel ($val)
+    {
+        switch ($val['level']) {
+            case 1:
+              echo "<h5 class='easy'>Easy</h5>";
+              break;
+            case 2:
+              echo "<h5 class='medium'>Medium</h5>";
+              break;
+            case 3:
+              echo "<h5 class='hard'>Hard</h5>";
+              break;
+            
+            default:
+              echo 'Easy';
+              break;
+          }
     }
 }
     

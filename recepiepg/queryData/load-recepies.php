@@ -21,13 +21,19 @@ $res = $con->getAllRec($postId);
         <h5 class="card-title"><?= $card['name'] ?></h5>
         <p><?= $card['level'] ?></p>
         <p class="card-text"><?= $card['description'] ?></p>
-        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         <button type="button" id="<?= $card['img_id'] ?>" class="btn btn-primary" data-toggle="modal" data-target="#id<?= $card['img_id'] ?>">
-          Show Recepie
-        </button>
+        Show Recepie
+      </button>
+      <span class="badge badge-light">
+        <?php 
+          $con->showDishCookingLevel($card['level']);
+        ?>
+      </span>
       </div>
     </div>
     
+
+    <!-- Recepie Modal Window -->
     <div class="modal" id="id<?= $card['img_id'] ?>" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

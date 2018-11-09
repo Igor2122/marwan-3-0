@@ -12,7 +12,7 @@ $result = $cat->getAllCategries();
       <ul class="nav flex-column">
          <li class="nav-item">
             <?php foreach($result as $li) :?>
-               <a class="nav-link" id="<?= $li['categ_id']?>" href="#"> <?= $li['name'] ?></a>
+               <h1><a class="nav-link" id="<?= $li['categ_id']?>" href="#"> <?= $li['name'] ?></a></h1>
             <?php endforeach ?>
          </li>
       </ul>
