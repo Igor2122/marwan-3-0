@@ -44,6 +44,9 @@ class Recep extends RecDB
             echo $msg = "Image Uploaded";
             echo 'success!';
             echo $location;
+            // prevent form submission on page reload
+            // header("Location: " . $_SERVER['REQUEST_URI']);
+            // exit();
         } else {
             echo $msg = " There was a problem ";
                 // exit;

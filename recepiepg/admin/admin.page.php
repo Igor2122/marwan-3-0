@@ -115,20 +115,25 @@
                 $res = $con->outputCategorisDropDown();
               ?>
               <div class="form-group">
-                  <label for="comment">Ingridients:</label>
+                  <label for="comment">Description</label>
+                  <textarea name="description" class="form-control" rows="5" id="comment" name="text"></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="comment">Ingridients: <small>Please input ',' separated values <br>ex: Ingr1, Ingr2, Ingr3 etc...</label>
                   <textarea name="ingredients" class="form-control" rows="5" id="comment" name="text"></textarea>
               </div>
               <div class="form-group">
-                  <label for="comment">Directions:</label>
+                  <label for="comment">Directions: <small>Please input ',' separated values <br>ex: Dir1, Dir2, Dir3 etc...</small></label>
                   <textarea name="directions" class="form-control" rows="5" id="comment" name="text"></textarea>
               </div>
               <div class="form-group">
-                  <label for="comment">Level</label>
-                  <textarea name="level" class="form-control" rows="5" id="comment" name="text"></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="comment">Description</label>
-                  <textarea name="description" class="form-control" rows="5" id="comment" name="text"></textarea>
+                <label for="exampleFormControlSelect1">Select Level</label>
+                <select name="level" class="form-control" id="exampleFormControlSelect1">
+                  <option value="1">Easy</option>
+                  <option value="2">Meium</option>
+                  <option value="3">Hard</option>
+                  <option value="4">Extra Hard</option>
+                </select>
               </div>
               <div class="form-group">
                   <label for="exampleFormControlFile1">Example file input</label>
