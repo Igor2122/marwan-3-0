@@ -7,12 +7,15 @@ include_once '../js.main.js';
 $cat = new Recep();
 $result = $cat->getAllCategries();
 
-foreach ($result as $li) {
-
-   echo "<ul class='nav flex-column'>";
-   echo "<li class='nav-item'>";
-   echo "<a class='nav-link' id=" . $li[categ_id]. "> " . $li['name'] . "</a>";
-   echo "</li>";
-   echo "</ul>";
-} 
-
+?>
+   <?php if($result) :?>
+      <ul class="nav flex-column">
+         <li class="nav-item">
+            <?php foreach($result as $li) :?>
+               <a class="nav-link" id="<?= $li['categ_id']?>" href="#"> <?= $li['name'] ?></a>
+            <?php endforeach ?>
+         </li>
+      </ul>
+   <?php else : ?>
+      <h2>No Results Found</h2>
+   <?php endif ?>
