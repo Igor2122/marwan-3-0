@@ -13,10 +13,10 @@ $res = $con->getAllRec($postId);
 
 ?>
 
-<?php if($res): ?>
-  <?php foreach($res as $card) : ?>
+<?php if ($res) : ?>
+  <?php foreach ($res as $card) : ?>
     <div class="card mt-3" style="width: 18rem;">
-      <img class="card-img-top" src="img/<?= $card['image']  ?>  " alt="Card image cap">
+      <img class="card-img-top" src="img/<?= $card['image'] ?>  " alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><?= $card['name'] ?></h5>
         <p><?= $card['level'] ?></p>
@@ -24,11 +24,11 @@ $res = $con->getAllRec($postId);
         <button type="button" id="<?= $card['img_id'] ?>" class="btn btn-primary" data-toggle="modal" data-target="#id<?= $card['img_id'] ?>">
         Show Recepie
       </button>
-      <span class="badge badge-light">
-        <?php 
-          $con->showDishCookingLevel($card['level']);
-        ?>
-      </span>
+          <span class="badge badge-light">
+            <?php 
+            $con->showDishCookingLevel($card['level']);
+            ?>
+          </span>
       </div>
     </div>
     
@@ -54,6 +54,11 @@ $res = $con->getAllRec($postId);
               <div class="col-md-8">
                 <div class="w-50 m-auto">
                   <h2>Ingredients:</h2>
+                    <span class="badge badge-light">
+                      <?php 
+                        $con->showDishCookingLevel($card['level']);
+                      ?>
+                    </span>
                   <div class="spacer m-5"></div>
                   <?php echo $con->showListOfIngridAndRecDirectn($card['ingredients'], 20) ?>
                 </div>
