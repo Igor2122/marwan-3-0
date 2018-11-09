@@ -99,6 +99,11 @@
             </div>
           </div>
           
+          <?php 
+            include_once '../classes/recep.class.php';
+            $con = new Recep();
+            // $res = $con->outputCategorisDropDown();
+          ?>
           
         <div class="container w-75">
           <form method="post" enctype="multipart/form-data">
@@ -106,14 +111,9 @@
                   <label for="usr">Name:</label>
                   <input name="name" type="text" class="form-control" id="usr">
               </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
-                <select name="category" class="form-control" id="exampleFormControlSelect1">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
+              <?php 
+                $res = $con->outputCategorisDropDown();
+              ?>
               <div class="form-group">
                   <label for="comment">Ingridients:</label>
                   <textarea name="ingredients" class="form-control" rows="5" id="comment" name="text"></textarea>
