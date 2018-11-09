@@ -31,21 +31,22 @@ include_once 'classes/recep.class.php';
 
 
       <div class="album py-5 bg-light">
-        <div class="container">
-          <div class="row">
+        
+          <div class="row w-75 mx-auto">
             <div class="col-md-4">
               <?php 
+              // query for recepie category side bar
                 include_once 'queryData/load-categor.php';
                ?>
               </div>
               <div class="col-md-8">
-                <div class="row qurResult">
+                <div class="d-flex flex-wrap justify-content-between qurResult">
                   <!-- lodading the reslult recepie data -->
                   <script src="js/main.js"></script>
                 </div>
               </div>
             </div>
-          </div>
+          
         </div>
 
   </main>

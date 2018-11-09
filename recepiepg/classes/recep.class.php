@@ -18,7 +18,7 @@ class Recep extends RecDB
         return $stmt->fetchAll();
     }
 
-        function getAllCategries()
+    function getAllCategries()
     {
         $stmt = $this->connect()->prepare("SELECT categ_id, name FROM category");
         $stmt->execute();
@@ -51,18 +51,18 @@ class Recep extends RecDB
 
     }
 
-    function outputCategorisDropDown ()
+    function outputCategorisDropDown()
     {
         $categ = $this->getAllCategries();
-        
+
         echo "<div class='form-group'>";
         echo "<label for='exampleFormControlSelect1'>Select Category</label>";
         echo "<select name='category' class='form-control' id='exampleFormControlSelect1'>";
-                    foreach ($categ as $cat ) {
-                  echo "<option value=" .$cat['categ_id'] ." >" .$cat['name'] . "</option>";
-                }
-                echo "</select>";
-              echo "</div>";
+        foreach ($categ as $cat) {
+            echo "<option value=" . $cat['categ_id'] . " >" . $cat['name'] . "</option>";
+        }
+        echo "</select>";
+        echo "</div>";
 
     }
     
