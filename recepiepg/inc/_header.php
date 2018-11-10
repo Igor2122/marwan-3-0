@@ -27,7 +27,7 @@
   
     <?php
       $page_name =  $_SERVER['PHP_SELF'];
-      if($page_name =='/recepiepg/admin/index.php'){
+      if($page_name =='/recepiepg/admin/index.php' || $page_name == '/recepiepg/admin/admin.page.signup.php'){
         echo '<link rel="stylesheet" href="../css/admin.css" type="text/css"/>';
         echo '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">';
       }
