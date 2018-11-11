@@ -9,7 +9,7 @@ include_once '../classes/recep.class.php';
 
 $con = new Recep();
 $res = $con->getAllRec($postId);
-// echo $con->showListOfIngridAndRecDirectn($rec['description'], 5);
+
 
 ?>
 
@@ -26,7 +26,7 @@ $res = $con->getAllRec($postId);
       </button>
           <span class="badge badge-light">
             <?php 
-            $con->showDishCookingLevel($card['level']);
+              $con->showDishCookingLevel($card['level']);
             ?>
           </span>
       </div>
@@ -49,7 +49,7 @@ $res = $con->getAllRec($postId);
           <div class="modal-body">
             <div class="row">
               <div class="col-md-4">
-                <img src="img/<?= $card['image'] ?>" alt="<?= $card['name'] ?>">
+                <img class="mw-100" src="img/<?= $card['image'] ?>" alt="<?= $card['name'] ?>">
               </div>
               <div class="col-md-8">
                 <div class="w-50 m-auto">
@@ -60,7 +60,7 @@ $res = $con->getAllRec($postId);
                       ?>
                     </span>
                   <div class="spacer m-5"></div>
-                  <?php echo $con->showListOfIngridAndRecDirectn($card['ingredients'], 20) ?>
+                  <?= $con->showListOfIngridAndRecDirectn($card['ingredients'], 20) ?>
                 </div>
               </div>
             </div>
