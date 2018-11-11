@@ -33,11 +33,11 @@ class User extends RecDB
     
     }
     
-    function (){
-        $this->connect();
+    // function (){
+    //     $this->connect();
         
         
-    }
+    // }
     
     
     

@@ -1,8 +1,8 @@
 <?php 
 
-include_once '../classes/recep.class.php';
+// include_once '../classes/recep.class.php';
 
-include_once '../js.main.js';
+// include_once '../js.main.js';
 
 $cat = new Recep();
 $result = $cat->getAllCategries();
