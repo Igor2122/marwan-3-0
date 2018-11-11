@@ -1,5 +1,5 @@
 <?php 
-   include_once 'classes/recep.class.php';
+   include_once 'classes/User.class.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,15 +15,17 @@
 </head>
 <body>
    <script>
-      $(document).ready(function(){
-         var show = '$_POST';
-         $(".show").click(function(){
-            var id = $(this).prop("id")
-             $(".container").load("load-data.php", {show, id});
-         });
-      });
+   //    $(document).ready(function(){
+   //       var show = '$_POST';
+   //       $(".show").click(function(){
+   //          var id = $(this).prop("id")
+   //           $(".container").load("load-data.php", {show, id});
+   //       });
+   //    });
    </script>
-   <div class="container"></div>
-   <button class="show" id="1">Show data </button>
+   <!--<div class="container"></div>-->
+   <!--<button class="show" id="1">Show data </button>-->
+   
+   
 </body>
 </html>

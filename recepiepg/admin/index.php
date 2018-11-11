@@ -1,14 +1,16 @@
 <?php 
     include_once '../inc/_header.php';
     
-    include_once '../classes/dbh.calss.php';
     
     if($_SERVER['REQUEST_METHOD']){
-        include_once 'inc/dbh.inc.php';
-    }
+        include_once 'inc/user.login.php';
+    } 
     
 ?>
 
+<script>
+    
+</script>
 
 <body>
   <div class="container">
@@ -17,10 +19,10 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
-            <form class="form-signin" action="inc/dbh.inc.php" method="POST" >
+            <form class="form-signin" action="inc/user.login.php" method="POST" >
               <div class="form-label-group">
-                <input name="uid" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label for="inputEmail">Email address</label>
+                <input name="uid" type="email" id="userEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="userEmail">Email address</label>
               </div>
 
               <div class="form-label-group">
