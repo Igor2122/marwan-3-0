@@ -21,7 +21,7 @@ class User extends RecDB
         foreach($user as $user){
 
             if($user_id == $user['user_email'] && $user_pwd == $user['user_pwd']){
-                header('Location: https://marwan-3-0-updated-recepies-igdevelopers.c9users.io/recepiepg/recepies.php');
+                header('Location: https://marwan-3-0-updated-recepies-igdevelopers.c9users.io/recepiepg/admin/admin.page.php');
                 exit();
             } else {
                 echo 'Wrong login details';
@@ -33,11 +33,17 @@ class User extends RecDB
     
     }
     
-    // function (){
-    //     $this->connect();
+    function addNewUser ($user_first, $user_last, $user_email, $user_uid, $user_pwd){
         
         
-    // }
+        $sql = "INSERT INTO users(user_first, user_last, user_email, user_uid, user_pwd)
+        VALUES('$user_first', '$user_last', '$user_email', '$user_uid', '$user_pwd')";
+        
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        
+        // ['user_first'=> $title, ['user_last'] => $user_last, ['user_email'] = > $user_email, ['user_uid'] => $user_uid, ['user_pwd'] => $user_pwd
+    }
     
     
     

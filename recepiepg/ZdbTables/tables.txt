@@ -1,15 +1,55 @@
+-- MARWAN PROJECT 
+
+
 CREATE TABLE recep(
 img_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(20) NOT NULL ,
-    category VARCHAR(20),
+    categ_id INT default 1,
     ingredients VARCHAR(120) NOT NULL ,
     directions VARCHAR(120) NOT NULL ,
     level INT DEFAULT 1,
-    description VARCHAR(20) DEFAULT 'no description'
+    description VARCHAR(20) DEFAULT 'no description',
+    image VARCHAR(100)
 );
 
+drop table recep;
 
-LOGIN_DB
+create table category (
+    categ_id INT PRIMARY KEY AUTO_INCREMENT,
+    name varchar(30)
+);
+
+alter table recep
+add foreign key(categ_id)
+references category(categ_id)
+on delete cascade;
+
+
+
+insert into category(name)
+values('Dessert');
+
+select * from recep ;
+
+
+insert recep(name, categ_id, ingredients, directions, level, description, image)
+values('SoupTwo', 1, 'ingredients', 'directions', 1 , 'description', 'mini.jpeg');
+
+select * from recep;
+
+
+update recep 
+set ingredients = 
+'IngridientOne, 
+IngridientTwo, 
+IngridientThree, 
+IngridientFour, 
+IngridientFive';
+
+SELECT * FROM category;
+
+
+
 
 CREATE TABLE users (
     user_id int not null AUTO_INCREMENT PRIMARY KEY,
@@ -28,3 +68,9 @@ INSERT INTO users(
     user_uid,
     user_pwd
 ) VALUES ('John', 'Smith', 'john@gmail.com', 'john', 'pass');
+
+
+
+
+
+

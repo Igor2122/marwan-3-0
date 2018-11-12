@@ -15,7 +15,7 @@ class RecDB implements RecDBIntrface
     {
         $this->host = 'localhost';
         $this->user = 'root';
-        $this->pass = 'root';
+        $this->pass = '';
         $this->dbname = 'recepies';
 
         try {

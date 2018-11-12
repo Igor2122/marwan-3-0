@@ -91,7 +91,7 @@ class Recep extends RecDB
 
     function showDishCookingLevel ($val)
     {
-        switch ($val['level']) {
+        switch ($val) {
             case 1:
               echo "<h5 class='easy'>Easy</h5>";
               break;
