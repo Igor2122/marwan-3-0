@@ -91,7 +91,6 @@ class Recep extends RecDB
 
     function showDishCookingLevel ($val)
     {
-<<<<<<< HEAD
         switch ($val) {
             case 1:
               echo "<h5 class='easy'>Easy</h5>";
@@ -107,25 +106,6 @@ class Recep extends RecDB
               echo 'Easy';
               break;
           }
-=======
-        if($val){
-            switch ($val) {
-                case '1':
-                echo "<h5 class='easy'>Easy</h5>";
-                break;
-                case 2:
-                echo "<h5 class='medium'>Medium</h5>";
-                break;
-                case 3:
-                echo "<h5 class='hard'>Hard</h5>";
-                break;
-                
-                default:
-                echo 'Easy';
-                break;
-            }
-        }
->>>>>>> 5cc8ec8bd4647f166ba5a856acdefad3cc5acc44
     }
 }
     
