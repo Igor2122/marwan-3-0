@@ -21,7 +21,11 @@ class User extends RecDB
         foreach($user as $user){
 
             if($user_id == $user['user_email'] && $user_pwd == $user['user_pwd']){
+<<<<<<< HEAD
                 header('Location: https://marwan-3-0-updated-recepies-igdevelopers.c9users.io/recepiepg/admin/admin.page.php');
+=======
+                header('Location: ?recepies.php#');
+>>>>>>> 5cc8ec8bd4647f166ba5a856acdefad3cc5acc44
                 exit();
             } else {
                 echo 'Wrong login details';
