@@ -72,7 +72,7 @@ class Recep extends RecDB
     
         
         
-        // Helper functions 
+    // Helper functions 
     function showListOfIngridAndRecDirectn($val, $count)
     {
         $li = explode(",", $val);
@@ -107,6 +107,12 @@ class Recep extends RecDB
               break;
           }
     }
+    
+    
+    
+    
+    
+    
 }
     
     

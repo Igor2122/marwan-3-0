@@ -11,16 +11,11 @@ if(isset($_POST['submit'])){
     $user_uid = $_POST['uid'];
     $user_pwd = $_POST['pwd'];
     
-    
-    
-    echo $user_nameF, $user_lastN, $user_email, $user_id, $user_pwd;
-    
-    
-    
     $users = new User();
-    $users->addNewUser($user_nameF, $user_lastN, $user_email, $user_uid, $user_pwd);
     
-    
-    
-    
+    if($users->addNewUser($user_nameF, $user_lastN, $user_email, $user_uid, $user_pwd)){
+        header("Location: https://marwan-3-0-updated-recepies-igdevelopers.c9users.io/recepiepg/admin/admin.page.php");
+        exit();
+    };
+ 
 }
