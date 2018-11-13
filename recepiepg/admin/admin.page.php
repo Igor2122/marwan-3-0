@@ -175,20 +175,29 @@
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
+                  <th>#</th>
                   <th>Name:</th>
                   <th>Category</th>
                   <th>Level</th>
                   <th>Image</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <?php foreach($getAllRecep as $item) : ?>
-                    <td><?= $item['name'] ?></td>
-                    <td><?= $item['categ_id'] ?></td>
-                    <td><?= $item['level'] ?></td>
-                    <td>
-                      <img class="img-thumbnail w-25" src="../img/<?= $item['image'] ?>  " alt="Card image cap">
+                    <td class="align-middle"><?= $item['img_id'] ?></td>
+                    <td class="align-middle"><?= $item['name'] ?></td>
+                    <td class="align-middle"><?= $item['categ_id'] ?></td>
+                    <td class="align-middle"><?= $item['level'] ?></td>
+                    <td class="w-25">
+                      <img style="max-width: 25%; "class="mx-auto" src="../img/<?= $item['image'] ?>  " alt="Card image cap">
+                    </td>
+                    <td class="d-flex">
+                      <div class="d-flex flex-column justify-content-center">
+                        <button class="mx-auto  btn-primary">Delete</button>
+                        <button class="mx-auto my-1  btn-danger">Edit</button>
+                      </div>
                     </td>
                   <?php endforeach ?>
                 </tr>
