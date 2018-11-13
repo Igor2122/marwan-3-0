@@ -3,6 +3,14 @@
   include_once '../inc/_nav.php';
  
   include_once '../classes/addReceps.class.php';
+
+  include_once '../classes/recep.class.php';
+
+  $con = new Recep();
+
+  $getAllRecep = $con->getAllRecepNoid(null);
+
+
 ?>
 
 
@@ -99,64 +107,58 @@
             </div>
           </div>
           
-          <?php 
-            include_once '../classes/recep.class.php';
-            $con = new Recep();
-            // $res = $con->outputCategorisDropDown();
-          ?>
-    
-<div id="accordion">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Add Recepies 
-        </button>
-      </h5>
-    </div>
-    <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        <div class="container w-75">
-          <form method="post" enctype="multipart/form-data">
-              <div class="form-group">
-                  <label for="usr">Name:</label>
-                  <input name="name" type="text" class="form-control" id="usr">
+          
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Add Recepies 
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <div class="container w-75">
+                  <form method="post" enctype="multipart/form-data">
+                      <div class="form-group">
+                          <label for="usr">Name:</label>
+                          <input name="name" type="text" class="form-control" id="usr">
+                      </div>
+                      <?php 
+                        $res = $con->outputCategorisDropDown();
+                      ?>
+                      <div class="form-group">
+                          <label for="comment">Description</label>
+                          <textarea name="description" class="form-control" rows="5" id="comment" name="text"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label for="comment">Ingridients: <small>Please input ',' separated values <br>ex: Ingr1, Ingr2, Ingr3 etc...</label>
+                          <textarea name="ingredients" class="form-control" rows="5" id="comment" name="text"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label for="comment">Directions: <small>Please input ',' separated values <br>ex: Dir1, Dir2, Dir3 etc...</small></label>
+                          <textarea name="directions" class="form-control" rows="5" id="comment" name="text"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Select Level</label>
+                        <select name="level" class="form-control" id="exampleFormControlSelect1">
+                          <option value="1">Easy</option>
+                          <option value="2">Meium</option>
+                          <option value="3">Hard</option>
+                          <option value="4">Extra Hard</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleFormControlFile1">Example file input</label>
+                          <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
               </div>
-              <?php 
-                $res = $con->outputCategorisDropDown();
-              ?>
-              <div class="form-group">
-                  <label for="comment">Description</label>
-                  <textarea name="description" class="form-control" rows="5" id="comment" name="text"></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="comment">Ingridients: <small>Please input ',' separated values <br>ex: Ingr1, Ingr2, Ingr3 etc...</label>
-                  <textarea name="ingredients" class="form-control" rows="5" id="comment" name="text"></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="comment">Directions: <small>Please input ',' separated values <br>ex: Dir1, Dir2, Dir3 etc...</small></label>
-                  <textarea name="directions" class="form-control" rows="5" id="comment" name="text"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Select Level</label>
-                <select name="level" class="form-control" id="exampleFormControlSelect1">
-                  <option value="1">Easy</option>
-                  <option value="2">Meium</option>
-                  <option value="3">Hard</option>
-                  <option value="4">Extra Hard</option>
-                </select>
-              </div>
-              <div class="form-group">
-                  <label for="exampleFormControlFile1">Example file input</label>
-                  <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-      </div>
-    </div>
-  </div>
-
-</div>    
+            </div>
+          </div>
+        </div>    
     
     
     
@@ -168,26 +170,27 @@
           
           
           
-         </div>
           <h2>Section title</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
+                  <th>Name:</th>
+                  <th>Category</th>
+                  <th>Level</th>
+                  <th>Image</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
+                  <?php foreach($getAllRecep as $item) : ?>
+                    <td><?= $item['name'] ?></td>
+                    <td><?= $item['categ_id'] ?></td>
+                    <td><?= $item['level'] ?></td>
+                    <td>
+                      <img class="img-thumbnail w-25" src="../img/<?= $item['image'] ?>  " alt="Card image cap">
+                    </td>
+                  <?php endforeach ?>
                 </tr>
                 
               </tbody>

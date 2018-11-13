@@ -18,6 +18,13 @@ class Recep extends RecDB
         return $stmt->fetchAll();
     }
 
+    function getAllRecepNoid ()
+    {
+        $stmt = $this->connect()->prepare("Select name, categ_id, ingredients, directions, level, description, image FROM recep");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     function getAllCategries()
     {
         $stmt = $this->connect()->prepare("SELECT categ_id, name FROM category");
