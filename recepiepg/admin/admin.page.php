@@ -6,6 +6,12 @@
 
   include_once '../classes/recep.class.php';
 
+  
+
+  include_once 'inc/delete.recep.php';
+
+  
+
   $con = new Recep();
 
   $getAllRecep = $con->getAllRecepNoid(null);
@@ -97,8 +103,8 @@
             <h1 class="h2">Dashboard</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
+                <button type="submit" class="btn btn-sm btn-outline-secondary">Share</button>
+                <button type="submit" class="btn btn-sm btn-outline-secondary">Export</button>
               </div>
               <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
                 <span data-feather="calendar"></span>
@@ -195,8 +201,10 @@
                     </td>
                     <td class="d-flex">
                       <div class="d-flex flex-column justify-content-center">
-                        <button class="mx-auto  btn-primary">Delete</button>
-                        <button class="mx-auto my-1  btn-danger">Edit</button>
+                        <form method="POST">
+                          <button name="delete" type="submit" class="mx-auto  btn-primary">Delete</button>
+                          <button name="edit" class="mx-auto my-1  btn-danger">Edit</button>
+                        </form>
                       </div>
                     </td>
                   <?php endforeach ?>
