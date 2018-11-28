@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Button } from 'reactstrap';
-import Layout from './containers/Layout/Lyout';
+import classes from './App.css';
+import Layout from './containers/Layout/Layout';
 
 class App extends Component {
+
   render() {
-    return (
-      <div className="App">
-        <Layout/>
-      </div>
+    return(
+      <Layout/>
     );
+    
   }
 }
 
-export default App;
+export default App;// higher order component 
