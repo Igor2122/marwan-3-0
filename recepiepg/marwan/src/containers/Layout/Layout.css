@@ -1,4 +1,5 @@
 .Parent {
-   grid-template-columns: 12px 12px 12px;
-   grid-template-rows: 12px 12px 12px;
+   height: 100vh;
+   width: 100%;
+   background: paleturquoise;
 }

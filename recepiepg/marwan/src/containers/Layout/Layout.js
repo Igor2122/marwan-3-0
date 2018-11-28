@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
-import classes from './'
+import classes from './Layout.css';
 import Navigation from '../Navigation/Navigation';
-
+import Home from '../Home/Home';
 class Layout extends Component {
 
     render () {
     return (
-       <div>
+       <div className={classes.Parent}>
           <div>
              <Navigation />
           </div>
-          <div>Content</div>
+          <div>
+             <Home />
+          </div>
+          
+          
        </div>
       );  
    }
