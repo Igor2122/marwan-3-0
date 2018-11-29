@@ -30,7 +30,6 @@
             level, 
             description, 
             image
-            FROM 
             FROM recep';
             
         // Query

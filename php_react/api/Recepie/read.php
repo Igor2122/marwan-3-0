@@ -35,9 +35,9 @@
             extract($row);
             
             $post_item = array(
-                'id' => $id,
+                'img_id' => $img_id,
                 'name' => $name,
-                'body' => html_entity_decode($body)
+                'ingredients' => html_entity_decode($ingredients)
             );
             
             array_push($recep_arr['data'], $post_item);
