@@ -1,15 +1,18 @@
 <?php 
 
-// 733838
+
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
+
+include_once '../classes/recep.class.php';
+
 
 $show = $_POST;
 $postId = $_POST['id'];
 
-include_once '../classes/recep.class.php';
 
 $con = new Recep();
 $res = $con->getAllRec($postId);
-
 
 ?>
 

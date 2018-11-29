@@ -5,6 +5,7 @@
 $cat = new Recep();
 $result = $cat->getAllCategries();
 
+
 ?>
    <?php if($result) :?>
       <ul class="nav flex-column">
