@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 // eslint-disable-next-line
 import axios from 'axios';
 import classes from './App.css';
-import Layout from './containers/Layout/Layout';
 import { BrowserRouter } from 'react-router-dom'
+import Recep from './components/Recep';
 
 class App extends Component {
 
@@ -15,26 +15,26 @@ class App extends Component {
   componentDidMount () {
     
     axios.get('http://localhost:8888/marwan4.0/php_react/api/Recepie/read.php')
+    // axios.get('https://jsonplaceholder.typicode.com/posts')
     .then(response => {
-      console.log(typeof(response.data));
-      this.setState({recep: response.data});
+      console.log(response.data, typeof(response.data));
+      this.setState({recep: response.data.recepies});
       
     });
   }
   
   render() {
 
-    // const recep = this.state.recep.map(post => {
-    //   return {
-
-    //   }
-    // }
-
-    // )
+    const recepies = this.state.recep.map(post => {
+      return <Recep 
+              key={post.img_id}
+              name={post.name} />
+    }
+    )
 
     return(
-      <div>
-
+      <div className="row">
+        {recepies}
       </div>
       
     );

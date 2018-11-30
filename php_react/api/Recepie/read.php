@@ -31,7 +31,7 @@
     
     if($num > 0) { // there are some recepies
         $recep_arr = array();
-        $recep_arr['data'] = array();
+        $recep_arr['recepies'] = array();
         
         while( $row = $res->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
@@ -47,7 +47,7 @@
                 'image' => $image,
             );
             
-            array_push($recep_arr['data'], $post_item);
+            array_push($recep_arr['recepies'], $post_item);
         }
         
         // Turn to JSON
