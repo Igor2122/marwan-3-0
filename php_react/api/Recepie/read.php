@@ -1,5 +1,7 @@
 <?php 
 
+
+    // location: http://localhost:8888/marwan4.0/php_react/api/Recepie/read.php 
     // Headers 
     
     header('Access-Control-Allow-Origin: *');
@@ -37,7 +39,12 @@
             $post_item = array(
                 'img_id' => $img_id,
                 'name' => $name,
-                'ingredients' => html_entity_decode($ingredients)
+                'categ_id' => $categ_id,
+                'ingredients' => html_entity_decode($ingredients),
+                'directions' => html_entity_decode($directions),
+                'level' => $level,
+                'description' => html_entity_decode($description),
+                'image' => $image,
             );
             
             array_push($recep_arr['data'], $post_item);
