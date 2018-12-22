@@ -1,57 +1,60 @@
 // eslint-disable-next-line
-import React from 'react';
-import classes from './Navigation.css';
+import React, { Component } from 'react';
+import classNamees from './Navigation.css';
 // eslint-disable-next-line
 import { Route, NavLink, Switch } from 'react-router-dom';
 
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 
-const navigation = (props) => {
-return (
-   <div>
-      
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><NavLink to="/">Home</NavLink> <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><NavLink to="/recepies">Recepies</NavLink></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-   
-  </div>
-</nav>
-   
-   
-   </div>
-   
-   
-   
-   
 
-);
+
+class Navigation extends Component {
+   
+   state = {
+      isOpen: false
+   }
+   
+   toggle = () => {
+      this.setState({
+         isOpen: !this.state.isOpen
+      });
+   }
+   
+   
+   render() {
+      return (
+         <div>
+           <Navbar color="light" light expand="md">
+             <NavbarBrand href="/">reactstrap</NavbarBrand>
+             <NavbarToggler onClick={this.toggle} />
+             <Collapse isOpen={this.state.isOpen} navbar>
+               <Nav className="ml-auto" navbar>
+                 <NavItem>
+                   <NavLink to="/">Home</NavLink> 
+                 </NavItem>
+                 <NavItem>
+                   <NavLink to="/recepies">Recepies</NavLink> 
+                 </NavItem>
+               </Nav>
+             </Collapse>
+           </Navbar>
+         </div>
+         
+         
+         );
+      }
 }
 
 
-
-export default navigation;
+export default Navigation;
