@@ -14,12 +14,13 @@ class Recepie extends Component {
   }
 
   componentDidMount () {
-    axios.get('http://localhost:8888/marwan4.0/php_react/api/Recepie/read.php')
+    // axios.get('http://localhost:8888/marwan4.0/php_react/api/Recepie/read.php')
     // axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then(response => {
-      console.log(response.data, typeof(response.data));
-      this.setState({recep: response.data.recepies});
-    });
+    // axios.get('https://marwan-4-0-igdevelopers.c9users.io/php_react/api/Recepie/read.php')
+    // .then(response => {
+    //   console.log(response.data, typeof(response.data));
+    //   this.setState({recep: response.data.recepies});
+    // });
   }
   
   render() {
@@ -37,7 +38,7 @@ class Recepie extends Component {
         <div className="col-md-3"></div>
         <div className="col-md-9">
           <div className="d-flex justify-content-around">
-            {recepies}
+            <h1>Recepies</h1>
           </div>         
         </div>
       </div>

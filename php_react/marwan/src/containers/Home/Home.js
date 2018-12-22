@@ -5,11 +5,7 @@ const home = () => {
 return (
    <div className={classes.Home}>
    <h1>Home</h1> 
-   <h1>Home</h1> 
-   <h1>Home</h1> 
-   <h1>Home</h1> 
-   <h1>Home</h1> 
-   <h1>Home</h1> 
+   <h1>Home2</h1> 
    </div>
 );
 }
