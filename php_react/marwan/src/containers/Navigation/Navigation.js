@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // eslint-disable-next-line
 import classNamees from './Navigation.css';
 // eslint-disable-next-line
-import { Link } from 'react-router-dom';
+import { NavLink as CstmNavLink  } from 'react-router-dom';
 // eslint-disable-next-line
 import {  NavLink } from 'reactstrap';
 import {
@@ -38,17 +38,17 @@ class Navigation extends Component {
    
    render() {
       return (
-         <div className="container">
-           <Navbar color="light" light expand="sm" >
+         <div>
+           <Navbar color="primary" light expand="sm" >
              <NavbarToggler onClick={this.toggle} />
              <NavbarBrand href="/">reactstrap</NavbarBrand>
              <Collapse isOpen={this.state.isOpen} navbar>
-               <Nav className="ml-auto" navbar>
+               <Nav className="ml-auto " navbar>
                  <NavItem>
-                   <NavLink tag={Link} to="/">Home</NavLink> 
+                   <NavLink tag={CstmNavLink} to="/" >Home</NavLink> 
                  </NavItem>
                  <NavItem>
-                   <NavLink tag={Link} to="/recepies">Home</NavLink> 
+                   <NavLink tag={CstmNavLink} to="/recepies">Recepies</NavLink> 
                  </NavItem>
                </Nav>
              </Collapse>
