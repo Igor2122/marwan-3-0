@@ -1,9 +1,11 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import classNamees from './Navigation.css';
 // eslint-disable-next-line
-import { Route, NavLink, Switch } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+// eslint-disable-next-line
+import {  NavLink } from 'reactstrap';
 import {
   Collapse,
   Navbar,
@@ -11,10 +13,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+   } from 'reactstrap';
+   
+//   UncontrolledDropdown,
+//   DropdownToggle,
+//   DropdownMenu,
+//   DropdownItem
 
 
 
@@ -34,17 +38,17 @@ class Navigation extends Component {
    
    render() {
       return (
-         <div>
-           <Navbar color="light" light expand="md">
-             <NavbarBrand href="/">reactstrap</NavbarBrand>
+         <div className="container">
+           <Navbar color="light" light expand="sm" >
              <NavbarToggler onClick={this.toggle} />
+             <NavbarBrand href="/">reactstrap</NavbarBrand>
              <Collapse isOpen={this.state.isOpen} navbar>
                <Nav className="ml-auto" navbar>
                  <NavItem>
-                   <NavLink to="/">Home</NavLink> 
+                   <NavLink tag={Link} to="/">Home</NavLink> 
                  </NavItem>
                  <NavItem>
-                   <NavLink to="/recepies">Recepies</NavLink> 
+                   <NavLink tag={Link} to="/recepies">Home</NavLink> 
                  </NavItem>
                </Nav>
              </Collapse>
