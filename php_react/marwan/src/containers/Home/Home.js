@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classes from './Home.css';
 // import { videoTagString, VideoTag } from 'react-video-tag'
 
 // <VideoTag src={mySrc} poster={myPoster} />
-class Home extends Component {
+const home = ()=> {
 
-   state = {
-      video: 'http://techslides.com/demos/sample-videos/small.mp4'
-      // video: 'http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4'
-   }
-   render() {
+   const video = 'http://techslides.com/demos/sample-videos/small.mp4';
       return (
          <div>
-              <video className={classes.BackgroundVideo} loop autoPlay>
-               <source src={this.state.video} type="video/mp4" />
+         <div className={classes.MainTagline}>
+            <h1>Portfolio</h1>
+            <h2>Chef Marwan Slim</h2>
+         </div>
+              <video className={classes.BackgroundVideo} loop >{/*autoPlay */}
+               <source src={video} type="video/mp4" />
              Your browser does not support the video tag.
             </video>
           </div>
       );
-   }
-}
+};
 
 
 
-export default Home;
+export default home;

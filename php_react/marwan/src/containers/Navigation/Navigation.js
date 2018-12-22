@@ -36,14 +36,14 @@ class Navigation extends Component {
    }
    
    
+            //  <NavbarBrand href="/">reactstrap</NavbarBrand>
    render() {
       return (
          <div>
            <Navbar color="primary" light expand="sm" >
              <NavbarToggler onClick={this.toggle} />
-             <NavbarBrand href="/">reactstrap</NavbarBrand>
              <Collapse isOpen={this.state.isOpen} navbar>
-               <Nav className="ml-auto " navbar>
+               <Nav className="mr-auto " navbar>
                  <NavItem>
                    <NavLink tag={CstmNavLink} to="/" >Home</NavLink> 
                  </NavItem>

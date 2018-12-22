@@ -8,17 +8,17 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Menu from './containers/Navigation/Navigation';
 import Home from './containers/Home/Home';
 import Recepies from './containers/Recepies/Recepies';
-import { Container, Row, Col } from 'reactstrap';
+import {  Row, Col } from 'reactstrap';
+
 
 // <Route path="/" exact component={Home}></Route>
 // <Route path="/recepies" exact component={Recepies}></Route>
 class App extends Component {
 
-
   render() {
     return(
         <BrowserRouter>
-          <div className="Component">
+          <div className={classes.Component}>
           <Menu />
               <Row>
                 <Col>
