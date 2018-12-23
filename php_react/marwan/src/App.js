@@ -8,7 +8,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Menu from './containers/Navigation/Navigation';
 import Home from './containers/Home/Home';
 import Recepies from './containers/Recepies/Recepies';
-import {  Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 
 // <Route path="/" exact component={Home}></Route>

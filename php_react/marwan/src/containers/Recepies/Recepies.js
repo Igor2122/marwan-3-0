@@ -24,6 +24,7 @@ class Recepie extends Component {
   }
   
   render() {
+    // eslint-disable-next-line
     const recepies = this.state.recep.map(post => {
       return <Recep 
               key={post.img_id}

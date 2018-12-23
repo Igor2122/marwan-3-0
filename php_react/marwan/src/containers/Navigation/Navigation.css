@@ -1,11 +1,10 @@
-.Menu {
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-   width: 60%;
-   background: purple;
-   height: 100px;
+.Navbar {
+   margin-top: 1%;
+   position: absolute;
+   z-index: 3;
+   width: 100%;
    color: #fff;
-   text-decoration: none;
-   list-style-type: none;
+   font-family: 'Bree Serif', serif;
+   font-size: 1.2em;
+   margin-left: 25px;
 }

@@ -1,0 +1,39 @@
+@font-face {
+    font-family: headlines;
+    src: url('../../assets/fonts/headerfont.ttf');
+}
+
+@font-face {
+    font-family: portfolio;
+    src: url('../../assets/fonts/portfoliofont.ttf');
+}
+
+
+.Home {
+   height: 90vh;
+   background: blue;
+}
+
+.BackgroundVideo {
+   height: 100%;
+   width: 100%;
+}
+
+.MainTagline {
+   position: absolute;
+   z-index: 3;
+   top: 25%;
+   left: 10%;
+   
+}
+
+.MainTagline>h1 {
+   font-family: portfolio;
+   color: yellow;
+}
+
+.MainTagline>h2 {
+   font-family: headlines;
+   color: #fff;
+   
+}

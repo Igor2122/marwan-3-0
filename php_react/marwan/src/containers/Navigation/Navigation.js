@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
 // eslint-disable-next-line
-import classNamees from './Navigation.css';
+import classes from './Navigation.css';
 // eslint-disable-next-line
 import { NavLink as CstmNavLink  } from 'react-router-dom';
 // eslint-disable-next-line
@@ -10,6 +10,7 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
+  // eslint-disable-next-line
   NavbarBrand,
   Nav,
   NavItem,
@@ -37,10 +38,11 @@ class Navigation extends Component {
    
    
             //  <NavbarBrand href="/">reactstrap</NavbarBrand>
+            // color="primary"
    render() {
       return (
-         <div>
-           <Navbar color="primary" light expand="sm" >
+         <div className={classes.Navbar}>
+           <Navbar   expand="sm" >
              <NavbarToggler onClick={this.toggle} />
              <Collapse isOpen={this.state.isOpen} navbar>
                <Nav className="mr-auto " navbar>
