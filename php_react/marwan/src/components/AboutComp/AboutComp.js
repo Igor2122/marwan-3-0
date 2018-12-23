@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import classes from './AboutComp.css';
 import linkdnLogo from '../../assets/svg/linkedin.svg';
 import Img from 'react-image'
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 const aboutComp =() => {
         return (
@@ -20,7 +21,7 @@ const aboutComp =() => {
                             linkdnLogo,
                             'https://www.example.com/bar.jpg'
                             ]}
-                            
+                            loader=<Spinner />
                           />
                           </Col>
                         </Row>    
