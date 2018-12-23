@@ -12,3 +12,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+@font-face {
+    font-family: headlines;
+    src: url('./assets/fonts/headerfont.ttf');
+}
+
+@font-face {
+    font-family: portfolio;
+    src: url('./assets/fonts/portfoliofont.ttf');
+}
+
+h1 {
+   font-family: portfolio!important;
+   color: yellow !important;
+}
+
+h2 {
+   font-family: headlines !important;
+   color: #fff !important;
+   
+}
+
