@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import classes from './AboutComp.css';
 import linkdnLogo from '../../assets/svg/linkedin.svg';
 import Img from 'react-image'
+import Tag from '../Tags/Tags';
 import Spinner from '../../components/UI/Spinner/Spinner';
 
 const aboutComp =() => {
@@ -11,7 +12,7 @@ const aboutComp =() => {
                 <Row>
                   <Col xs="4">
                     <div className={classes.Tagline}>
-                        <h1>Meet the Chef</h1>
+                        <Tag type='h1' value='Meet The Chef'></Tag>
                         <p>Experienced Executive Chef with a demonstrated history of working in the hospitality industry. Motivated and enthusiastic Chef who has a real passion for food, and who is sure to exceed your customer’s expectations.</p>
                         <Row>
                           <Col xs="4"></Col>

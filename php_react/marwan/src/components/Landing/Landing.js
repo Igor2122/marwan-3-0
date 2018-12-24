@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './Landing.css';
 import Overlay from '../Overlay/Overlay';
+import Tag from '../Tags/Tags';
 
 
 class Landing extends Component {
@@ -21,8 +22,8 @@ class Landing extends Component {
                 <Overlay />
                 {videoTag}
                 <div className={classes.MainTagline}>
-                   <h1>Portfolio</h1>
-                   <h2>Chef Marwan Slim</h2>
+                   <Tag type='h1' value='Portfolio'></Tag>
+                   <Tag type='h2' value='Chef Marwan Slim'></Tag>
                 </div>
             </div>
         );
