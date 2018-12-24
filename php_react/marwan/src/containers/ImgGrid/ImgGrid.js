@@ -57,8 +57,14 @@ class Recepie extends Component {
                 <h4>DivSix</h4>
             </div>
             
-            <div className={classes.DivSeven}>    
-                <h4>Shrimp Cocktail</h4>
+            <div className={classes.DivSeven}>  
+                <h4>DivSeven</h4>
+            </div>
+            <div className={classes.DivEigtht}>  
+                <h4>DivEigtht</h4>
+            </div>
+            <div className={classes.DivNine}>  
+                <h4>DivNine</h4>
             </div>
            
           </div>
