@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Landing.css';
+
 import Overlay from '../Overlay/Overlay';
 import Tag from '../Tags/Tags';
 

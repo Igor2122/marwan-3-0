@@ -1,0 +1,62 @@
+.Recepies {
+   height: 90%;
+   background: red;
+}
+
+
+/*****         GRID DECLARATION      *******/
+
+.div-top {
+    grid-area: div-top;
+    text-align: center;
+}
+
+.div-one {
+    grid-area: div-one;
+    /*    background-color: red;*/
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-two {
+    grid-area: div-two;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-three {
+    grid-area: div-three;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-four {
+    grid-area: div-four;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-five {
+    grid-area: div-five;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-six {
+    grid-area: div-six;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-seven {
+    grid-area: div-seven;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}

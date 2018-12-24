@@ -16,7 +16,8 @@ const aboutComp =() => {
                         <p>Experienced Executive Chef with a demonstrated history of working in the hospitality industry. Motivated and enthusiastic Chef who has a real passion for food, and who is sure to exceed your customer’s expectations.</p>
                         <Row>
                           <Col xs="4"></Col>
-                          <Col xs="auto"><a href="https://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28left\%2C\%20rgba\%2863\%2C54\%2C42\%2C1\%29\%200\%25\%2C\%20rgba\%2821\%2C18\%2C14\%2C1\%29\%20100\%25\%29\%3B'">My Linkedin</a></Col>
+                          <Col xs="auto">
+                          <a href="https://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28left\%2C\%20rgba\%2863\%2C54\%2C42\%2C1\%29\%200\%25\%2C\%20rgba\%2821\%2C18\%2C14\%2C1\%29\%20100\%25\%29\%3B'">My Linkedin</a></Col>
                           <Col xs="4">
                           <Img width="35px" src={[
                             linkdnLogo,
@@ -30,7 +31,7 @@ const aboutComp =() => {
                     
                   </Col>
                   <Col xs="4">.col-auto - variable width content</Col>
-                  <Col xs="4">.col-3</Col>
+                  <Col xs="4"></Col>
                 </Row>
             </Container>
         );
