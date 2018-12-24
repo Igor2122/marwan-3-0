@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import classes from './ImgGrid.css';
 import Overlay from '../../components/Overlay/Overlay';
+import Image from 'react-image';
+import Spinner from '../../components/UI/Spinner/Spinner'
 
 
 
@@ -46,7 +48,8 @@ class Recepie extends Component {
             
             <div className={classes.DviOne}>
               <Overlay />
-                <h4>DviOne</h4>
+                <Image width="100%" src={this.state.images[0]}
+                loader={<Spinner />} />
             </div>
             
             <div className={classes.DivTwo}>    
