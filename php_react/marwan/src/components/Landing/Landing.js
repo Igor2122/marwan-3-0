@@ -26,6 +26,7 @@ class Landing extends Component {
                    <Tag type='h1' value='Portfolio'></Tag>
                    <Tag type='h2' value='Chef Marwan Slim'></Tag>
                 </div>
+                
             </div>
         );
     }

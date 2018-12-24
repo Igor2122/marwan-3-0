@@ -6,12 +6,22 @@
 
 /*****         GRID DECLARATION      *******/
 
+.GalleryGrid {
+    margin: 2% 1%;
+    height: 100vh;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 10% minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    grid-template-areas: "div-top div-top div-top div-top div-top div-top " "div-one div-one div-four div-five div-seven div-seven" "div-one div-one div-six div-six div-seven div-seven" "div-two div-three div-six div-six div-seven div-seven"
+}
+
 .div-top {
     grid-area: div-top;
     text-align: center;
 }
 
-.div-one {
+.DviOne {
     grid-area: div-one;
     /*    background-color: red;*/
     text-align: center;
@@ -19,42 +29,42 @@
     position: relative;
 }
 
-.div-two {
+.DivTwo {
     grid-area: div-two;
     text-align: center;
     overflow: hidden;
     position: relative;
 }
 
-.div-three {
+.DivThree {
     grid-area: div-three;
     text-align: center;
     overflow: hidden;
     position: relative;
 }
 
-.div-four {
+.DivFour {
     grid-area: div-four;
     text-align: center;
     overflow: hidden;
     position: relative;
 }
 
-.div-five {
+.DivFive {
     grid-area: div-five;
     text-align: center;
     overflow: hidden;
     position: relative;
 }
 
-.div-six {
+.DivSix {
     grid-area: div-six;
     text-align: center;
     overflow: hidden;
     position: relative;
 }
 
-.div-seven {
+.DivSeven {
     grid-area: div-seven;
     text-align: center;
     overflow: hidden;
