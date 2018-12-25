@@ -14,27 +14,31 @@ class Recepie extends Component {
 
   state = {
     images: [],
+    error: false,
   }
 
   componentDidMount() {
     // 
     // axios.get('http://localhost:8888/marwan4.0/php_react/api/Recepie/read.php')
     // axios.get('https://jsonplaceholder.typicode.com/posts')
-    
-    
+
+
     axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
-    .then(response => {
-      console.log(response.data, typeof(response.data));
-      let images = []
-      for (const key of response.data.data) {
-         images.push(key['images']['standard_resolution']['url']);
-      }
-      this.setState({images: images})
-      
-    });
-    
-   console.log(this.state.images);
-   
+      .then(response => {
+        console.log(response.data, typeof(response.data));
+        let images = []
+        for (const key of response.data.data) {
+          images.push(key['images']['standard_resolution']['url']);
+        }
+        this.setState({ images: images })
+      })
+      .catch(error => {
+        // console.log(error);
+        this.setState({ error: true });
+      });;
+
+    console.log(this.state.images);
+
   }
 
   render() {
