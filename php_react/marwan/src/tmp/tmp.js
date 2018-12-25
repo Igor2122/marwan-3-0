@@ -13,11 +13,13 @@ import Spinner from '../../components/UI/Spinner/Spinner'
 class Recepie extends Component {
 
   state = {
-    images: ['https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    'https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    'https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    'https://images.pexels.com/photos/355241/pexels-photo-355241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'],
+    images: [],
     error: false,
+  }
+  
+  renderGrid = () => {
+     
+        
   }
 
   componentDidMount() {
@@ -32,7 +34,6 @@ class Recepie extends Component {
     //     let images = []
     //     for (const key of response.data.data) {
     //       images.push(key['images']['standard_resolution']['url']);
-    //       console.log(images);
     //     }
     //     this.setState({ images: images })
     //   })
@@ -41,12 +42,22 @@ class Recepie extends Component {
     //     this.setState({ error: true });
     //   });;
 
-    // console.log(this.state.images);
+    console.log(this.state.images);
 
-  }
+     window.addEventListener("load", this.renderGrid);
+     window.addEventListener("resize", this.renderGrid);
+    
+    
+    
+    }
+    
+      
+  
 
   render() {
-
+    
+    
+    
     return (
 
       <div className={classes.GalleryGrid}>
@@ -56,24 +67,21 @@ class Recepie extends Component {
             
             <div className={classes.DviOne}>
               <Overlay />
-                <Image max-width="100%" height="100%" src={this.state.images[0]}
+                <Image width="100%" src={this.state.images[0]}
                 loader={<Spinner />} />
             </div>
             
             <div className={classes.DivTwo}>    
               <Overlay />
-                <Image max-width="100%" height="100%" src={this.state.images[1]}
-                loader={<Spinner />} />
+                <h4>DivTwo</h4>
             </div>
 
             <div className={classes.DivThree}>
-              <Image max-width="100%" height="100%" src={this.state.images[2]}
-                loader={<Spinner />} />
+              <h4>DivThree</h4>
             </div>
             
             <div className={classes.DivFour}>
-              <Image max-width="100%" height="100%" src={this.state.images[3]}
-                loader={<Spinner />} />
+                  <h4>DivFour</h4>      
             </div>
             
             <div className={classes.DivFive}>
