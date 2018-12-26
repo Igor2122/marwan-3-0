@@ -56,9 +56,9 @@ class Recepie extends Component {
     const gridClasses = ['DviOne', 'DivTwo', 'DivThree', 'DivFour', 'DivFive', 'DivSix', 'DivSeven', 'DivEigtht', 'DivNine' ]
 
     let outPut = [];
-    gridClasses.map(res =>  {
+    gridClasses.map((res, i) =>  {
         // console.log(res, typeof(res));
-        return outPut.push(<Element name={res} />);
+        return outPut.push(<Element key={res+i} name={res}  images={this.state.imagesThumb[i]}/>);
       });
       let cont = null
       cont = outPut.map(res => res);

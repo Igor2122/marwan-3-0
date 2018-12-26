@@ -1,3 +1,10 @@
+.AllImages {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
 .DviOne {
     grid-area: DviOne;
     background: red;
