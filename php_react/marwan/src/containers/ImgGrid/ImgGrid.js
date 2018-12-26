@@ -31,7 +31,7 @@ class Recepie extends Component {
         console.log(response.data, typeof(response.data));
         let images = []
         for (const key of response.data.data) {
-          images.push(key['images']['low_resolution']['url']);
+          images.push(key['images']['standard_resolution']['url']);
           console.log(key);
         }
         this.setState({ imagesThumb: images })
@@ -50,48 +50,49 @@ class Recepie extends Component {
     return (
 
       <div className={classes.GalleryGrid}>
-            <div className={classes.DivTop}>
-              <h4>DivTop</h4>
-            </div>
-            
-            <div className={classes.DviOne}>
-              <Overlay />
-                <Image max-width="100%" height="100%" src={this.state.imagesThumb[0]}
+            <div className={[classes.DviOne, classes.AllImages].join(' ')}>
+              {/* <Overlay /> */}
+                <Image   src={this.state.imagesThumb[0]}
                 loader={<Spinner />} />
             </div>
             
-            <div className={classes.DivTwo}>    
+            <div className={[classes.DivTwo, classes.AllImages].join(' ')}>    
               <Overlay />
-                <Image max-width="100%" height="100%" src={this.state.imagesThumb[1]}
+                <Image   src={this.state.imagesThumb[1]}
                 loader={<Spinner />} />
             </div>
 
-            <div className={classes.DivThree}>
-              <Image max-width="100%" height="100%" src={this.state.imagesThumb[2]}
+            <div className={[classes.DivThree, classes.AllImages].join(' ')}>
+              <Image   src={this.state.imagesThumb[2]}
                 loader={<Spinner />} />
             </div>
             
-            <div className={classes.DivFour}>
-              <Image max-width="100%" height="100%" src={this.state.imagesThumb[3]}
+            <div className={[classes.DivFour, classes.AllImages].join(' ')}>
+              <Image   src={this.state.imagesThumb[3]}
                 loader={<Spinner />} />
             </div>
             
-            <div className={classes.DivFive}>
-                <h4>DivFive</h4>
+            <div className={[classes.DivFive, classes.AllImages].join(' ')}>
+            <Image   src={this.state.imagesThumb[4]}
+                loader={<Spinner />} />
             </div>
             
-            <div className={classes.DivSix}>
-                <h4>DivSix</h4>
+            <div className={[classes.DivSix, classes.AllImages].join(' ')}>
+            <Image   src={this.state.imagesThumb[5]}
+                loader={<Spinner />} />
             </div>
             
-            <div className={classes.DivSeven}>  
-                <h4>DivSeven</h4>
+            <div className={[classes.DivSeven, classes.AllImages].join(' ')}>  
+            <Image   src={this.state.imagesThumb[6]}
+                loader={<Spinner />} />
             </div>
-            <div className={classes.DivEigtht}>  
-                <h4>DivEigtht</h4>
+            <div className={[classes.DivEigtht, classes.AllImages].join(' ')}>  
+            <Image   src={this.state.imagesThumb[7]}
+                loader={<Spinner />} />
             </div>
-            <div className={classes.DivNine}>  
-                <h4>DivNine</h4>
+            <div className={[classes.DivNine, classes.AllImages].join(' ')}>  
+            <Image   src={this.state.imagesThumb[8]}
+                loader={<Spinner />} />
             </div>
            
           </div>
