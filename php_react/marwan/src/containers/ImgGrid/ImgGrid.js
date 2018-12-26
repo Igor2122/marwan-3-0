@@ -5,7 +5,8 @@ import axios from 'axios';
 import classes from './ImgGrid.css';
 import Overlay from '../../components/Overlay/Overlay';
 import Image from 'react-image';
-import Spinner from '../../components/UI/Spinner/Spinner'
+import Spinner from '../../components/UI/Spinner/Spinner';
+import Element from '../../components/GridElement/GridElement';
 
 
 
@@ -45,59 +46,28 @@ class Recepie extends Component {
 
   }
 
+  genreateGrid = () => {
+
+    
+  }
+
   render() {
 
     const gridClasses = ['DviOne', 'DivTwo', 'DivThree', 'DivFour', 'DivFive', 'DivSix', 'DivSeven', 'DivEigtht', 'DivNine' ]
-    
+
+    let outPut = [];
+    gridClasses.map(res =>  {
+        // console.log(res, typeof(res));
+        return outPut.push(<Element name={res} />);
+      });
+      let cont = null
+      cont = outPut.map(res => res);
+
     return (
 
       <div className={classes.GalleryGrid}>
-            <div className={[classes.DviOne, classes.AllImages].join(' ')}>
-              {/* <Overlay /> */}
-                <Image className={classes.Image}   src={this.state.imagesThumb[0]}
-                loader={<Spinner />} />
-            </div>
-            
-            <div className={[classes.DivTwo, classes.AllImages].join(' ')}>    
-              <Overlay />
-                <Image className={classes.Image}   src={this.state.imagesThumb[1]}
-                loader={<Spinner />} />
-            </div>
-
-            <div className={[classes.DivThree, classes.AllImages].join(' ')}>
-              <Image className={classes.Image}   src={this.state.imagesThumb[2]}
-                loader={<Spinner />} />
-            </div>
-            
-            <div className={[classes.DivFour, classes.AllImages].join(' ')}>
-              <Image className={classes.Image}   src={this.state.imagesThumb[3]}
-                loader={<Spinner />} />
-            </div>
-            
-            <div className={[classes.DivFive, classes.AllImages].join(' ')}>
-            <Image className={classes.Image}   src={this.state.imagesThumb[4]}
-                loader={<Spinner />} />
-            </div>
-            
-            <div className={[classes.DivSix, classes.AllImages].join(' ')}>
-            <Image className={classes.Image}   src={this.state.imagesThumb[5]}
-                loader={<Spinner />} />
-            </div>
-            
-            <div className={[classes.DivSeven, classes.AllImages].join(' ')}>  
-            <Image className={classes.Image}   src={this.state.imagesThumb[6]}
-                loader={<Spinner />} />
-            </div>
-            <div className={[classes.DivEigtht, classes.AllImages].join(' ')}>  
-            <Image className={classes.Image}   src={this.state.imagesThumb[7]}
-                loader={<Spinner />} />
-            </div>
-            <div className={[classes.DivNine, classes.AllImages].join(' ')}>  
-            <Image className={classes.Image}   src={this.state.imagesThumb[8]}
-                loader={<Spinner />} />
-            </div>
-           
-          </div>
+        {cont}
+      </div>
 
     );
 

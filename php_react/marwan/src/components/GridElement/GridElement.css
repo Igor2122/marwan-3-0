@@ -1,0 +1,37 @@
+.DviOne {
+    grid-area: DviOne;
+    background: red;
+  }
+  
+  .DivTwo {
+    grid-area: DivTwo;
+  }
+  
+  .DivThree {
+    grid-area: DivThree;
+  }
+  
+  .DivFour {
+    grid-area: DivFour;
+  }
+  
+  .DivFive {
+    grid-area: DivFive;
+  }
+  
+  .DivSix {
+    grid-area: DivSix;
+  }
+  
+  .DivSeven {
+    grid-area: DivSeven;
+  }
+  .DivEigtht {
+    grid-area: DivEigtht;
+  }
+  .DivNine {
+    grid-area: DivNine;
+    background: red;
+  }
+  
+  
