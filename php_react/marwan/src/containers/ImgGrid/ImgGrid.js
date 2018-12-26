@@ -27,22 +27,22 @@ class Recepie extends Component {
     // axios.get('https://jsonplaceholder.typicode.com/posts')
 
 
-    // axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
-    //   .then(response => {
-    //     console.log(response.data, typeof(response.data));
-    //     let images = []
-    //     for (const key of response.data.data) {
-    //       images.push(key['images']['standard_resolution']['url']);
-    //       console.log(key);
-    //     }
-    //     this.setState({ imagesThumb: images })
-    //   })
-    //   .catch(error => {
-    //     // console.log(error);
-    //     this.setState({ error: true });
-    //   });;
+    axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
+      .then(response => {
+        console.log(response.data, typeof(response.data));
+        let images = []
+        for (const key of response.data.data) {
+          images.push(key['images']['standard_resolution']['url']);
+          console.log(key.likes);
+        }
+        this.setState({ imagesThumb: images })
+      })
+      .catch(error => {
+        // console.log(error);
+        this.setState({ error: true });
+      });;
 
-    // console.log(this.state.images);
+    console.log(this.state.images);
 
   }
 
@@ -58,7 +58,7 @@ class Recepie extends Component {
     let outPut = [];
     gridClasses.map((res, i) =>  {
         // console.log(res, typeof(res));
-        return outPut.push(<Element key={res+i} name={res}  images={this.state.imagesThumb[i]}/>);
+        return outPut.push(<Element key={res+i} name={res}   images={this.state.imagesThumb[i]}/>);
       });
       let cont = null
       cont = outPut.map(res => res);

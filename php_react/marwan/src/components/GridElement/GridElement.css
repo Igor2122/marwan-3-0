@@ -1,3 +1,28 @@
+
+@keyframes slide {
+    0% {scale: 0;  transform: translateX(0) scale(1)}
+    50% {scale: 1.1;  transform: translateX(20px) scale(1.1) }
+    100% { scale: 0; transform: translateX(0) scale(1)}
+  }
+
+.Animated {
+    position: absolute;
+    height: 180%;   
+    scale: 0;
+    top: 0;
+    left: -40px;
+    /* transform: translateX(-50%); */
+    /* transform: translateY(-30%); */
+    animation-duration: 10s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+/* Grid elements Layout */
+
 .AllImages {
     text-align: center;
     overflow: hidden;

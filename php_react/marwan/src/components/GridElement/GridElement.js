@@ -6,11 +6,13 @@ import Spinner from '../../components/UI/Spinner/Spinner'
 const element = (props)  => {
     return (
         <div className={[classes[props.name], classes.AllImages].join(' ')}>
-            <Img height="100%" src={[
+        <h3>{props.likes}</h3>
+            <Img src={[
                 props.images,
                 'https://www.example.com/bar.jpg'
                 ]}
                 loader={<Spinner />}
+                className={classes.Animated}
             />
         </div>
     );
