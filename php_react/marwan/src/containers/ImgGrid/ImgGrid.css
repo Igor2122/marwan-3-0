@@ -22,22 +22,20 @@
     "DivTwo DivThree DivSix DivSix DivEigtht DivNine"
 }
 
-.DivTop {
-    grid-area: DivTop;
-    text-align: center;
+
+.Image {
+    height: 130%;
 }
+
 
 .AllImages {
     text-align: center;
     overflow: hidden;
     position: relative;
-    
 }
 
 .DviOne {
     grid-area: DviOne;
-    /*    background-color: red;*/
-    
 }
 
 .DivTwo {
