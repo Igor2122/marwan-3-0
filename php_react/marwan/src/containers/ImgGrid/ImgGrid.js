@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 // eslint-disable-next-line
 import axios from 'axios';
 import classes from './ImgGrid.css';
+// eslint-disable-next-line
 import Overlay from '../../components/Overlay/Overlay';
+// eslint-disable-next-line
 import Image from 'react-image';
+// eslint-disable-next-line
 import Spinner from '../../components/UI/Spinner/Spinner';
-import Element from '../../components/GridElement/GridElement';
+import GridElement from '../../components/GridElement/GridElement';
 
 
 
@@ -27,22 +30,22 @@ class Recepie extends Component {
     // axios.get('https://jsonplaceholder.typicode.com/posts')
 
 
-    axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
-      .then(response => {
-        console.log(response.data, typeof(response.data));
-        let images = []
-        for (const key of response.data.data) {
-          images.push(key['images']['standard_resolution']['url']);
-          console.log(key.likes);
-        }
-        this.setState({ imagesThumb: images })
-      })
-      .catch(error => {
-        // console.log(error);
-        this.setState({ error: true });
-      });;
+    // axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
+    //   .then(response => {
+    //     console.log(response.data, typeof(response.data));
+    //     let images = []
+    //     for (const key of response.data.data) {
+    //       images.push(key['images']['standard_resolution']['url']);
+    //       console.log(key.likes);
+    //     }
+    //     this.setState({ imagesThumb: images })
+    //   })
+    //   .catch(error => {
+    //     // console.log(error);
+    //     this.setState({ error: true });
+    //   });;
 
-    console.log(this.state.images);
+    // console.log(this.state.images);
 
   }
 
@@ -52,21 +55,29 @@ class Recepie extends Component {
   }
 
   render() {
-
+    console.log(this.state.animationClasses, typeof(this.state.animationClasses))
+    
+    
     const gridClasses = ['DviOne', 'DivTwo', 'DivThree', 'DivFour', 'DivFive', 'DivSix', 'DivSeven', 'DivEigtht', 'DivNine' ]
+    const animationClasses = ['Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse']
+    
+    console.log(animationClasses[1]);
 
     let outPut = [];
     gridClasses.map((res, i) =>  {
         // console.log(res, typeof(res));
-        return outPut.push(<Element key={res+i} name={res}   images={this.state.imagesThumb[i]}/>);
+        return outPut.push(<GridElement 
+                  key={res+i} name={res} 
+                  images={this.state.imagesThumb[i]}
+                  animationClass={animationClasses[i]}/>);
       });
-      let cont = null
-      cont = outPut.map(res => res);
+      let gridItmes = null
+      gridItmes = outPut.map(res => res);
 
     return (
 
       <div className={classes.GalleryGrid}>
-        {cont}
+        {gridItmes}
       </div>
 
     );

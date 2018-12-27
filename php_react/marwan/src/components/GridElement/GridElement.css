@@ -1,20 +1,35 @@
 
 @keyframes slide {
-    0% {scale: 0;  transform: translateX(0) scale(1)}
+    0% {scale: 0;  transform: translateX(0) scale(1.2)}
     50% {scale: 1.1;  transform: translateX(20px) scale(1.1) }
-    100% { scale: 0; transform: translateX(0) scale(1)}
+    100% { scale: 0; transform: translateX(0) scale(1.2)}
+  }
+
+@keyframes slideReverse {
+    0% {scale: 0;  transform: translateX(0) scale(1.2)}
+    50% {scale: 1.1;  transform: translateX(-20px) scale(1  ) }
+    100% { scale: 0; transform: translateX(0) scale(1.2)}
   }
 
 .Animated {
     position: absolute;
     height: 180%;   
-    scale: 0;
+    top: 0;
+    left: -40px;
+    animation-duration: 15s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+}
+
+.AnimatedReverse {
+  position: absolute;
+    height: 180%;   
     top: 0;
     left: -40px;
     /* transform: translateX(-50%); */
     /* transform: translateY(-30%); */
-    animation-duration: 10s;
-    animation-name: slide;
+    animation-duration: 15s;
+    animation-name: slideReverse;
     animation-iteration-count: infinite;
 }
 
@@ -27,6 +42,7 @@
     text-align: center;
     overflow: hidden;
     position: relative;
+    transfrom: scale(1.2);
 }
 
 
