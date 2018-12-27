@@ -14,6 +14,7 @@ const element = (props)  => {
                 loader={<Spinner />}
                 className={classes[props.animationClass]}
             />
+            <h3>{props.likes}</h3>
         </div>
     );
 }

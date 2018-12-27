@@ -30,22 +30,24 @@ class Recepie extends Component {
     // axios.get('https://jsonplaceholder.typicode.com/posts')
 
 
-    // axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
-    //   .then(response => {
-    //     console.log(response.data, typeof(response.data));
-    //     let images = []
-    //     for (const key of response.data.data) {
-    //       images.push(key['images']['standard_resolution']['url']);
-    //       console.log(key.likes);
-    //     }
-    //     this.setState({ imagesThumb: images })
-    //   })
-    //   .catch(error => {
-    //     // console.log(error);
-    //     this.setState({ error: true });
-    //   });;
+    axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
+      .then(response => {
+        let images = []
+        let likes = []
+        for (const key of response.data.data) {
+          images.push(key['images']['standard_resolution']['url']);
+          likes.push(key['likes'])
+          console.log(key['likes']);
+        }
+        this.setState({ imagesThumb: images })
+        this.setState({ likes: likes })
+      })
+      .catch(error => {
+        // console.log(error);
+        this.setState({ error: true });
+      });;
 
-    // console.log(this.state.images);
+    console.log(this.state.images);
 
   }
 
@@ -55,8 +57,6 @@ class Recepie extends Component {
   }
 
   render() {
-    console.log(this.state.animationClasses, typeof(this.state.animationClasses))
-    
     
     const gridClasses = ['DviOne', 'DivTwo', 'DivThree', 'DivFour', 'DivFive', 'DivSix', 'DivSeven', 'DivEigtht', 'DivNine' ]
     const animationClasses = ['Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse']
@@ -69,6 +69,7 @@ class Recepie extends Component {
         return outPut.push(<GridElement 
                   key={res+i} name={res} 
                   images={this.state.imagesThumb[i]}
+                  likes={this.state.likes}
                   animationClass={animationClasses[i]}/>);
       });
       let gridItmes = null
