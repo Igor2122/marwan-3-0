@@ -14,7 +14,7 @@ const heading = (props) => {
         
         default:
             return (
-                <h3>props.value</h3>
+                <h3>{props.value}</h3>
             );
     }
 };

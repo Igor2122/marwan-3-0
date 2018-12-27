@@ -2,19 +2,19 @@ import React, {Component} from 'react';
 import classes from './GridElement.css';
 import Img from 'react-image';
 import Spinner from '../../components/UI/Spinner/Spinner'
+import Tags from '../../components/Tags/Tags';
 
 class Element extends Component {
     
 
-
     
-    
-    componentDidMount() {
-        
-
-    }
     
     render () {
+        let likesTag = <Spinner />
+        if(this.props.likesIndividal){
+            console.log(this.props.likesIndividal)
+            likesTag = <Tags type={'h3'} value={this.props.likesIndividal}></Tags> ;
+        }
         
         
         return (
@@ -26,7 +26,7 @@ class Element extends Component {
             loader={<Spinner />}
             className={classes[this.props.animationClass]}
             />
-            {/* <h3>{props.likesIndividal}</h3> */}
+            {likesTag}
         </div>
     );
     }
