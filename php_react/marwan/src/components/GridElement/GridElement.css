@@ -33,7 +33,10 @@
     animation-iteration-count: infinite;
 }
 
-
+.Likes {
+  position: absolute;
+  z-index: 99;
+}
 
 
 /* Grid elements Layout */

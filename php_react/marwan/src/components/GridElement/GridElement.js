@@ -1,24 +1,35 @@
-import React from 'react';
+import React, {Component} from 'react';
 import classes from './GridElement.css';
 import Img from 'react-image';
 import Spinner from '../../components/UI/Spinner/Spinner'
 
-const element = (props)  => {
-    
-    console.log(props);
+class Element extends Component {
     
 
-    return (
-        <div className={[classes[props.name], classes.AllImages].join(' ')}>
+
+    
+    
+    componentDidMount() {
+        
+
+    }
+    
+    render () {
+        
+        
+        return (
+            <div className={[classes[this.props.name], classes.AllImages].join(' ')}>
             <Img src={[
-                props.images,
+                this.props.images,
                 'https://www.example.com/bar.jpg'
-                ]}
-                loader={<Spinner />}
-                className={classes[props.animationClass]}
+            ]}
+            loader={<Spinner />}
+            className={classes[this.props.animationClass]}
             />
+            {/* <h3>{props.likesIndividal}</h3> */}
         </div>
     );
+    }
 }
 
-export default element;
+export default Element;

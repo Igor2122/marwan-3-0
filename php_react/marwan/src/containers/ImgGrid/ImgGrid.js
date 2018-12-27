@@ -22,6 +22,7 @@ class Recepie extends Component {
     'https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     'https://images.pexels.com/photos/355241/pexels-photo-355241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260','https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260','https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260','https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260','https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260','https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',],
     error: false,
+    likes: []
   }
 
   componentDidMount() {
@@ -32,39 +33,42 @@ class Recepie extends Component {
 
     axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
       .then(response => {
+        console.log(response);
+        
         let images = []
         let likes = []
         for (const key of response.data.data) {
           images.push(key['images']['standard_resolution']['url']);
-          likes.push(key['likes'])
-          console.log(key['likes']);
+          likes.push(key['likes']['count'])
         }
         this.setState({ imagesThumb: images, likes: likes  })
-        this.setState()
+        
       })
       .catch(error => {
-        // console.log(error);
+        
         this.setState({ error: true });
       });;
 
-    console.log(this.state.images);
 
   }
 
   render() {
+
     
+
     const gridClasses = ['DviOne', 'DivTwo', 'DivThree', 'DivFour', 'DivFive', 'DivSix', 'DivSeven', 'DivEigtht', 'DivNine' ]
     const animationClasses = ['Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse']
     
-    console.log(animationClasses[1]);
+
+    
 
     let outPut = [];
     gridClasses.map((res, i) =>  {
-        // console.log(res, typeof(res));
         return outPut.push(<GridElement 
                   key={res+i} name={res} 
                   images={this.state.imagesThumb[i]}
-                  animationClass={animationClasses[i]}/>);
+                  animationClass={animationClasses[i]}
+                  likesIndividal={this.state.likes[i]}/>);
       });
       let gridItmes = null
       gridItmes = outPut.map(res => res);
