@@ -1,0 +1,13 @@
+
+.InfoOverlay {
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    background: seagreen;
+
+}
+
+.Show {
+    opacity: 100;
+}
