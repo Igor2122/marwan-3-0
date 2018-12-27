@@ -5,6 +5,9 @@ import Spinner from '../../components/UI/Spinner/Spinner'
 
 const element = (props)  => {
     
+    console.log(props);
+    
+
     return (
         <div className={[classes[props.name], classes.AllImages].join(' ')}>
             <Img src={[
@@ -14,7 +17,6 @@ const element = (props)  => {
                 loader={<Spinner />}
                 className={classes[props.animationClass]}
             />
-            <h3>{props.likes}</h3>
         </div>
     );
 }

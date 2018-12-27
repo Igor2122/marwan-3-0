@@ -39,8 +39,8 @@ class Recepie extends Component {
           likes.push(key['likes'])
           console.log(key['likes']);
         }
-        this.setState({ imagesThumb: images })
-        this.setState({ likes: likes })
+        this.setState({ imagesThumb: images, likes: likes  })
+        this.setState()
       })
       .catch(error => {
         // console.log(error);
@@ -49,11 +49,6 @@ class Recepie extends Component {
 
     console.log(this.state.images);
 
-  }
-
-  genreateGrid = () => {
-
-    
   }
 
   render() {
@@ -69,7 +64,6 @@ class Recepie extends Component {
         return outPut.push(<GridElement 
                   key={res+i} name={res} 
                   images={this.state.imagesThumb[i]}
-                  likes={this.state.likes}
                   animationClass={animationClasses[i]}/>);
       });
       let gridItmes = null
