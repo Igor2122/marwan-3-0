@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classes from './OverLayInfo.css';
 import Tags from '../../Tags/Tags'
+import Img from 'react-image'
+import HeartIcon from '../../../assets/svg/heartInsta.png'
 
 
 class OverlayInfo extends Component {
@@ -13,9 +15,10 @@ class OverlayInfo extends Component {
                 cursor: 'pointer'
                 }}>
         <div className={classes.LikesCommets}>
-            <div className={classes.InstaLikes}>
             <span className={classes.TipDown}></span>
-                    <Tags type={'h3'} value={this.props.value} />
+            <div className={classes.InstaLikes}>
+                <Img src={HeartIcon}/>
+                <Tags type={'h3'} value={this.props.value} />
                 
             </div>
         </div>

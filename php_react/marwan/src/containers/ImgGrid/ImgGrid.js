@@ -33,7 +33,7 @@ class Recepie extends Component {
 
     axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=285502478.8001032.48720ae4588d48c9be566f37274a24ff')
       .then(response => {
-        // console.log(response);
+        console.log(response);
         
         let images = []
         let likes = []
@@ -54,14 +54,9 @@ class Recepie extends Component {
 
   render() {
 
-    
-
     const gridClasses = ['DviOne', 'DivTwo', 'DivThree', 'DivFour', 'DivFive', 'DivSix', 'DivSeven', 'DivEigtht', 'DivNine' ]
     const animationClasses = ['Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse', 'Animated', 'AnimatedReverse']
     
-
-    
-
     let outPut = [];
     gridClasses.map((res, i) =>  {
         return outPut.push(<GridElement 
