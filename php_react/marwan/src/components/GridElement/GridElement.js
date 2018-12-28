@@ -11,8 +11,11 @@ class Element extends Component {
         showOverlay: false,
     }
 
-    showLikesHandler () {
-        
+    showLikesHandler = () => {
+        this.setState({showOverlay: true})
+    }
+    hideLikesHandler = () => {
+        this.setState({showOverlay: false})
     }
     
     
@@ -23,8 +26,8 @@ class Element extends Component {
         }
         
         return (
-            <div onMouseEnter={this.showLikesHandler} className={[classes[this.props.name], classes.AllImages].join(' ')}>
-            <OverLayInfo value={this.props.likesIndividal}/>
+            <div onMouseEnter={this.showLikesHandler} onMouseLeave={this.hideLikesHandler} className={[classes[this.props.name], classes.AllImages].join(' ')}>
+            <OverLayInfo value={this.props.likesIndividal} show={this.state.showOverlay}/>
             <Img src={[
                 this.props.images,
                 'https://www.example.com/bar.jpg'

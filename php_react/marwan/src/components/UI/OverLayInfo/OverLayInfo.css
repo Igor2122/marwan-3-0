@@ -1,13 +1,48 @@
 
 .InfoOverlay {
     position: absolute;
-    z-index: 99;
+    z-index: 2;
     height: 100%;
     width: 100%;
-    background: seagreen;
-
+    background: #2A231C;
+    transition: all .3s ease;
 }
 
-.Show {
-    opacity: 100;
+.LikesCommets {
+    position: absolute;
+    right: 20%;
+    bottom: 5%;
+    display: flex;
 }
+
+.InstaLikes {
+    position: relative;
+    border-radius: 20%;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e13584, #e3106c, #fd1d1d);
+    width: 4rem;
+    color: #fff;
+    font-size: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.InstaLikes div {
+    height: 100%;
+    width: 100%;
+}
+
+.TipDown {
+    width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: -40%;
+  left: 5%;
+  background: transparent;
+  border: 10px solid #5851db;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;  
+}
+
