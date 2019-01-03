@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-
+import Navigation from '../Navigation/Navigation';
+import Carusel from '../../components/Carusel/Carusel';
+import classes from './LandingPage.css';
 
 
 
@@ -11,7 +13,10 @@ class Landing extends Component {
      render () {
          return(
           <div>
-              <h1>Landing Component</h1>
+            <div className={classes.Carusel}>
+                <Carusel />
+            </div>
+                <Navigation />
           </div>
          );
     }

@@ -5,7 +5,7 @@ import classes from './App.css';
 // eslint-disable-next-line
 import { BrowserRouter, Route } from 'react-router-dom'
 // import Recepie from './containers/Recepies/Recepies';
-import Menu from './containers/Navigation/Navigation';
+import Navigation from './containers/Navigation/Navigation';
 import About from './containers/AboutDiv/AboutDiv';
 import LandingPage from './containers/LandingPage/LandingPage';
 import Recepies from './containers/Recepies/Recepies';
@@ -20,7 +20,6 @@ class App extends Component {
     return(
         <BrowserRouter>
           <div className={classes.Component}>
-          <Menu />
               <Row>
                 <Col>
                   <Route path="/" exact component={LandingPage}></Route>
