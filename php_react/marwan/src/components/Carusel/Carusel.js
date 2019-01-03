@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'react-image-carousel';
+import classes from './Carusel.css';
  
  
 
@@ -12,10 +13,12 @@ const carusel = ( props ) => {
 ];
 
 return (
-  <Carousel images={images} 
-    thumb={true}
-    loop={true}
-    autoplay={3000}/>
+  <div className={classes.Carusel}>
+            <Carousel images={images} 
+                        thumb={true}
+                        loop={true}
+                        autoplay={3000}/>
+        </div>
 );
 }
 
