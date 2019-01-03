@@ -39,18 +39,18 @@ class Navigation extends Component {
    render() {
       return (
          <div className={classes.Navbar}>
-           <Navbar   expand="sm" >
+           <Navbar expand="sm" >
              <NavbarToggler onClick={this.toggle} />
              <Collapse isOpen={this.state.isOpen} navbar>
                <Nav className="mx-auto" navbar>
                 <NavItem>  
-                   <NavLink tag={CstmNavLink} to="/" >Home</NavLink> 
+                   <NavLink className="px-5" tag={CstmNavLink} to="/" >Home</NavLink> 
                  </NavItem> 
                  <NavItem>
-                   <NavLink tag={CstmNavLink} to="/about" >About</NavLink> 
+                   <NavLink className="px-5" tag={CstmNavLink} to="/about" >About</NavLink> 
                  </NavItem>
                  <NavItem>
-                   <NavLink tag={CstmNavLink} to="/recepies">Recepies</NavLink> 
+                   <NavLink className="px-5" tag={CstmNavLink} to="/recepies">Recepies</NavLink> 
                  </NavItem>
                </Nav>
              </Collapse>
