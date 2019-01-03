@@ -6,7 +6,8 @@ import classes from './App.css';
 import { BrowserRouter, Route } from 'react-router-dom'
 // import Recepie from './containers/Recepies/Recepies';
 import Menu from './containers/Navigation/Navigation';
-import Home from './containers/Home/Home';
+import About from './containers/AboutDiv/AboutDiv';
+import LandingPage from './containers/LandingPage/LandingPage';
 import Recepies from './containers/Recepies/Recepies';
 import { Row, Col } from 'reactstrap';
 
@@ -22,7 +23,8 @@ class App extends Component {
           <Menu />
               <Row>
                 <Col>
-                  <Route path="/" exact component={Home}></Route>
+                  <Route path="/" exact component={LandingPage}></Route>
+                  <Route path="/about" exact component={About}></Route>
                   <Route path="/recepies" exact component={Recepies}></Route>
                 </Col>
               </Row>

@@ -2,7 +2,7 @@ import React from 'react';
 // import classes from './Home.css';
 // import { videoTagString, VideoTag } from 'react-video-tag'
 import ImgGrid from '../ImgGrid/ImgGrid';
-import Landing from '../../components/Landing/Landing'
+import Landing from '../../components/About/About'
 import About from '../About/About';
 
 
