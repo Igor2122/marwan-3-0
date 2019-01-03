@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navigation from '../Navigation/Navigation';
-import Carusel from '../../components/imageSliders/Carusel/Carusel';
 import BackgroundSlider from '../../components/imageSliders/backgroundSlider/backgroundSlider';
+import Jumbotron from '../../components/UI/Jumbotron/Jumbotron';
 import classes from './LandingPage.css';
 
 
@@ -18,6 +18,7 @@ class Landing extends Component {
                 <BackgroundSlider />
             </div>
             <Navigation />
+            <Jumbotron />
           </div>
          );
     }

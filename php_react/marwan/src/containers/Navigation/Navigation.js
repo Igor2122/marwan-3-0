@@ -1,8 +1,6 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
-// eslint-disable-next-line
 import classes from './Navigation.css';
-// eslint-disable-next-line
 import { NavLink as CstmNavLink  } from 'react-router-dom';
 // eslint-disable-next-line
 import {  NavLink } from 'reactstrap';
@@ -10,12 +8,11 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  // eslint-disable-next-line
-  NavbarBrand,
   Nav,
   NavItem,
-   } from 'reactstrap';
-   
+} from 'reactstrap';
+
+// NavbarBrand,
 //   UncontrolledDropdown,
 //   DropdownToggle,
 //   DropdownMenu,
