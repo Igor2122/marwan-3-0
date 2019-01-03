@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Navigation from '../Navigation/Navigation';
-import Carusel from '../../components/Carusel/Carusel';
+import Carusel from '../../components/imageSliders/Carusel/Carusel';
+import BackgroundSlider from '../../components/imageSliders/backgroundSlider/backgroundSlider';
 import classes from './LandingPage.css';
 
 
@@ -12,11 +13,11 @@ class Landing extends Component {
 
      render () {
          return(
-          <div>
+          <div className={classes.HomeUpper}>
             <div className={classes.Carusel}>
-                <Carusel />
+                <BackgroundSlider />
             </div>
-                <Navigation />
+            <Navigation />
           </div>
          );
     }
