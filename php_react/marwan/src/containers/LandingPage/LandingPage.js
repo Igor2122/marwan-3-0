@@ -43,7 +43,6 @@ class Landing extends Component {
             onEnter={this._handleWaypointEnter}
                 
             onLeave={this._handleWaypointLeave}>
-            <NavigationSticky />
             </Waypoint>
             <div style={styles}></div>
             <div style={style2}></div>
