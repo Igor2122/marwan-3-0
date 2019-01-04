@@ -23,6 +23,9 @@ import {
 
 class Navigation extends Component {
    
+
+
+
    state = {
       isOpen: false
    }
@@ -35,8 +38,8 @@ class Navigation extends Component {
    
    render() {
       return (
-         <div className={classes.Navbar}>
-           <Navbar expand="sm" >
+         <div>
+           <Navbar fixed={this.props.fixed} className={classes.Navbar} expand="sm" >
              <NavbarToggler onClick={this.toggle} />
              <Collapse isOpen={this.state.isOpen} navbar>
                <Nav className="mx-auto" navbar>
