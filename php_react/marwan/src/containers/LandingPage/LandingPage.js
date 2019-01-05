@@ -3,7 +3,6 @@ import Navigation from '../Navigation/Navigation';
 import BackgroundSlider from '../../components/imageSliders/backgroundSlider/backgroundSlider';
 import Jumbotron from '../../components/UI/Jumbotron/Jumbotron';
 import classes from './LandingPage.css';
-// import NavigationSticky from '../../containers/Navigation/Navigation';
 import Waypoint from 'react-waypoint';
 
 class Landing extends Component {
@@ -20,7 +19,6 @@ class Landing extends Component {
     let y = window.pageYOffset;
     if(y > 758){
         this.setState({stickyNav: true});
-        console.log(this.state.stickyNav)
     } else {
         this.setState({stickyNav: false})
     }
@@ -38,9 +36,13 @@ class Landing extends Component {
       background: 'red'
     }
 
+    let styleNav = {
+        background: 'red',
+    }
+
     let nav = <Navigation />;
     if(this.state.stickyNav){
-        nav = <Navigation fixed={'top'}/>
+        nav = <Navigation style={styleNav} fixed={'top'}/>
     } else {
         nav = <Navigation />
     }
