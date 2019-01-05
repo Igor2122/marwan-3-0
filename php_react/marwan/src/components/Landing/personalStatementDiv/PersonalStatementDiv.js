@@ -1,10 +1,10 @@
 import React from 'react';
 import {Container, Row, Col} from 'reactstrap';
-import classes from './AboutComp.css';
-import linkdnLogo from '../../assets/svg/linkedin.svg';
+import classes from './PersonalStatementDiv.css';
+import linkdnLogo from '../../../assets/svg/linkedin.svg';
 import Img from 'react-image'
-import Tag from '../Tags/Tags';
-import Spinner from '../UI/Spinner/Spinner';
+import Tag from '../../Tags/Tags';
+import Spinner from '../../UI/Spinner/Spinner';
 
 const aboutComp = () => {
   return (
@@ -24,10 +24,7 @@ const aboutComp = () => {
                     href="https://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28left\%2C\%20rgba\%2863\%2C54\%2C42\%2C1\%29\%200\%25\%2C\%20rgba\%2821\%2C18\%2C14\%2C1\%29\%20100\%25\%29\%3B'">My Linkedin</a>
                 </Col>
                 <Col xs="4">
-                  <Img
-                    width="35px"
-                    src={[linkdnLogo, 'https://www.example.com/bar.jpg']}
-                    // loader=<Spinner/>
+                  <Img width="35px" src={[linkdnLogo, 'https://www.example.com/bar.jpg']} // loader=<Spinner/>
                   />
                 </Col>
               </Row>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import classes from './About.css';
+import classes from './backgroundVideoDiv.css';
 
-import Overlay from '../Overlay/Overlay';
-import Tag from '../Tags/Tags';
+import Overlay from '../../Overlay/Overlay';
+import Tag from '../../Tags/Tags';
 
 
 class Landing extends Component {
