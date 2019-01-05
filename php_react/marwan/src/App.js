@@ -5,7 +5,7 @@ import classes from './App.css';
 // eslint-disable-next-line
 import { BrowserRouter, Route } from 'react-router-dom'
 import About from './containers/websitePages/AboutDiv/AboutDiv';
-import LandingPage from './containers/LandingPage/LandingPage';
+import LandingPage from './containers/websitePages/LandingPage/LandingPage';
 import Recepies from './containers/Recepies/Recepies';
 import { Row, Col } from 'reactstrap';
 

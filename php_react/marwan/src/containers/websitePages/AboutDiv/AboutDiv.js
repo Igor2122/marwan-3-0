@@ -3,7 +3,8 @@ import React from 'react';
 // import { videoTagString, VideoTag } from 'react-video-tag'
 import ImgGrid from '../../ImgGrid/ImgGrid';
 import Landing from '../../../components/About/About'
-import About from '../../About/About';
+import About from '../../../components/AboutComp/AboutComp';
+import AboutDiv from '../../../components/About/About'
 import Navigation from '../../Navigation/Navigation';
 
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Navigation from '../Navigation/Navigation';
-import BackgroundSlider from '../../components/imageSliders/backgroundSlider/backgroundSlider';
-import Jumbotron from '../../components/UI/Jumbotron/Jumbotron';
+import Navigation from '../../Navigation/Navigation';
+import BackgroundSlider from '../../../components/imageSliders/backgroundSlider/backgroundSlider';
+import Jumbotron from '../../../components/UI/Jumbotron/Jumbotron';
 import classes from './LandingPage.css';
 import Waypoint from 'react-waypoint';
 
