@@ -27,7 +27,7 @@ const aboutComp = () => {
                   <Img
                     width="35px"
                     src={[linkdnLogo, 'https://www.example.com/bar.jpg']}
-                    loader=<Spinner/>
+                    // loader=<Spinner/>
                   />
                 </Col>
               </Row>
