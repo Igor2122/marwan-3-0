@@ -6,10 +6,11 @@ import classes from './App.css';
 import { BrowserRouter, Route } from 'react-router-dom'
 import About from './containers/websitePages/AboutDiv/AboutDiv';
 import LandingPage from './containers/websitePages/LandingPage/LandingPage';
-import Recepies from './containers/Recepies/Recepies';
+import Recepies from './containers/websitePages/Recepies/Recepies';
 import { Row, Col } from 'reactstrap';
 import { DB_CONFIG }from './config/config';
 import firebase from 'firebase/app'
+import AdminPage from './containers/websitePages/Admin/Admin';
 
 
 // <Route path="/" exact component={Home}></Route>
@@ -39,6 +40,7 @@ class App extends Component {
                   <Route path="/" exact component={LandingPage}></Route>
                   <Route path="/about" exact component={About}></Route>
                   <Route path="/recepies" exact component={Recepies}></Route>
+                  <Route path="/admin" exact component={AdminPage}></Route>
                 </Col>
               </Row>
             

@@ -52,6 +52,9 @@ class Navigation extends Component {
                  <NavItem>
                    <NavLink className="px-5" tag={CstmNavLink} to="/recepies">Recepies</NavLink> 
                  </NavItem>
+                 <NavItem>
+                   <NavLink className="px-5" tag={CstmNavLink} to="/admin">Admin</NavLink> 
+                 </NavItem>
                </Nav>
              </Collapse>
            </Navbar>
