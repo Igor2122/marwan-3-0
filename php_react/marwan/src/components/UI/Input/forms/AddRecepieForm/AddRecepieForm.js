@@ -25,26 +25,17 @@ class AddRecepie extends Component {
 
     switch (this.props.inputtype) {
       case('input'):
-        inputElent = <Input
-          type={this.props.type}
-          name={this.props.name}
-          id={this.props.id}
-          placeholder={this.props.placeholder}/>
+        inputElent = <Input {...this.props}/>
         break;
       case('text-area'):
-        inputElent = <FormText {...this.props}/>
+        inputElent = <Input {...this.props}/>
         break;
       case('select'):
-        inputElent = <Input 
-        type={this.props.type}
-        name={this.props.name}
-        id={this.props.id}
-        placeholder={this.props.placeholder}>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        inputElent = <Input {...this.props}>
+          <option>Soup</option>
+          <option>Snack</option>
+          <option>Main Course</option>
+          <option>Dessert</option>
         </Input>
         break;
 
@@ -58,7 +49,7 @@ class AddRecepie extends Component {
           <Form>
             <FormGroup>
               <Label for="exampleEmail">{this.props.label}</Label>
-               {inputElent}
+              {inputElent}
             </FormGroup>
           </Form>
         </Container>
