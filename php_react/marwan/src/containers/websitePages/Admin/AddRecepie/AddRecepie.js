@@ -5,8 +5,7 @@ class AddRecepies extends Component {
   render() {
     return (
       <div>
-        <h1>Add Recepies seciton
-        </h1>
+        <h1>Add Recepies seciton</h1>
       </div>
     );
   }

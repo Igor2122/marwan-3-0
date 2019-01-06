@@ -11,6 +11,7 @@ import { Row, Col } from 'reactstrap';
 import { DB_CONFIG }from './config/config';
 import firebase from 'firebase/app'
 import AdminPage from './containers/websitePages/Admin/Admin';
+import AddRecepies from './containers/websitePages/Admin/AddRecepie/AddRecepie';
 
 
 // <Route path="/" exact component={Home}></Route>
@@ -41,6 +42,8 @@ class App extends Component {
                   <Route path="/about" exact component={About}></Route>
                   <Route path="/recepies" exact component={Recepies}></Route>
                   <Route path="/admin" exact component={AdminPage}></Route>
+
+                  <Route path="/admin/all_recepies" component={AddRecepies}/>
                 </Col>
               </Row>
             
