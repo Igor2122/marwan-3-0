@@ -9,12 +9,18 @@ class AddRecepies extends Component {
         <h1>Add New Recepies:</h1>
         <AddRecepieForm
           label={'Recepie Name'}
-          inputtype={'text-area'}
-          type={'text'}
+          inputtype={'input'}
+          type={'input'}
           id={'RecepieName'}
           placeholder={'Recepie Name'}
           name={'RecepieName'}/>
-        <AddRecepieForm label={'Directions'} inputtype={'text-area'}/>
+        <AddRecepieForm
+          label={'Select Category'}
+          inputtype={'select'}
+          type={'select'}
+          id={'RecepieName'}
+          placeholder={'Recepie Name'}
+          name={'RecepieName'}/>
       </div>
     );
   }
