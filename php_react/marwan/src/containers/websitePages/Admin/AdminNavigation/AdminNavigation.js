@@ -14,7 +14,7 @@ export default class Example extends React.Component {
           <li>
             <Link to={{
               pathname: '/admin/all_recepies'
-            }}>See All Recepies</Link>
+            }}>Add Recepie</Link>
           </li>
         </ul>
       </nav>
