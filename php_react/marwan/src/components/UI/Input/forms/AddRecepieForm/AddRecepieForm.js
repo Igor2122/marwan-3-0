@@ -25,13 +25,16 @@ class AddRecepie extends Component {
 
     switch (this.props.inputtype) {
       case('input'):
-        inputElent = <Input {...this.props}/>
+        inputElent = <Input {...this.props} 
+        onChange={this.props.changed}/>
         break;
       case('text-area'):
-        inputElent = <Input {...this.props}/>
+        inputElent = <Input {...this.props} 
+        onChange={this.props.changed}/>
         break;
       case('select'):
-        inputElent = <Input {...this.props}>
+        inputElent = <Input {...this.props} 
+        onChange={this.props.changed}>
           <option>Soup</option>
           <option>Snack</option>
           <option>Main Course</option>
@@ -40,18 +43,16 @@ class AddRecepie extends Component {
         break;
 
       default:
-        inputElent = <input {...this.props}/>
+        inputElent = <input {...this.props} />
     }
 
     return (
       <div>
         <Container>
-          <Form>
             <FormGroup>
               <Label for="exampleEmail">{this.props.label}</Label>
               {inputElent}
             </FormGroup>
-          </Form>
         </Container>
       </div>
     );

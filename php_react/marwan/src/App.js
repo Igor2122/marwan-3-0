@@ -8,8 +8,8 @@ import About from './containers/websitePages/About/About';
 import LandingPage from './containers/websitePages/LandingPage/LandingPage';
 import RecepiesDiv from './containers/websitePages/Recepies/Recepies';
 import { Row, Col } from 'reactstrap';
-import { DB_CONFIG }from './config/config';
-import firebase from 'firebase/app'
+// import { DB_CONFIG }from './config/config';
+// import firebase from 'firebase/app'
 import AdminPage from './containers/websitePages/Admin/Admin';
 import AddRecepies from './containers/websitePages/Admin/AddRecepie/AddRecepie';
 
@@ -24,8 +24,8 @@ class App extends Component {
     // this.app = firebase.initializeApp({DB_CONFIG});
     // this.db = this.app.database().ref().child('recepies');
 
-    console.log(firebase.name);
-    console.log(firebase.database());
+    // console.log(firebase.name);
+    // console.log(firebase.database());
 
     this.satae = {
       recepies : []
