@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 import classes from './App.css';
 // eslint-disable-next-line
 import { BrowserRouter, Route } from 'react-router-dom'
-import About from './containers/websitePages/AboutDiv/AboutDiv';
+import About from './containers/websitePages/About/About';
 import LandingPage from './containers/websitePages/LandingPage/LandingPage';
-import Recepies from './containers/websitePages/Recepies/Recepies';
+import RecepiesDiv from './containers/websitePages/Recepies/Recepies';
 import { Row, Col } from 'reactstrap';
 import { DB_CONFIG }from './config/config';
 import firebase from 'firebase/app'
@@ -40,7 +40,7 @@ class App extends Component {
                 <Col>
                   <Route path="/" exact component={LandingPage}></Route>
                   <Route path="/about" exact component={About}></Route>
-                  <Route path="/recepies" exact component={Recepies}></Route>
+                  <Route path="/recepies" exact component={RecepiesDiv}></Route>
                   <Route path="/admin" exact component={AdminPage}></Route>
 
                   <Route path="/admin/all_recepies" component={AddRecepies}/>
