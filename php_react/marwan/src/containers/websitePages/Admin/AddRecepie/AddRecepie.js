@@ -8,54 +8,107 @@ class AddRecepies extends Component {
   state = {
     name: null,
     cagegory: null,
-    instructions: null
+    // instructions: null,
+    addRecepieForm: {
+      recepName: {
+        configuration: {
+          label: 'Recepie Name',
+          inputtype: 'input',
+          type: 'input',
+          id: 'RecepieName',
+          placeholder: 'Recepie Name',
+          name: 'Recepie Name'
+        },
+        value: '',
+      },
+      SelectCategory: {
+        configuration: {
+          label: 'Select Category',
+          inputtype: 'select',
+          type: 'select',
+          id: 'SelectCategory',
+          placeholder: 'Select Category',
+          name: 'SelectCategory'
+        },
+        value: '',
+      },
+      Instructions: {
+        configuration: {
+          label: 'Instructions',
+          inputtype: 'text-area',
+          type: 'textarea',
+          id: 'Inscructions',
+          placeholder: 'Insctruction shall come here',
+          name: 'Inscructions'
+        },
+        value: '',
+      },
+      
+    }
   }
 
-  handleChange = (e) => {
-    // this.setState({name: e.target.value, cagegory: e.target.value, instructions: e.target.value});
-    console.log(e.target);
-    
+  inputChangedHandler = (e, inputIndentifier) => {
+    console.log(e.target.value );
+    const updatedOrderForm = {
+      ...this.state.updatedOrderForm
+    }
+
   }
 
   addRecepiesHandler = (e) => {
     e.preventDefault();
-    console.log(this.state);
-
-    
+    // console.log(this.state);
   }
 
   render() {
+    
+    
+    // const formIds = Object.keys(this.state.addRecepieForm)
+    const formElements = Object.values(this.state.addRecepieForm);
+
+
+    console.log(formElements);
+
+    
     return (
       <div>
 
         <Form onSubmit={this.addRecepiesHandler}>
+    
           <Container className="mt-5">
             <h1>Add New Recepies:</h1>
-            <AddRecepieForm
+            {formElements.map((formElement, i) => (
+              <AddRecepieForm 
+              key={i}
+              label={formElement.configuration.label}
+              inputtype={formElement.configuration.inputtype}
+              type={formElement.configuration.type}
+              changed={this.inputChangedHandler}
+              inputtype={formElement.configuration.inputtype}
+              />
+            ))}
+            {/* <AddRecepieForm
               label={'Recepie Name'}
               inputtype={'input'}
               type={'input'}
               id={'RecepieName'}
               placeholder={'Recepie Name'}
-              name={'RecepieName'}
-              changed={this.handleChange}/>
+              name={'RecepieName'}/>
             <AddRecepieForm
               label={'Select Category'}
               inputtype={'select'}
               type={'select'}
               id={'SelectCategory'}
               placeholder={'Recepie Name'}
-              name={'SelectCategory'}
-              changed={this.handleChange}/>
+              name={'SelectCategory'}/>
             <AddRecepieForm
               label={'Instructions'}
               inputtype={'text-area'}
               type={'textarea'}
               id={'SelectCategory'}
               placeholder={'Recepie Name'}
-              name={'Recepie Insctructions'}
-              changed={this.handleChange}/>
-            <input type="submit" value="Submit" />
+              name={'Recepie Insctructions'}/> */}
+            <input type="submit" value="Submit"/>
           </Container>
         </Form>
       </div>
