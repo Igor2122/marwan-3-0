@@ -4,6 +4,7 @@ import BackgroundSlider from '../../../components/imageSliders/backgroundSlider/
 import Jumbotron from '../../../components/UI/Jumbotron/Jumbotron';
 import classes from './LandingPage.css';
 import Waypoint from 'react-waypoint';
+import Recepies from '../Recepies/Recepies';
 
 class Landing extends Component {
 
@@ -11,16 +12,16 @@ class Landing extends Component {
     stickyNav: false
   }
 
-  componentDidMount(){
-      window.addEventListener('scroll', this.scrollHandler);
+  componentDidMount() {
+    window.addEventListener('scroll', this.scrollHandler);
   }
 
   scrollHandler = () => {
     let y = window.pageYOffset;
-    if(y > 758){
-        this.setState({stickyNav: true});
+    if (y > 758) {
+      this.setState({stickyNav: true});
     } else {
-        this.setState({stickyNav: false})
+      this.setState({stickyNav: false})
     }
   }
 
@@ -37,25 +38,26 @@ class Landing extends Component {
     }
 
     let styleNav = {
-        background: 'red',
+      background: 'red'
     }
 
-    let nav = <Navigation />;
-    if(this.state.stickyNav){
-        nav = <Navigation style={styleNav} fixed={'top'}/>
+    let nav = <Navigation/>;
+    if (this.state.stickyNav) {
+      nav = <Navigation style={styleNav} fixed={'top'}/>
     } else {
-        nav = <Navigation />
+      nav = <Navigation/>
     }
     return (
       <div className={classes.HomeUpper}>
         <div className={classes.Carusel}>
-          <BackgroundSlider />
+          <BackgroundSlider/>
         </div>
         {nav}
         <Jumbotron/>
         <Waypoint
           onEnter={this._handleWaypointEnter}
           onLeave={this._handleWaypointLeave}></Waypoint>
+          <Recepies />
         <div style={styles}></div>
         <div style={style2}></div>
         <div style={styles}></div>

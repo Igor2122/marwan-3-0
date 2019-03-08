@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
+// import classes from './AddRecepie.css';
+
 import {
-  Button,
-  Form,
   FormGroup,
   Label,
   Input,
+  // eslint-disable-next-line
   FormText,
   Container
 } from 'reactstrap';
@@ -25,16 +26,13 @@ class AddRecepie extends Component {
 
     switch (this.props.inputtype) {
       case('input'):
-        inputElent = <Input {...this.props} 
-        onChange={this.props.changed}/>
+        inputElent = <Input {...this.props} />
         break;
       case('text-area'):
-        inputElent = <Input {...this.props} 
-        onChange={this.props.changed}/>
+        inputElent = <Input {...this.props} />
         break;
       case('select'):
-        inputElent = <Input {...this.props} 
-        onChange={this.props.changed}>
+        inputElent = <Input {...this.props} >
           <option>Soup</option>
           <option>Snack</option>
           <option>Main Course</option>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import AddRecepieForm from '../../../../components/UI/Input/forms/AddRecepieForm/AddRecepieForm';
 import {Container, Form} from 'reactstrap';
+// eslint-disable-next-line
 import axios from '../../../../axios-recep-conn';
 
 class AddRecepies extends Component {

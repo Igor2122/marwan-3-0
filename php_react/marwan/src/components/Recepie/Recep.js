@@ -1,24 +1,29 @@
 import React from 'react';
-import classes from './Recep.css'
+import {
+  Card, CardBody,
+  //   Button,
+  CardTitle,
+  CardText,
+  CardImg
+} from 'reactstrap';
+import classes from './Recep.css';
 
-const recep = (props) => {
-return (
+const Recepie = (props) => {
+  return (
+    <div>
+      <Card className={classes.Card}>
+        <CardImg top width="100%" src="/img/tram.jpeg" alt="Card image cap"/>
+        <CardBody>
+          <CardTitle>{props.name}</CardTitle>
+          <CardText>This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.</CardText>
+          <CardText>
+            <small className="text-muted">Last updated 3 mins ago</small>
+          </CardText>
+        </CardBody>
+      </Card>
+    </div>
+  );
+};
 
-   
-      <div className={[classes.Card, "card"].join(' ')} id={props.id}>
-         {/* <img className="card-img-top" src={require(`../../assets/img/${props.img}`)} alt="Card image cap"></img> */}
-         <div className="card-body">
-            <h5 className="text-primary">Recepies Page</h5>
-            <h5 className="card-title">{props.name}</h5>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            {/*<a href="#" className="btn btn-primary">Go somewhere</a>*/}
-         </div>
-      </div>
-   
-
-);
-}
-
-
-
-export default recep;
+export default Recepie;

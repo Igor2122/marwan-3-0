@@ -4,6 +4,7 @@ import classes from './PersonalStatementDiv.css';
 import linkdnLogo from '../../../assets/svg/linkedin.svg';
 import Img from 'react-image'
 import Tag from '../../Tags/Tags';
+// eslint-disable-next-line
 import Spinner from '../../UI/Spinner/Spinner';
 
 const aboutComp = () => {
